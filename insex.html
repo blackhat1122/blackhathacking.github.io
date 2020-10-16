@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>hackingbook/deephacking</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+<h1>Offensive Security Tool: Commix</h1>
+<p>by DEEP.HACKING | Oct 12, 2020 | Tools</p>
+  <img src="img/1_4Cqd9ej5LgAgGjs4XOyb2A (1).png">
+  <center><p>Offensive Security Tool: Commix.</p></center>
+</div>
+<div class="Github">
+   <center><img src="img/687474703a2f2f692e696d6775722e636f6d2f6c4b6762336c712e706e67.png"></center>
+   <center><img alt="Build Status" src="https://camo.githubusercontent.com/a6b1f01c6a03e44625b7d7a68e154d464e1e5bc9/68747470733a2f2f6170692e7472617669732d63692e6f72672f636f6d6d697870726f6a6563742f636f6d6d69782e7376673f6272616e63683d6d6173746572" data-canonical-src="https://api.travis-ci.org/commixproject/commix.svg?branch=master"></center>
+   <h2>
+       <a id="user-content-general-information" class="anchor" aria-hidden="true" href="https://github.com/rohan805/kali" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>
+       "General Information"
+   </h2>
+   <center><p><strong>Commix</strong><span>&nbsp;</span>(short for [<strong>comm</strong>]and [<strong>i</strong>]njection e[<strong>x</strong>]ploiter) is an automated tool written by<span>&nbsp;</span><strong><a href="https://github.com/stasinopoulos">Anastasios Stasinopoulos</a></strong><span>&nbsp;</span>(<strong><a href="https://twitter.com/ancst" rel="nofollow">@ancst</a></strong>) that can be used from web developers, penetration testers or even security researchers in order to test web-based applications with the view to find bugs, errors or vulnerabilities related to<span>&nbsp;</span><strong><a href="https://www.owasp.org/index.php/Command_Injection" rel="nofollow">command injection</a></strong><span>&nbsp;</span>attacks. By using this tool, it is very easy to find and exploit a command injection vulnerability in a certain vulnerable parameter or HTTP header.</p></center>
+   <h2>
+    <a id="user-content-legal-disclaimer" class="anchor" aria-hidden="true" href="https://github.com/rohan805/kali" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg>
+    </a>
+        "Legal Disclaimer"
+    </h2>
+    <p><strong>With each commix run end users are obligated to agree</strong><span>&nbsp;</span>with the following prelude message:</p>
+    <pre>
+        <code>(!) Legal disclaimer: Usage of commix for attacking targets without prior mutual consent is illegal. 
+It is the end user's responsibility to obey all applicable local, state and federal laws. 
+Developers assume no liability and are not responsible for any misuse or damage caused by this program.
+</code>
+    </pre>
+    <h2><a id="user-content-requirements" class="anchor" aria-hidden="true" href="https://github.com/rohan805/kali" data-et-has-event-already="true">
+        <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg>
+        </a>
+    "Requirements"
+</h2>
+<p style="height: auto !important;">
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+ <ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-6620833063853657" data-ad-slot="6941004256" data-ad-format="auto" data-full-width-responsive="trueu" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:797px;background-color:transparent;"><ins id="aswift_2_anchor" style="display: block; border: none; height: 280px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 797px; background-color: transparent; overflow: visible;"><iframe id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0;width:797px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="797" height="280" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-6620833063853657&amp;output=html&amp;h=280&amp;slotname=6941004256&amp;adk=1775058902&amp;adf=1953245042&amp;w=797&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1602416791&amp;rafmt=1&amp;psa=1&amp;guci=2.2.0.0.2.2.0.0&amp;format=797x280&amp;url=https%3A%2F%2Fwww.blackhatethicalhacking.com%2Ftools%2Fcommix%2F%3F__cf_chl_captcha_tk__%3De22a0a1764b4edb3de7b7de119366ed4b2f37dd8-1602416755-0-AXUuRmfwZDQEJvpQ4U6VpL1lCymali-Sl7WKmDT9Jf9shOuPb5Ra_c9-81TXvoXB2KYk4Pi22lO0uVvh3ZoUI0M_CLDOEXGPCHLawdh8lvxis6Yn3O3OqUKxWmYG94Ezji3cLca-FYFJjTd8ys1vhISP7Vl2hv1vJVOpbQnDFNeHnzs64ImwUQogjmSwwe9oeAEDuQJR5FBWlt4xErKjWZKPLwwsPGq6XpnGLuej8gE0Q10W5V8WHYQbhrGrOwkgZRCviUNwxNkBviP91yGyRPpnGaLDa6BRkmW61tNu_EmqB7MeaasyZmxM_5N4LxiSL6Mz3PWar-fFXSXVmsFErf2RixoCK12nV_4Ba_GOruzND5hwi3-XE-TOMkaQNOqr-X-Glo9RbKksj6SpLtC23QQ0Ti3mBDqaYIGJAa02oyVrbxuTeLV1pbgsbcWC_PYd-3fncRLOEKsn8xkJE2C8n6DRyK_Ltf8h6LnvveMmDWns5-ZrMMp6eJypcy4xudgNY3Ix-2COgjdj4UbVIIkPInt5-v5PHLP8b647tFC9D-pK&amp;flash=0&amp;fwr=0&amp;fwrattr=trueu&amp;rpe=1&amp;resp_fmts=3&amp;wgl=1&amp;tt_state=W3siaXNzdWVyT3JpZ2luIjoiaHR0cHM6Ly9hZHNlcnZpY2UuZ29vZ2xlLmNvbSIsInN0YXRlIjowfV0.&amp;dt=1602416791199&amp;bpp=4&amp;bdt=900&amp;idt=302&amp;shv=r20201007&amp;cbv=r20190131&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3D39a0d9562ca1fc11-226e6142d4c30054%3AT%3D1601718496%3ART%3D1601718496%3AS%3DALNI_MbXWsTvnZH7n5IQIMTMJmc7uoAjXg&amp;prev_fmts=0x0%2C797x280&amp;nras=1&amp;correlator=6631784386422&amp;frm=20&amp;pv=1&amp;ga_vid=1144099473.1601718494&amp;ga_sid=1602416791&amp;ga_hid=487891774&amp;ga_fc=0&amp;iag=0&amp;icsg=3565315703177203&amp;dssz=77&amp;mdo=0&amp;mso=0&amp;u_tz=-420&amp;u_his=11&amp;u_java=0&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;adx=137&amp;ady=2288&amp;biw=1349&amp;bih=568&amp;scr_x=0&amp;scr_y=1120&amp;oid=3&amp;pvsid=472472621349919&amp;pem=64&amp;ref=https%3A%2F%2Fwww.blackhatethicalhacking.com%2Ftools%2Fcommix%2F%3F__cf_chl_jschl_tk__%3Db9b0137bb3554070b94f41834a87e438c777ffd9-1602416732-0-AXgy8aQfx8D8m2stSjofDXTyIe2vunRdNmPvia3LlEOafel9DNRDn5mR6yIwg0O5_IN4LH6KurybAUfaLMQBL7bXp7qveWBcwt292MuCOKF46d1iArEQR3qTsjqB7yHdGQres9i8JmmMYVGkktRycmt70BZoD3cYpbZQV4lreXH1IknRIHrT1cZ9jkFykeKjnz1-pEu9bzpx2gIyODsfLvGJrNrjaQAOrajGsX4FvmtCSpcAHiy1thpNHyBMxOK59SpNs743CjdENihE427oWrIe9AMXrLCS2dGtMeWK4v_k&amp;rx=0&amp;eae=0&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C1366%2C568&amp;vis=1&amp;rsz=%7C%7CeEbr%7C&amp;abl=CS&amp;pfx=0&amp;fu=8320&amp;bc=31&amp;ifi=2&amp;uci=a!2&amp;btvi=1&amp;fsb=1&amp;xpc=FaXsQpi6mU&amp;p=https%3A//www.blackhatethicalhacking.com&amp;dtd=316" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!2" data-google-query-id="CMOCk927rOwCFfaArAIdXNwJOA" data-load-complete="true"></iframe></ins></ins></ins><br>
+<script>// <!&#091;CDATA&#091;      (adsbygoogle = window.adsbygoogle || &#091;&#093;).push({}); // &#093;&#093;></script></p>
+<p>
+    <strong>
+    <a href="https://www.python.org/download/" rel="nofollow">Python</a></strong>
+    <span>&nbsp;</span>
+    "version"
+    <span>&nbsp;</span>
+    <strong>2.6</strong>
+    ","
+    <span>&nbsp;</span>
+    <strong>2.7</strong>
+    <span>&nbsp;</span>
+    "or"
+    <span>&nbsp;</span>
+    <strong>3.x</strong>
+    <span>&nbsp;</span>
+"is required for running this program."
+</p>
+<h2>
+    <center><a id="user-content-installation" class="anchor" aria-hidden="true" href="https://github.com/rohan805/kali" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg>
+    </a></center>
+<center>"Installation"</center>
+</h2>
+<p>Download commix by cloning the Git repository:</p>
+<pre>
+<center><code>git clone https://github.com/commixproject/commix.git commix</code></center>
+</pre>
+<center><p>
+    "Commix comes packaged on the"
+    <span>&nbsp;</span>
+    <strong>official repositories</strong>
+    <span>&nbsp;</span>
+    "of the following Linux distributions, so you can use the"
+    <span>&nbsp;</span>
+    <strong>package manager</strong>
+    <span>&nbsp;</span>
+<center>"to install it!"</center>
+</p></center>
+<ul>
+<li>
+    <a href="https://archstrike.org/" rel="nofollow">ArchStrike</a>
+</li>
+<li>
+    <a href="https://blackarch.org/" rel="nofollow">BlackArch Linux</a>
+</li>
+<li>
+    <a href="https://backbox.org/" rel="nofollow">BackBox</a>
+</li>
+<li>
+    <a href="https://www.kali.org/" rel="nofollow">Kali Linux</a>
+</li>
+<li>
+    <a href="https://www.parrotsec.org/" rel="nofollow">Parrot Security OS</a>
+</li>
+<li>
+    <a href="https://www.pentoo.ch/" rel="nofollow">Pentoo Linux</a>
+</li>
+<li>
+    <a href="http://www.weaknetlabs.com/" rel="nofollow">Weakerthan Linux</a>
+</li>
+</ul>
+<p>
+    "Commix also comes"
+    <span>&nbsp;</span>
+    <strong>as a plugin</strong>
+", on the following penetration testing frameworks:"
+</p>
+<ul>
+<li>
+    <a href="https://github.com/trustedsec/ptf">TrustedSec’s Penetration Testers Framework (PTF)</a>
+</li>
+<li>
+    <a href="https://github.com/owtf/owtf">OWASP Offensive Web Testing Framework (OWTF)</a>
+</li>
+<li>
+    <a href="https://github.com/zardus/ctf-tools">CTF-Tools</a>
+</li>
+<li>
+    <a href="https://tools.pentestbox.com/" rel="nofollow">PentestBox</a>
+</li>
+<li>
+    <a href="https://github.com/x3omdax/PenBox">PenBox</a>
+</li>
+<li>
+    <a href="https://github.com/LionSec/katoolin">Katoolin</a>
+</li>
+<li
+    <a href="https://github.com/Aptive/penetration-testing-tools">Aptive’s Penetration Testing tools</a>
+</li>
+<li>
+    <a href="https://github.com/sidaf/homebrew-pentest">Homebrew Tap – Pen Test Tools</a>
+</li>
+<li>
+    <a href="https://github.com/Manisso/fsociety">fsociety Hacking Tools Pack – A Penetration Testing Framework</a>
+</li>
+</ul>
+<h2>
+    <center><a id="user-content-supported-platforms" class="anchor" aria-hidden="true" href="https://github.com/rohan805/kali" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a></center>
+<center>"Supported Platforms"</center>
+                </h2>
+                 <ul>
+                 <li>
+                  Linux</li>
+                 <li>Mac OS X</li>
+                 <li>Windows (experimental)</li>
+                 </ul>
+                 <h2>
+                    <center><a id="user-content-usage" class="anchor" aria-hidden="true" href="https://github.com/rohan805/kali" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></center>
+                    </svg>
+                </a>
+                <center>"Usage"</center>
+                 </h2>
+                 <p>To get a list of all options and switches use:</p>
+                <pre>
+                    <code>python commix.py -h
+                </code>
+                </pre>
+                <p>
+                    <strong>Q</strong>
+              ": Where can I check all the available options and switches?"
+          </p>
+          <p>
+            <strong>A</strong>
+            ": Check the ‘"
+            <strong>
+                <a href="https://github.com/commixproject/commix/wiki/Usage">usage</a></strong>
+            "‘ wiki page."
+        </p>
+        <h2>
+            <center><a id="user-content-usage-examples" class="anchor" aria-hidden="true" href="https://github.com/rohan805/kali" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg>
+            </a></center><center>"Usage Examples"</center>
+        </h2>
+        <center><p>
+            <strong>Q</strong>
+        ": Can I get some basic ideas on how to use commix?"
+    </p></center>
+    <center><p>
+        <strong>A</strong>
+        ": Just go and check the ‘"
+        <strong>
+            <a href="https://github.com/commixproject/commix/wiki/Usage-Examples">usage examples</a>
+        </strong>
+    "‘ wiki page, where there are several test cases and attack scenarios."
+</p></center>
+<h2>
+    <center><a id="user-content-upload-shells" class="anchor" aria-hidden="true" href="https://github.com/rohan805/kali" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg>
+    </a>"Upload Shells"</center>
+</h2>
+<p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<br>
+ <ins class="adsbygoogle" style="display: block;" data-ad-client="ca-pub-6620833063853657" data-ad-slot="6941004256" data-ad-format="auto" data-full-width-responsive="true"></ins>
+ <br>
+<script>// <!&#091;CDATA&#091;      (adsbygoogle = window.adsbygoogle || &#091;&#093;).push({}); // &#093;&#093;>
+    
+</script>
+</p>
+  <center><p> 
+    <strong>Q</strong>
+": How easily can I upload web-shells on a target host via commix?"</p></center>
+  <center><p>
+    <strong>A</strong>
+    ": Commix enables you to upload web-shells (e.g metasploit PHP meterpreter) easily on target host. For more, check the ‘"
+    <strong>
+        <a href="https://github.com/commixproject/commix/wiki/Upload-shells">upload shells</a>
+    </strong>"‘ wiki page."</p></center>
+    <h2>
+        <center><a id="user-content-modules-development" class="anchor" aria-hidden="true" href="" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg>
+        </a></center>
+    <center>"Modules Development"</center>
+</h2>
+<center><p>
+    <strong>Q</strong>
+": Do you want to increase the capabilities of the commix tool and/or to adapt it to our needs?"</p></center>
+<center><p>
+    <strong>A</strong>
+    : You can easily develop and import our own modules. For more, check the ‘
+    <strong>
+        <center><a href="https://github.com/commixproject/commix/wiki/Module-Development">module development</a></center>
+    </strong>
+"‘ wiki page."</p></center>
+<h2>
+    <center><a id="user-content-command-injection-testbeds" class="anchor" aria-hidden="true" href="https://github.com/rohan805/kali" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a></center>
+    <center>"Command Injection Testbeds"</center></h2>
+    <center><p>
+        <strong>Q</strong>
+    ": How can I test or evaluate the exploitation abilities of commix?"</p></center>
+    <p>
+        <strong>A</strong>
+       <center>": Check the ‘"</center>
+        <strong>
+            <center><a href="https://github.com/commixproject/commix/wiki/Command-Injection-Testbeds">command injection testbeds</a></center>
+            </strong>
+        <center>"‘ wiki page which includes a collection of pwnable web applications and/or VMs (that include web applications) vulnerable to command injection attacks."</p></center>
+        <h2>
+            <center><a id="user-content-exploitation-demos" class="anchor" aria-hidden="true" href="https://github.com/rohan805/kali/commix#exploitation-demos" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a></center>
+            <center>"Exploitation Demos"</center>
+        </h2>
+        <center><p>
+            <strong>Q</strong>
+        ": Is there a place where I can check for demos of commix?"</p></center>
+        <center><p>
+            <strong>A</strong>
+            ": If you want to see a collection of demos, about the exploitation abilities of commix, take a look at the ‘"
+            <strong>
+                <center><a href="https://github.com/commixproject/commix/wiki/Exploitation-Demos">exploitation demos</a></center>
+            </strong>
+            <center>"‘ wiki page."</center>
+        </p>
+        <h2>
+            <center><a id="user-content-bugs-and-enhancements" class="anchor" aria-hidden="true" href="https://github.com/rohan805/kali/commix#bugs-and-enhancements" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a></center>
+                <center>"Bugs and Enhancements"</center>
+            </h2>
+            <p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+ <ins class="adsbygoogle" style="display: block;" data-ad-client="ca-pub-6620833063853657" data-ad-slot="6941004256" data-ad-format="auto" data-full-width-responsive="true"></ins><br>
+<script>// <!&#091;CDATA&#091;      (adsbygoogle = window.adsbygoogle || &#091;&#093;).push({}); // &#093;&#093;></script>
+</p>
+<cente><p> 
+    <strong>Q</strong>
+": I found a bug / I have to suggest a new feature! What can I do?"
+</p></cente>
+<center><p>
+    <strong>A</strong>
+    ": For bug reports or enhancements, please open an issue"
+    <span>&nbsp;</span>
+    <strong>
+        <a href="https://github.com/commixproject/commix/issues">here</a>
+    </strong>
+"."
+</p></center>
+<h2>
+    <center><a id="user-content-presentations-and-white-papers" class="anchor" aria-hidden="true" href="https://github.com/rohan805/kali/commix#presentations-and-white-papers" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a></center>
+    "Presentations and White Papers"</h2>
+    <center><p>
+        <strong>Q</strong>
+    ": Is there a place where I can find presentations and/or white papers regarding commix?"</p></center>
+    <center><p>
+        <strong>A</strong>
+        ": For presentations and/or white papers published in conferences, check the ‘"
+        <strong>
+            <a href="https://github.com/commixproject/commix/wiki/Presentations">presentations</a>
+        </strong>
+    "‘ wiki page."
+</p></center>
+<h2>
+    <center><a id="user-content-support-and-donations" class="anchor" aria-hidden="true" href="https://github.com/rohan805/kali" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a></center>
+    "Support and Donations"
+</h2>
+<center><p>
+    <strong>Q</strong>
+": Except for tech stuff (bug reports or enhancements) is there any other way that I can support the development of commix?"
+</p></center>
+<center><p>
+    <strong>A</strong>
+    ": Sure! Commix is the outcome of many hours of work and total personal dedication. Feel free to ‘"
+    <strong>
+        <a href="https://mail.google.com/mail/u/1/?tab=wm#inbox?compose=new">donate</a>
+    </strong>
+    ‘ Contact Us"
+    <span>&nbsp;</span>
+    <code>blackhathackerworld332@gmail.com</code>
+    <span>&nbsp;</span>
+"and instantly prove your feelings for it! :)."
+</p></center>
+<hr>
+<center><p>
+
+    <div style="line-height: 0;">
+        <iframe src="https://www.patreon.com/platform/iframe?widget=become-patron-button&amp;redirectURI=https%3A%2F%2Fwww.blackhatethicalhacking.com%2Ftools%2Fcommix%2F&amp;creatorID=20287909" scrolling="no" allowtransparency="true" frameborder="0" class="patreon-widget" title="Patreon Widget" style="position: static; visibility: visible; width: 176px; height: 33px;"></iframe></div>
+    </p></center>
+    <hr>
+     <video width="1700" height="450" autoplay>
+        <source src="movies.mp4" type="video/mp4">
+      </video>
+      <hr>
+      <div class="et_pb_title_container">    
+<h1 class="entry-title">Offensive Security Tool: DroneSploit</h1>
+<p class="et_pb_title_meta_container">
+ "by DEEP.HACKING"
+<div class="et_pb_title_featured_container">
+    <span class="et_pb_image_wrap">
+        <center><img src="img/68747470733a2f2f64686f6e6474612e6769746875622e696f2f64726f6e6573706c6f69742f646f63732f696d672f64726f6e6573706c6f69742e706e67-980x689.png" width="620" height="450"></span></center>
+    </div>
+    <div class="et_pb_row_inner et_pb_row_inner_1">
+<div class="et_pb_column et_pb_column_4_4 et_pb_column_inner et_pb_column_inner_1 et-last-child">
+<div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
+<div class="et_pb_text_inner"><div class="second-place clear"></div>
+<div class="second-place clear"></div>
+<div class="second-place clear" style="text-align: center;">
+<p><code></code></p>
+<p><code><code></code></code></p>
+<p><strong>Reading Time:&nbsp;</strong><strong>10&nbsp;</strong>Minutes</p>
+<p><code></code></p>
+<p><code>&nbsp;</code><strong style="font-size: large;">Offensive Security Tool: DroneSploit</strong></p>
+<p><strong style="font-size: large;"></strong></p>
+</div>
+<div id="second-place" class="second-place clear">
+<div class="c-article__intro" style="text-align: center;">
+<aside class="inline-block inline-related align-left item-count-1 related-video">
+<div dir="ltr">
+<div class="c-article__intro">
+<header>
+<div class="c-article__intro" style="box-sizing: inherit; orphans: 2; text-align: start; text-indent: 0px; widows: 2; text-decoration-style: initial; text-decoration-color: initial;">
+<div class="c-article__intro">
+<div class="c-article__intro">
+<div class="c-article__intro" style="text-align: center;">
+<div class="c-article__intro">
+<div class="c-article__intro">
+<div class="c-article__intro">
+<div class="c-article__intro">
+<div class="c-article__intro">
+<div class="c-article__intro">
+<div class="c-article__intro">
+<p><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+<ins class="adsbygoogle" style="display: block; text-align: center; height: 0px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6620833063853657" data-ad-slot="4517761481" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display: inline-table; border: none; height: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 552px; background-color: transparent;"><ins id="aswift_1_anchor" style="display: block; border: none; height: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 552px; background-color: transparent; overflow: hidden; opacity: 0;"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:552px;height:138px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="552" height="138" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-6620833063853657&amp;output=html&amp;h=138&amp;slotname=4517761481&amp;adk=2032369501&amp;adf=2473559564&amp;w=552&amp;fwrn=4&amp;lmt=1602496486&amp;rafmt=11&amp;psa=1&amp;guci=2.2.0.0.2.2.0.0&amp;format=552x138&amp;url=https%3A%2F%2Fwww.blackhatethicalhacking.com%2Ftools%2Fdronesploit%2F%3F__cf_chl_jschl_tk__%3D1e2c36c05900661220ebdacaf427ec2a548047b7-1602496467-0-ARScBnYHhNhkzsHGo9HYrjiouXhnO9o0S79Jeqi5NONk8V4iRHN_bSIgdfH_cVJKPTZ51jZRY_RnGgRJ_ak1BvSmKyltk2iJqIYoubD7v-chet4KwAe4o8l3h9zwZY0uQvNSlnpA9mJZY46oEDvRCGmU96OdSDGqrAt8xErKnuacO4ELa-R70t0V0yLCZhGF4GZRC-Z0H27As6jbEbEDCnbQxMLsBR_DSFdW7KZZWSD7PEJR8JlCHF78XUirvGaUsgAGRyobhwqq_lT4WfKol5l4Y5ofhxNX4_0wNaiEqGbk&amp;flash=0&amp;wgl=1&amp;tt_state=W3siaXNzdWVyT3JpZ2luIjoiaHR0cHM6Ly9hZHNlcnZpY2UuZ29vZ2xlLmNvbSIsInN0YXRlIjowfV0.&amp;dt=1602496484629&amp;bpp=157&amp;bdt=7120&amp;idt=1835&amp;shv=r20201007&amp;cbv=r20190131&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3D39a0d9562ca1fc11-226e6142d4c30054%3AT%3D1601718496%3ART%3D1601718496%3AS%3DALNI_MbXWsTvnZH7n5IQIMTMJmc7uoAjXg&amp;prev_fmts=0x0&amp;nras=1&amp;correlator=7339294127909&amp;frm=20&amp;pv=1&amp;ga_vid=1144099473.1601718494&amp;ga_sid=1602496486&amp;ga_hid=1307461535&amp;ga_fc=0&amp;iag=0&amp;icsg=53875263056552&amp;dssz=52&amp;mdo=0&amp;mso=0&amp;rplot=4&amp;u_tz=-420&amp;u_his=9&amp;u_java=0&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;adx=71&amp;ady=867&amp;biw=689&amp;bih=625&amp;scr_x=0&amp;scr_y=0&amp;oid=3&amp;pvsid=607753022725377&amp;pem=64&amp;ref=https%3A%2F%2Fwww.blackhatethicalhacking.com%2Ftools%2Fdronesploit%2F&amp;rx=0&amp;eae=0&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C706%2C625&amp;vis=1&amp;rsz=%7C%7CeEbr%7C&amp;abl=CS&amp;pfx=0&amp;fu=8320&amp;bc=31&amp;ifi=1&amp;uci=a!1&amp;btvi=1&amp;fsb=1&amp;xpc=AakHCNFuWX&amp;p=https%3A//www.blackhatethicalhacking.com&amp;dtd=1941" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!1" data-google-query-id="CKLr883kruwCFREB-QAd9qIFOA" data-load-complete="true"></iframe></ins></ins></ins><br>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+<div class="c-article__intro">
+<div class="c-article__intro">
+<div class="c-article__intro">
+<div class="topContent container">
+<div class="row">
+<div class="row">
+<div class="col-12">
+<header class="storyHeader article">
+<div id="main" data-article-num="1">
+<div>
+<section class="leader leader-top" data-component="medusaContentRecommendation" data-medusa-content-recommendation-options="{&quot;promo&quot;:&quot;promo_zd_recommendation_top_leaderboard_desktop&quot;,&quot;spot&quot;:&quot;content-top-leaderboard&quot;}"></section>
+<div style="text-align: center;"></div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;">Github <a title="Download" href="https://github.com/rohan805/kali/dronesploit">Link</a></div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;"></div>
+<p>&nbsp;</p>
+<div style="text-align: center;"><strong><div class="post-views post-247354 entry-meta">
+<span class="post-views-icon dashicons dashicons-chart-bar"></span>
+<span class="post-views-label">Post Views: </span>
+<span class="post-views-count">1,544</span>
+</div></strong></div>
+<div style="text-align: center;"></div>
+</div>
+</div>
+</header>
+</div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><a href="https://pypi.python.org/pypi/dronesploit/" rel="nofollow"><img src="https://camo.githubusercontent.com/5652e26814955979c9759f6d6d9d44cc95b3c71f/68747470733a2f2f696d672e736869656c64732e696f2f707970692f762f64726f6e6573706c6f69742e737667" alt="PyPi" data-canonical-src="https://img.shields.io/pypi/v/dronesploit.svg"></a><span>&nbsp;</span><a href="https://dronesploit.readthedocs.io/en/latest/?badge=latest" rel="nofollow"><img src="https://camo.githubusercontent.com/01257fc3a4cf75ce4bee197e946290afb557e357/68747470733a2f2f72656164746865646f63732e6f72672f70726f6a656374732f64726f6e6573706c6f69742f62616467652f3f76657273696f6e3d6c6174657374" alt="Read The Docs" data-canonical-src="https://readthedocs.org/projects/dronesploit/badge/?version=latest"></a><span>&nbsp;</span><a href="https://snyk.io/test/github/dhondta/dronesploit?targetFile=requirements.txt" rel="nofollow"><img src="https://camo.githubusercontent.com/187900ac5b0785cf053f6709e9ff00bc8cc5ee31/68747470733a2f2f736e796b2e696f2f746573742f6769746875622f64686f6e6474612f64726f6e6573706c6f69742f62616467652e7376673f74617267657446696c653d726571756972656d656e74732e747874" alt="Known Vulnerabilities" data-canonical-src="https://snyk.io/test/github/dhondta/dronesploit/badge.svg?targetFile=requirements.txt"></a><span>&nbsp;</span><a href="https://requires.io/github/dhondta/dronesploit/requirements/?branch=master" rel="nofollow"><img src="https://camo.githubusercontent.com/b241ae2bad4959ec6d010f91f31844016a64b934/68747470733a2f2f72657175697265732e696f2f6769746875622f64686f6e6474612f64726f6e6573706c6f69742f726571756972656d656e74732e7376673f6272616e63683d6d6173746572" alt="Requirements Status" data-canonical-src="https://requires.io/github/dhondta/dronesploit/requirements.svg?branch=master"></a><span>&nbsp;</span><a href="https://pypi.python.org/pypi/dronesploit/" rel="nofollow"><img src="https://camo.githubusercontent.com/ef06e7dd5dde60469407a91f2f9ece3d543c19e6/68747470733a2f2f696d672e736869656c64732e696f2f707970692f707976657273696f6e732f64726f6e6573706c6f69742e737667" alt="Python Versions" data-canonical-src="https://img.shields.io/pypi/pyversions/dronesploit.svg"></a><span>&nbsp;</span><a href="https://www.blackhat.com/eu-19/arsenal/schedule/index.html#drone-hacking-with-dronesploit-18217" rel="nofollow" data-et-has-event-already="true"><img src="https://camo.githubusercontent.com/772da9575517fd2835eb553c4375736a680b2c5c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f426c61636b253230486174253230417273656e616c2d4555253230323031392d626c75652e737667" alt="Black Hat Arsenal Europe 2019" data-canonical-src="https://img.shields.io/badge/Black%20Hat%20Arsenal-EU%202019-blue.svg"></a><span>&nbsp;</span><a href="https://github.com/dhondta/dronesploit/blob/master/LICENSE"><img src="https://camo.githubusercontent.com/47d9050eacb804283495a010f55cca5f6b71adbc/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4147504c25323076332d6c69676874677265792e737667" alt="License" data-canonical-src="https://img.shields.io/badge/license-AGPL%20v3-lightgrey.svg"></a></p>
+<h1><a id="user-content-dronesploit" class="anchor" aria-hidden="true" href="https://github.com/rohan805/kali" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>DroneSploit</h1>
+<p>This CLI framework is based on<span>&nbsp;</span><a href="https://github.com/dhondta/python-sploitkit"><code>sploitkit</code></a><span>&nbsp;</span>and is an attempt to gather hacking techniques and exploits especially focused on<span>&nbsp;</span><strong>drone hacking</strong>. For the ease of use, the interface has a layout that looks like Metasploit.</p>
+<p><a href="https://dhondta.github.io/dronesploit/docs/blackhat-eu19-arsenal.pdf" rel="nofollow">Black Hat Europe Arsenal 2019 presentation</a></p>
+<p>Also see articles:</p>
+<ul>
+<li><a href="https://portswigger.net/daily-swig/black-hat-europe-new-tool-offers-metasploit-like-framework-for-hacking-into-drones" rel="nofollow"><em>Black Hat Europe: New tool offers Metasploit-like framework for hacking into drones</em>, The Daily Swig</a></li>
+<li><a href="https://hakin9.org/dronesploit-a-pentesting-console-framework-dedicated-to-drones/" rel="nofollow"><em>Dronesploit, a pentesting console framework dedicated to drones</em>, Hakin9</a></li>
+</ul>
+<h2><a id="user-content-setup" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/dronesploit#setup" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Setup</h2>
+<p>This project is available on<span>&nbsp;</span><a href="https://pypi.python.org/pypi/dronesploit/" rel="nofollow">PyPi</a><span>&nbsp;</span>and can be simply installed using Pip:</p>
+<div class="highlight highlight-source-shell">
+<pre>pip3 install dronesploit</pre>
+</div>
+<h1><a id="user-content-basics" class="anchor" aria-hidden="true" href="https://github.com/rohan805/kali/dronesploit#basics" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Basics</h1>
+<h2><a id="user-content-interface" class="anchor" aria-hidden="true" href="https://github.com/rohan805/kali/dronesploit#interface" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Interface</h2>
+<p>&nbsp;</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/420ed5a5f0d7244b40180d4e57030a8b5c631b9f/68747470733a2f2f64686f6e6474612e6769746875622e696f2f64726f6e6573706c6f69742f646f63732f696d672f64726f6e6573706c6f69742d636f6d6d616e64732e706e67"><img src="https://camo.githubusercontent.com/420ed5a5f0d7244b40180d4e57030a8b5c631b9f/68747470733a2f2f64686f6e6474612e6769746875622e696f2f64726f6e6573706c6f69742f646f63732f696d672f64726f6e6573706c6f69742d636f6d6d616e64732e706e67" alt="DroneSploit command examples" data-canonical-src="https://dhondta.github.io/dronesploit/docs/img/dronesploit-commands.png"></a></p>
+<h2><a id="user-content-modules" class="anchor" aria-hidden="true" href="https://github.com/rohan805/kali/dronesploit#modules" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Modules</h2>
+<p><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+<ins class="adsbygoogle" style="display: block; text-align: center; height: 0px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6620833063853657" data-ad-slot="4517761481" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display: inline-table; border: none; height: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 552px; background-color: transparent;"><ins id="aswift_2_anchor" style="display: block; border: none; height: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 552px; background-color: transparent; overflow: hidden; opacity: 0;"><iframe id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0;width:552px;height:138px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="552" height="138" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-6620833063853657&amp;output=html&amp;h=138&amp;slotname=4517761481&amp;adk=2342799725&amp;adf=3120830315&amp;w=552&amp;fwrn=4&amp;lmt=1602496487&amp;rafmt=11&amp;psa=1&amp;guci=2.2.0.0.2.2.0.0&amp;format=552x138&amp;url=https%3A%2F%2Fwww.blackhatethicalhacking.com%2Ftools%2Fdronesploit%2F%3F__cf_chl_jschl_tk__%3D1e2c36c05900661220ebdacaf427ec2a548047b7-1602496467-0-ARScBnYHhNhkzsHGo9HYrjiouXhnO9o0S79Jeqi5NONk8V4iRHN_bSIgdfH_cVJKPTZ51jZRY_RnGgRJ_ak1BvSmKyltk2iJqIYoubD7v-chet4KwAe4o8l3h9zwZY0uQvNSlnpA9mJZY46oEDvRCGmU96OdSDGqrAt8xErKnuacO4ELa-R70t0V0yLCZhGF4GZRC-Z0H27As6jbEbEDCnbQxMLsBR_DSFdW7KZZWSD7PEJR8JlCHF78XUirvGaUsgAGRyobhwqq_lT4WfKol5l4Y5ofhxNX4_0wNaiEqGbk&amp;flash=0&amp;wgl=1&amp;tt_state=W3siaXNzdWVyT3JpZ2luIjoiaHR0cHM6Ly9hZHNlcnZpY2UuZ29vZ2xlLmNvbSIsInN0YXRlIjowfV0.&amp;dt=1602496484786&amp;bpp=30&amp;bdt=7277&amp;idt=3143&amp;shv=r20201007&amp;cbv=r20190131&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3D39a0d9562ca1fc11-226e6142d4c30054%3AT%3D1601718496%3ART%3D1601718496%3AS%3DALNI_MbXWsTvnZH7n5IQIMTMJmc7uoAjXg&amp;prev_fmts=0x0%2C552x138&amp;nras=1&amp;correlator=7339294127909&amp;frm=20&amp;pv=1&amp;ga_vid=1144099473.1601718494&amp;ga_sid=1602496486&amp;ga_hid=1307461535&amp;ga_fc=0&amp;iag=0&amp;icsg=3448016835881610&amp;dssz=57&amp;mdo=0&amp;mso=0&amp;rplot=4&amp;u_tz=-420&amp;u_his=9&amp;u_java=0&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;adx=71&amp;ady=2226&amp;biw=689&amp;bih=625&amp;scr_x=0&amp;scr_y=0&amp;oid=3&amp;pvsid=607753022725377&amp;pem=64&amp;ref=https%3A%2F%2Fwww.blackhatethicalhacking.com%2Ftools%2Fdronesploit%2F&amp;rx=0&amp;eae=0&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C706%2C625&amp;vis=1&amp;rsz=%7C%7CeEbr%7C&amp;abl=CS&amp;pfx=0&amp;fu=8320&amp;bc=31&amp;ifi=2&amp;uci=a!2&amp;btvi=2&amp;fsb=1&amp;xpc=5teEkj01qp&amp;p=https%3A//www.https://github.com/rohan805/kali.com&amp;dtd=3212" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!2" data-google-query-id="CM_xyc7kruwCFYToZAodGMgKYg" data-load-complete="true"></iframe></ins></ins></ins><br>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><br>
+This example shows an example of module for DroneSploit aimed to change the password or the SSID of a particular model of drone.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/26088f3e8c1da173343d41532596a6ff641390f3/68747470733a2f2f64686f6e6474612e6769746875622e696f2f64726f6e6573706c6f69742f646f63732f696d672f64726f6e6573706c6f69742d6d6f64756c652e706e67"><img src="https://camo.githubusercontent.com/26088f3e8c1da173343d41532596a6ff641390f3/68747470733a2f2f64686f6e6474612e6769746875622e696f2f64726f6e6573706c6f69742f646f63732f696d672f64726f6e6573706c6f69742d6d6f64756c652e706e67" alt="DroneSploit module example" data-canonical-src="https://dhondta.github.io/dronesploit/docs/img/dronesploit-module.png"></a></p>
+<h2><strong>Setup</strong></h2>
+<p><span>This project is available on&nbsp;<a href="https://pypi.python.org/pypi/dronesploit/" rel="nofollow">PyPi</a>&nbsp;and can be simply installed using Pip:</span></p>
+<pre><span>pip3 install dronesploit
+</span></pre>
+<h2 id="1-startup"><strong>1. Startup</strong></h2>
+<pre><span>$ python3 main.py --help
+usage: ./main.py <span class="o">[</span>--dev<span class="o">]</span> <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>-v<span class="o">]</span>
+
+Main
+
+optional arguments:
+  --dev          development mode <span class="o">(</span>default: False<span class="o">)</span>
+
+extra arguments:
+  -h, --help     show this <span class="nb">help</span> message and <span class="nb">exit</span>
+  -v, --verbose  verbose mode <span class="o">(</span>default: False<span class="o">)</span></span></pre>
+<p><span>The console is started using the launcher&nbsp;<code>main.py</code>. It may ask for sudo rights as it must have the permission for setting WiFi interfaces.</span></p>
+<pre><span>$ python3 main.py
+<span class="o">[</span>sudo<span class="o">]</span> password <span class="k">for</span> user:
+
+<span class="o">[</span>...<span class="o">]</span></span></pre>
+<p><span>At startup, a banner is shown and a summary of the available modules is shown.</span></p>
+<p><a href="https://hakin9.org/wp-content/uploads/2020/01/68747470733a2f2f64686f6e6474612e6769746875622e696f2f64726f6e6573706c6f69742f646f63732f696d672f64726f6e6573706c6f69742e706e67.jpg"><img loading="lazy" class="alignnone wp-image-162673" src="https://hakin9.org/wp-content/uploads/2020/01/68747470733a2f2f64686f6e6474612e6769746875622e696f2f64726f6e6573706c6f69742f646f63732f696d672f64726f6e6573706c6f69742e706e67.jpg" alt="" width="856" height="602" srcset="https://hakin9.org/wp-content/uploads/2020/01/68747470733a2f2f64686f6e6474612e6769746875622e696f2f64726f6e6573706c6f69742f646f63732f696d672f64726f6e6573706c6f69742e706e67.jpg 1022w, https://hakin9.org/wp-content/uploads/2020/01/68747470733a2f2f64686f6e6474612e6769746875622e696f2f64726f6e6573706c6f69742f646f63732f696d672f64726f6e6573706c6f69742e706e67-460x324.jpg 460w, https://hakin9.org/wp-content/uploads/2020/01/68747470733a2f2f64686f6e6474612e6769746875622e696f2f64726f6e6573706c6f69742f646f63732f696d672f64726f6e6573706c6f69742e706e67-768x540.jpg 768w, https://hakin9.org/wp-content/uploads/2020/01/68747470733a2f2f64686f6e6474612e6769746875622e696f2f64726f6e6573706c6f69742f646f63732f696d672f64726f6e6573706c6f69742e706e67-500x352.jpg 500w, https://hakin9.org/wp-content/uploads/2020/01/68747470733a2f2f64686f6e6474612e6769746875622e696f2f64726f6e6573706c6f69742f646f63732f696d672f64726f6e6573706c6f69742e706e67-200x141.jpg 200w, https://hakin9.org/wp-content/uploads/2020/01/68747470733a2f2f64686f6e6474612e6769746875622e696f2f64726f6e6573706c6f69742f646f63732f696d672f64726f6e6573706c6f69742e706e67-378x266.jpg 378w, https://hakin9.org/wp-content/uploads/2020/01/68747470733a2f2f64686f6e6474612e6769746875622e696f2f64726f6e6573706c6f69742f646f63732f696d672f64726f6e6573706c6f69742e706e67-565x397.jpg 565w, https://hakin9.org/wp-content/uploads/2020/01/68747470733a2f2f64686f6e6474612e6769746875622e696f2f64726f6e6573706c6f69742f646f63732f696d672f64726f6e6573706c6f69742e706e67-120x84.jpg 120w, https://hakin9.org/wp-content/uploads/2020/01/68747470733a2f2f64686f6e6474612e6769746875622e696f2f64726f6e6573706c6f69742f646f63732f696d672f64726f6e6573706c6f69742e706e67-310x218.jpg 310w" sizes="(max-width: 856px) 100vw, 856px"></a></p>
+<p>Some requirements can be unsatisfied at startup like in the picture above. The command<span>&nbsp;</span><code>show issues</code><span>&nbsp;</span>allows to identify how this can be fixed.</p>
+<h3><strong>2.1 From the root console</strong></h3>
+<p><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+<ins class="adsbygoogle" style="display: block; text-align: center; height: 138px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6620833063853657" data-ad-slot="4517761481" data-adsbygoogle-status="done"><ins id="aswift_3_expand" style="display:inline-table;border:none;height:138px;margin:0;padding:0;position:relative;visibility:visible;width:552px;background-color:transparent;"><ins id="aswift_3_anchor" style="display:block;border:none;height:138px;margin:0;padding:0;position:relative;visibility:visible;width:552px;background-color:transparent;"></ins></ins></ins><br>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+<pre><span>dronesploit &gt; <span class="nb">help</span>
+<span class="o">[</span>...<span class="o">]
+</span></span></pre>
+<p><span>This will display multiple sections in function of the context ;</span></p>
+<ul>
+<li><span>General commands are always displayed.&nbsp;<strong>Example</strong>: Getting help in DroneSploit – General commands</span></li>
+</ul>
+<p><span class="o"><a href="https://hakin9.org/wp-content/uploads/2020/01/help-general.jpg"><img loading="lazy" class="alignnone size-full wp-image-162676" src="https://hakin9.org/wp-content/uploads/2020/01/help-general.jpg" alt="" width="714" height="484" srcset="https://hakin9.org/wp-content/uploads/2020/01/help-general.jpg 714w, https://hakin9.org/wp-content/uploads/2020/01/help-general-460x312.jpg 460w, https://hakin9.org/wp-content/uploads/2020/01/help-general-500x339.jpg 500w, https://hakin9.org/wp-content/uploads/2020/01/help-general-200x136.jpg 200w, https://hakin9.org/wp-content/uploads/2020/01/help-general-378x256.jpg 378w, https://hakin9.org/wp-content/uploads/2020/01/help-general-565x383.jpg 565w, https://hakin9.org/wp-content/uploads/2020/01/help-general-120x81.jpg 120w, https://hakin9.org/wp-content/uploads/2020/01/help-general-310x210.jpg 310w" sizes="(max-width: 714px) 100vw, 714px"></a></span></p>
+<ul>
+<li><span>Level-specific commands are displayed according to the current console.&nbsp;<strong>Example</strong>: Getting help in DroneSploit – Specific commands:</span></li>
+</ul>
+<p><a href="https://hakin9.org/wp-content/uploads/2020/01/help-others.jpg"><img loading="lazy" class="alignnone size-full wp-image-162677" src="https://hakin9.org/wp-content/uploads/2020/01/help-others.jpg" alt="" width="716" height="458" srcset="https://hakin9.org/wp-content/uploads/2020/01/help-others.jpg 716w, https://hakin9.org/wp-content/uploads/2020/01/help-others-460x294.jpg 460w, https://hakin9.org/wp-content/uploads/2020/01/help-others-500x320.jpg 500w, https://hakin9.org/wp-content/uploads/2020/01/help-others-200x128.jpg 200w, https://hakin9.org/wp-content/uploads/2020/01/help-others-378x242.jpg 378w, https://hakin9.org/wp-content/uploads/2020/01/help-others-565x361.jpg 565w, https://hakin9.org/wp-content/uploads/2020/01/help-others-120x77.jpg 120w, https://hakin9.org/wp-content/uploads/2020/01/help-others-310x198.jpg 310w" sizes="(max-width: 716px) 100vw, 716px"></a></p>
+<h3><strong>2.2 From the project console</strong></h3>
+<pre><span>dronesploit &gt; <span class="k">select</span> <span class="nb">test</span>
+dronesploit<span class="o">[</span>test<span class="o">]</span> &gt; <span class="nb">help</span>
+<span class="o">[</span>...<span class="o">]</span></span></pre>
+<p><span>Now being into the context of a project, we now see the general commands again but with the project commands as the section for level-specific commands;&nbsp;<strong>Example</strong>: Getting help in DroneSploit – Project-level commands:</span></p>
+<p><a href="https://hakin9.org/wp-content/uploads/2020/01/help-project.jpg"><img loading="lazy" class="alignnone size-full wp-image-162678" src="https://hakin9.org/wp-content/uploads/2020/01/help-project.jpg" alt="" width="714" height="655" srcset="https://hakin9.org/wp-content/uploads/2020/01/help-project.jpg 714w, https://hakin9.org/wp-content/uploads/2020/01/help-project-460x422.jpg 460w, https://hakin9.org/wp-content/uploads/2020/01/help-project-500x459.jpg 500w, https://hakin9.org/wp-content/uploads/2020/01/help-project-200x183.jpg 200w, https://hakin9.org/wp-content/uploads/2020/01/help-project-378x347.jpg 378w, https://hakin9.org/wp-content/uploads/2020/01/help-project-565x518.jpg 565w, https://hakin9.org/wp-content/uploads/2020/01/help-project-120x110.jpg 120w, https://hakin9.org/wp-content/uploads/2020/01/help-project-310x284.jpg 310w" sizes="(max-width: 714px) 100vw, 714px"></a></p>
+<h3><strong>2.3 From the module console</strong></h3>
+<p><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+<ins class="adsbygoogle" style="display: block; text-align: center; height: 138px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6620833063853657" data-ad-slot="4517761481" data-adsbygoogle-status="done"><ins id="aswift_4_expand" style="display:inline-table;border:none;height:138px;margin:0;padding:0;position:relative;visibility:visible;width:552px;background-color:transparent;"><ins id="aswift_4_anchor" style="display:block;border:none;height:138px;margin:0;padding:0;position:relative;visibility:visible;width:552px;background-color:transparent;"></ins></ins></ins><br>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+<pre><span>dronesploit<span class="o">[</span>test<span class="o">]</span> &gt; use auxiliary/wifi/deauth
+dronesploit<span class="o">[</span>test<span class="o">]</span> auxiliary<span class="o">(</span>wifi/deauth<span class="o">)</span> &gt; <span class="nb">help</span>
+<span class="o">[</span>...<span class="o">]
+</span></span></pre>
+<p><span>Now being into the context of a module, we now see the general commands again but with the module commands as the section for level-specific commands;&nbsp;<strong>Example</strong>: Getting help in DroneSploit – Module-level commands:</span></p>
+<p><span class="o"><a href="https://hakin9.org/wp-content/uploads/2020/01/help-module.jpg"><img loading="lazy" class="alignnone size-full wp-image-162679" src="https://hakin9.org/wp-content/uploads/2020/01/help-module.jpg" alt="" width="697" height="661" srcset="https://hakin9.org/wp-content/uploads/2020/01/help-module.jpg 697w, https://hakin9.org/wp-content/uploads/2020/01/help-module-460x436.jpg 460w, https://hakin9.org/wp-content/uploads/2020/01/help-module-500x474.jpg 500w, https://hakin9.org/wp-content/uploads/2020/01/help-module-200x190.jpg 200w, https://hakin9.org/wp-content/uploads/2020/01/help-module-378x358.jpg 378w, https://hakin9.org/wp-content/uploads/2020/01/help-module-565x536.jpg 565w, https://hakin9.org/wp-content/uploads/2020/01/help-module-120x114.jpg 120w, https://hakin9.org/wp-content/uploads/2020/01/help-module-310x294.jpg 310w" sizes="(max-width: 697px) 100vw, 697px"></a></span></p>
+<h2><strong>3. Listing available modules</strong></h2>
+<p>This can be achieved by executing the following command:</p>
+<p><a href="https://hakin9.org/wp-content/uploads/2020/01/modules.jpg"><img loading="lazy" class="alignnone wp-image-162680" src="https://hakin9.org/wp-content/uploads/2020/01/modules.jpg" alt="" width="742" height="563" srcset="https://hakin9.org/wp-content/uploads/2020/01/modules.jpg 1076w, https://hakin9.org/wp-content/uploads/2020/01/modules-460x349.jpg 460w, https://hakin9.org/wp-content/uploads/2020/01/modules-1024x777.jpg 1024w, https://hakin9.org/wp-content/uploads/2020/01/modules-768x582.jpg 768w, https://hakin9.org/wp-content/uploads/2020/01/modules-500x379.jpg 500w, https://hakin9.org/wp-content/uploads/2020/01/modules-200x152.jpg 200w, https://hakin9.org/wp-content/uploads/2020/01/modules-378x287.jpg 378w, https://hakin9.org/wp-content/uploads/2020/01/modules-565x428.jpg 565w, https://hakin9.org/wp-content/uploads/2020/01/modules-120x91.jpg 120w, https://hakin9.org/wp-content/uploads/2020/01/modules-310x235.jpg 310w" sizes="(max-width: 742px) 100vw, 742px"></a></p>
+<div class="admonition note">
+<p>In the screenshot above, one can see two modules that are disabled, like shown at startup.</p>
+</div>
+<h2><strong>4. Enabling the WiFi monitor mode</strong></h2>
+<p><span>The&nbsp;<code>toggle</code>&nbsp;command allows to toggle the WiFi mode for an interface. It autocompletes through the list of WiFi interfaces present on the system.</span></p>
+<p><span><a href="https://hakin9.org/wp-content/uploads/2020/01/monitor-mode.jpg"><img loading="lazy" class="alignnone size-full wp-image-162681" src="https://hakin9.org/wp-content/uploads/2020/01/monitor-mode.jpg" alt="" width="408" height="56" srcset="https://hakin9.org/wp-content/uploads/2020/01/monitor-mode.jpg 408w, https://hakin9.org/wp-content/uploads/2020/01/monitor-mode-200x27.jpg 200w, https://hakin9.org/wp-content/uploads/2020/01/monitor-mode-378x52.jpg 378w, https://hakin9.org/wp-content/uploads/2020/01/monitor-mode-120x16.jpg 120w, https://hakin9.org/wp-content/uploads/2020/01/monitor-mode-310x43.jpg 310w" sizes="(max-width: 408px) 100vw, 408px"></a></span></p>
+<p><span>When executed, it switches between the managed and monitor modes</span></p>
+<p><a href="https://hakin9.org/wp-content/uploads/2020/01/managed-mode.jpg"><img loading="lazy" class="alignnone size-full wp-image-162682" src="https://hakin9.org/wp-content/uploads/2020/01/managed-mode.jpg" alt="" width="402" height="56" srcset="https://hakin9.org/wp-content/uploads/2020/01/managed-mode.jpg 402w, https://hakin9.org/wp-content/uploads/2020/01/managed-mode-200x28.jpg 200w, https://hakin9.org/wp-content/uploads/2020/01/managed-mode-378x53.jpg 378w, https://hakin9.org/wp-content/uploads/2020/01/managed-mode-120x17.jpg 120w, https://hakin9.org/wp-content/uploads/2020/01/managed-mode-310x43.jpg 310w" sizes="(max-width: 402px) 100vw, 402px"></a></p>
+<h2><strong>5. Scanning for targets</strong></h2>
+<p><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+<ins class="adsbygoogle" style="display: block; text-align: center; height: 138px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6620833063853657" data-ad-slot="4517761481" data-adsbygoogle-status="done"><ins id="aswift_5_expand" style="display:inline-table;border:none;height:138px;margin:0;padding:0;position:relative;visibility:visible;width:552px;background-color:transparent;"><ins id="aswift_5_anchor" style="display:block;border:none;height:138px;margin:0;padding:0;position:relative;visibility:visible;width:552px;background-color:transparent;"></ins></ins></ins><br>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><br>
+<span>The&nbsp;<code>scan</code>&nbsp;command allows to quickly scan for targets (and requires a WiFi interface in monitor mode).</span></p>
+<p><span><a href="https://hakin9.org/wp-content/uploads/2020/01/scanning.jpg"><img loading="lazy" class="alignnone size-full wp-image-162683" src="https://hakin9.org/wp-content/uploads/2020/01/scanning.jpg" alt="" width="550" height="75" srcset="https://hakin9.org/wp-content/uploads/2020/01/scanning.jpg 550w, https://hakin9.org/wp-content/uploads/2020/01/scanning-460x63.jpg 460w, https://hakin9.org/wp-content/uploads/2020/01/scanning-500x68.jpg 500w, https://hakin9.org/wp-content/uploads/2020/01/scanning-200x27.jpg 200w, https://hakin9.org/wp-content/uploads/2020/01/scanning-378x52.jpg 378w, https://hakin9.org/wp-content/uploads/2020/01/scanning-120x16.jpg 120w, https://hakin9.org/wp-content/uploads/2020/01/scanning-310x42.jpg 310w" sizes="(max-width: 550px) 100vw, 550px"></a></span></p>
+<p><span>The&nbsp;<code>targets</code>&nbsp;command then allows to list the discovered targets and their characteristics.</span></p>
+<p><a href="https://hakin9.org/wp-content/uploads/2020/01/targets-list.jpg"><img loading="lazy" class="alignnone size-full wp-image-162684" src="https://hakin9.org/wp-content/uploads/2020/01/targets-list.jpg" alt="" width="837" height="178" srcset="https://hakin9.org/wp-content/uploads/2020/01/targets-list.jpg 837w, https://hakin9.org/wp-content/uploads/2020/01/targets-list-460x98.jpg 460w, https://hakin9.org/wp-content/uploads/2020/01/targets-list-768x163.jpg 768w, https://hakin9.org/wp-content/uploads/2020/01/targets-list-500x106.jpg 500w, https://hakin9.org/wp-content/uploads/2020/01/targets-list-200x43.jpg 200w, https://hakin9.org/wp-content/uploads/2020/01/targets-list-378x80.jpg 378w, https://hakin9.org/wp-content/uploads/2020/01/targets-list-565x120.jpg 565w, https://hakin9.org/wp-content/uploads/2020/01/targets-list-120x26.jpg 120w, https://hakin9.org/wp-content/uploads/2020/01/targets-list-310x66.jpg 310w" sizes="(max-width: 837px) 100vw, 837px"></a></p>
+<div class="admonition note">
+<p><span>Targets are valid during a period of 5 minutes, meaning that they will still be displayed after this period, but when using the&nbsp;<code>scan</code>&nbsp;command again, the list will be updated (and targets that are not in the vicinity anymore will disappear).</span></p>
+</div>
+<h2><strong>6. Breaking into a target</strong></h2>
+<p><span>Now that we have a target, we can start an attack. For this purpose, we start the appropriate attack module. Note that, in the example hereafter, the&nbsp;<code>ESSID</code>&nbsp;and&nbsp;<code>INTERFACE</code>&nbsp;options are automatically filled in with the current information.</span></p>
+<p><a href="https://hakin9.org/wp-content/uploads/2020/01/wpa2-psk-attack.jpg"><img loading="lazy" class="alignnone size-full wp-image-162685" src="https://hakin9.org/wp-content/uploads/2020/01/wpa2-psk-attack.jpg" alt="" width="1074" height="362" srcset="https://hakin9.org/wp-content/uploads/2020/01/wpa2-psk-attack.jpg 1074w, https://hakin9.org/wp-content/uploads/2020/01/wpa2-psk-attack-460x155.jpg 460w, https://hakin9.org/wp-content/uploads/2020/01/wpa2-psk-attack-1024x345.jpg 1024w, https://hakin9.org/wp-content/uploads/2020/01/wpa2-psk-attack-768x259.jpg 768w, https://hakin9.org/wp-content/uploads/2020/01/wpa2-psk-attack-500x169.jpg 500w, https://hakin9.org/wp-content/uploads/2020/01/wpa2-psk-attack-200x67.jpg 200w, https://hakin9.org/wp-content/uploads/2020/01/wpa2-psk-attack-378x127.jpg 378w, https://hakin9.org/wp-content/uploads/2020/01/wpa2-psk-attack-565x190.jpg 565w, https://hakin9.org/wp-content/uploads/2020/01/wpa2-psk-attack-120x40.jpg 120w, https://hakin9.org/wp-content/uploads/2020/01/wpa2-psk-attack-310x104.jpg 310w" sizes="(max-width: 1074px) 100vw, 1074px"></a></p>
+<p><span>The attack succeeded and the password is then known in the targets list.</span></p>
+<p><span><a href="https://hakin9.org/wp-content/uploads/2020/01/targets-with-password.jpg"><img loading="lazy" class="alignnone size-full wp-image-162686" src="https://hakin9.org/wp-content/uploads/2020/01/targets-with-password.jpg" alt="" width="832" height="178" srcset="https://hakin9.org/wp-content/uploads/2020/01/targets-with-password.jpg 832w, https://hakin9.org/wp-content/uploads/2020/01/targets-with-password-460x98.jpg 460w, https://hakin9.org/wp-content/uploads/2020/01/targets-with-password-768x164.jpg 768w, https://hakin9.org/wp-content/uploads/2020/01/targets-with-password-500x107.jpg 500w, https://hakin9.org/wp-content/uploads/2020/01/targets-with-password-200x43.jpg 200w, https://hakin9.org/wp-content/uploads/2020/01/targets-with-password-378x81.jpg 378w, https://hakin9.org/wp-content/uploads/2020/01/targets-with-password-565x121.jpg 565w, https://hakin9.org/wp-content/uploads/2020/01/targets-with-password-120x26.jpg 120w, https://hakin9.org/wp-content/uploads/2020/01/targets-with-password-310x66.jpg 310w" sizes="(max-width: 832px) 100vw, 832px"></a></span></p>
+<p><span>Sadly, lots of light commercial drones have the same default password ; the&nbsp;<code>password</code>&nbsp;command allows to fill in the password without having to run an attack.</span></p>
+<p><a href="https://hakin9.org/wp-content/uploads/2020/01/targets-password.jpg"><img loading="lazy" class="alignnone size-full wp-image-162687" src="https://hakin9.org/wp-content/uploads/2020/01/targets-password.jpg" alt="" width="430" height="39" srcset="https://hakin9.org/wp-content/uploads/2020/01/targets-password.jpg 430w, https://hakin9.org/wp-content/uploads/2020/01/targets-password-200x18.jpg 200w, https://hakin9.org/wp-content/uploads/2020/01/targets-password-378x34.jpg 378w, https://hakin9.org/wp-content/uploads/2020/01/targets-password-120x11.jpg 120w, https://hakin9.org/wp-content/uploads/2020/01/targets-password-310x28.jpg 310w" sizes="(max-width: 430px) 100vw, 430px"></a></p>
+<h2><strong>7. Connecting to the target</strong></h2>
+<p><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+<ins class="adsbygoogle" style="display: block; text-align: center; height: 138px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6620833063853657" data-ad-slot="4517761481" data-adsbygoogle-status="done"><ins id="aswift_6_expand" style="display:inline-table;border:none;height:138px;margin:0;padding:0;position:relative;visibility:visible;width:552px;background-color:transparent;"><ins id="aswift_6_anchor" style="display:block;border:none;height:138px;margin:0;padding:0;position:relative;visibility:visible;width:552px;background-color:transparent;"></ins></ins></ins><br>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><br>
+<span>At this point, we have a password for a target, we can know connect to it using the&nbsp;<code>connect</code>command.</span></p>
+<p><span><a href="https://hakin9.org/wp-content/uploads/2020/01/targets-connect.jpg"><img loading="lazy" class="alignnone size-full wp-image-162688" src="https://hakin9.org/wp-content/uploads/2020/01/targets-connect.jpg" alt="" width="837" height="214" srcset="https://hakin9.org/wp-content/uploads/2020/01/targets-connect.jpg 837w, https://hakin9.org/wp-content/uploads/2020/01/targets-connect-460x118.jpg 460w, https://hakin9.org/wp-content/uploads/2020/01/targets-connect-768x196.jpg 768w, https://hakin9.org/wp-content/uploads/2020/01/targets-connect-500x128.jpg 500w, https://hakin9.org/wp-content/uploads/2020/01/targets-connect-200x51.jpg 200w, https://hakin9.org/wp-content/uploads/2020/01/targets-connect-378x97.jpg 378w, https://hakin9.org/wp-content/uploads/2020/01/targets-connect-565x144.jpg 565w, https://hakin9.org/wp-content/uploads/2020/01/targets-connect-120x31.jpg 120w, https://hakin9.org/wp-content/uploads/2020/01/targets-connect-310x79.jpg 310w" sizes="(max-width: 837px) 100vw, 837px"></a></span></p>
+<div class="admonition note">
+<p><span>Like shown in the screenshot above, the targets list has now a row highlighted in bold to show that we are connected to this target.</span></p>
+</div>
+<p><span>We can also connect to another target.</span></p>
+<p><span><a href="https://hakin9.org/wp-content/uploads/2020/01/targets-connect-another.jpg"><img loading="lazy" class="alignnone size-full wp-image-162689" src="https://hakin9.org/wp-content/uploads/2020/01/targets-connect-another.jpg" alt="" width="800" height="73" srcset="https://hakin9.org/wp-content/uploads/2020/01/targets-connect-another.jpg 800w, https://hakin9.org/wp-content/uploads/2020/01/targets-connect-another-460x42.jpg 460w, https://hakin9.org/wp-content/uploads/2020/01/targets-connect-another-768x70.jpg 768w, https://hakin9.org/wp-content/uploads/2020/01/targets-connect-another-500x46.jpg 500w, https://hakin9.org/wp-content/uploads/2020/01/targets-connect-another-200x18.jpg 200w, https://hakin9.org/wp-content/uploads/2020/01/targets-connect-another-378x34.jpg 378w, https://hakin9.org/wp-content/uploads/2020/01/targets-connect-another-565x52.jpg 565w, https://hakin9.org/wp-content/uploads/2020/01/targets-connect-another-120x11.jpg 120w, https://hakin9.org/wp-content/uploads/2020/01/targets-connect-another-310x28.jpg 310w" sizes="(max-width: 800px) 100vw, 800px"></a></span></p>
+<p><span>In the case herebefore, we call a module for which the required model of target can not be found as connected to the attack machine, therefore raising a warning. If we show the options for this module, we get several required values that are not filled in.</span></p>
+<p><a href="https://hakin9.org/wp-content/uploads/2020/01/targets-module-required-options.jpg"><img loading="lazy" class="alignnone size-full wp-image-162690" src="https://hakin9.org/wp-content/uploads/2020/01/targets-module-required-options.jpg" alt="" width="621" height="210" srcset="https://hakin9.org/wp-content/uploads/2020/01/targets-module-required-options.jpg 621w, https://hakin9.org/wp-content/uploads/2020/01/targets-module-required-options-460x156.jpg 460w, https://hakin9.org/wp-content/uploads/2020/01/targets-module-required-options-500x169.jpg 500w, https://hakin9.org/wp-content/uploads/2020/01/targets-module-required-options-200x68.jpg 200w, https://hakin9.org/wp-content/uploads/2020/01/targets-module-required-options-378x128.jpg 378w, https://hakin9.org/wp-content/uploads/2020/01/targets-module-required-options-565x191.jpg 565w, https://hakin9.org/wp-content/uploads/2020/01/targets-module-required-options-120x41.jpg 120w, https://hakin9.org/wp-content/uploads/2020/01/targets-module-required-options-310x105.jpg 310w" sizes="(max-width: 621px) 100vw, 621px"></a></p>
+<h2><strong>8. Executing a module</strong></h2>
+<p><span>We can now use a module for the connected drone using the&nbsp;<code>use</code>&nbsp;command.</span></p>
+<p><span><a href="https://hakin9.org/wp-content/uploads/2020/01/targets-module-options.jpg"><img loading="lazy" class="alignnone size-full wp-image-162691" src="https://hakin9.org/wp-content/uploads/2020/01/targets-module-options.jpg" alt="" width="805" height="311" srcset="https://hakin9.org/wp-content/uploads/2020/01/targets-module-options.jpg 805w, https://hakin9.org/wp-content/uploads/2020/01/targets-module-options-460x178.jpg 460w, https://hakin9.org/wp-content/uploads/2020/01/targets-module-options-768x297.jpg 768w, https://hakin9.org/wp-content/uploads/2020/01/targets-module-options-500x193.jpg 500w, https://hakin9.org/wp-content/uploads/2020/01/targets-module-options-200x77.jpg 200w, https://hakin9.org/wp-content/uploads/2020/01/targets-module-options-378x146.jpg 378w, https://hakin9.org/wp-content/uploads/2020/01/targets-module-options-565x218.jpg 565w, https://hakin9.org/wp-content/uploads/2020/01/targets-module-options-120x46.jpg 120w, https://hakin9.org/wp-content/uploads/2020/01/targets-module-options-310x120.jpg 310w" sizes="(max-width: 805px) 100vw, 805px"></a></span></p>
+<div class="admonition note">
+<p><span>In this example, one can see that the value for the&nbsp;<code>TARGET</code>&nbsp;option is automatically filled in. The module is then directly ready to run.</span></p>
+</div>
+<p><span>Finally, we can run the module by using the&nbsp;<code>run</code>&nbsp;command.</span></p>
+<p><a href="https://hakin9.org/wp-content/uploads/2020/01/targets-module-run.jpg"><img loading="lazy" class="alignnone size-full wp-image-162692" src="https://hakin9.org/wp-content/uploads/2020/01/targets-module-run.jpg" alt="" width="479" height="280" srcset="https://hakin9.org/wp-content/uploads/2020/01/targets-module-run.jpg 479w, https://hakin9.org/wp-content/uploads/2020/01/targets-module-run-460x269.jpg 460w, https://hakin9.org/wp-content/uploads/2020/01/targets-module-run-200x117.jpg 200w, https://hakin9.org/wp-content/uploads/2020/01/targets-module-run-378x221.jpg 378w, https://hakin9.org/wp-content/uploads/2020/01/targets-module-run-120x70.jpg 120w, https://hakin9.org/wp-content/uploads/2020/01/targets-module-run-310x181.jpg 310w" sizes="(max-width: 479px) 100vw, 479px"></a></p>
+<p><div style="line-height: 0;"><iframe src="https://www.patreon.com/platform/iframe?widget=become-patron-button&amp;redirectURI=https%3A%2F%2Fwww.blackhatethicalhacking.com%2Ftools%2Fdronesploit%2F%3F__cf_chl_jschl_tk__%3D1e2c36c05900661220ebdacaf427ec2a548047b7-1602496467-0-ARScBnYHhNhkzsHGo9HYrjiouXhnO9o0S79Jeqi5NONk8V4iRHN_bSIgdfH_cVJKPTZ51jZRY_RnGgRJ_ak1BvSmKyltk2iJqIYoubD7v-chet4KwAe4o8l3h9zwZY0uQvNSlnpA9mJZY46oEDvRCGmU96OdSDGqrAt8xErKnuacO4ELa-R70t0V0yLCZhGF4GZRC-Z0H27As6jbEbEDCnbQxMLsBR_DSFdW7KZZWSD7PEJR8JlCHF78XUirvGaUsgAGRyobhwqq_lT4WfKol5l4Y5ofhxNX4_0wNaiEqGbk&amp;creatorID=20287909" scrolling="no" allowtransparency="true" frameborder="0" class="patreon-widget" title="Patreon Widget" style="position: static; visibility: visible; width: 176px; height: 34px;"></iframe></div></p>
+<p><script async="" src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+</div>
+</div>
+</aside>
+</div>
+</div></div>
+</div> 
+</div> 
+</div>
+<hr>
+<img src="img/download (1).png">
+<hr>
+
+</div>
+<div class="et_pb_title_container">
+<h1 class="entry-title">Offensive Security Tool: The TIDoS Framework</h1>
+<p class="et_pb_title_meta_container"> by <span class="author vcard"><a href="#" title="Posts by DEEP.HACKING" rel="author">Deep.Hacking</a></span> | <span class="published">Sep 10, 2020</span>
+</p>
+</div>
+<div class="et_pb_title_featured_container">
+    <span class="et_pb_image_wrap">
+        <img src="img/47764921-88d2f580-dd02-11e8-8255-7e87bb5141fa.png" width="350" height="250"></span>
+    </div>
+</div>
+<div class="et_pb_row_inner et_pb_row_inner_1" style="height: auto !important;">
+<div class="et_pb_column et_pb_column_4_4 et_pb_column_inner et_pb_column_inner_1 et-last-child" style="height: auto !important; min-height: 0px !important;">
+<div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light" style="height: auto !important;">
+<div class="et_pb_text_inner" style="height: auto !important;"><div class="second-place clear"></div>
+<div class="second-place clear"></div>
+<div class="second-place clear" style="text-align: center;">
+<p><code></code></p>
+<p><code><code></code></code></p>
+<p><strong>Reading Time:&nbsp;</strong><strong>8&nbsp;</strong>Minutes</p>
+<p><code></code></p>
+<p><code>&nbsp;</code><strong style="font-size: large;">Offensive Security Tool: Hellraiser</strong></p>
+</div>
+<div id="second-place" class="second-place clear" style="height: auto !important;">
+<div class="c-article__intro" style="text-align: center; height: auto !important;">
+<aside class="inline-block inline-related align-left item-count-1 related-video" style="height: auto !important;">
+<div dir="ltr" style="height: auto !important;">
+<div class="c-article__intro" style="height: auto !important;">
+<header>
+<div class="c-article__intro" style="box-sizing: inherit; orphans: 2; text-align: start; text-indent: 0px; widows: 2; text-decoration-style: initial; text-decoration-color: initial; height: auto !important;">
+<div class="c-article__intro" style="height: auto !important;">
+<div class="c-article__intro" style="height: auto !important;">
+<div class="c-article__intro" style="text-align: center; height: auto !important;">
+<div class="c-article__intro" style="height: auto !important;">
+<div class="c-article__intro" style="height: auto !important;">
+<div class="c-article__intro" style="height: auto !important;">
+<div class="c-article__intro" style="height: auto !important;">
+<div class="c-article__intro" style="height: auto !important;">
+<div class="c-article__intro" style="height: auto !important;">
+<div class="c-article__intro" style="height: auto !important;">
+<p style="height: auto !important;">
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+ <ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-6620833063853657" data-ad-slot="9572483901" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:797px;background-color:transparent;"><ins id="aswift_1_anchor" style="display: block; border: none; height: 280px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 797px; background-color: transparent; overflow: visible;"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:797px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="797" height="280" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-6620833063853657&amp;output=html&amp;h=280&amp;slotname=9572483901&amp;adk=2441063852&amp;adf=2473559564&amp;w=797&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1602501207&amp;rafmt=1&amp;psa=1&amp;guci=2.2.0.0.2.2.0.0&amp;format=797x280&amp;url=https%3A%2F%2Fwww.blackhatethicalhacking.com%2Ftools%2Fthe-tidos-framework%2F&amp;flash=0&amp;fwr=0&amp;fwrattr=true&amp;rpe=1&amp;resp_fmts=3&amp;wgl=1&amp;adsid=ChAI8P2P_AUQ5IfTs7rC7cpmEkgAE9a8m4ltcU4t8Kindr1zyfGDscXMMLgoMj2qw8QX4juOQ9vfOCrYW8qbooffXCsiUvQubR5JMdF64xJN3S0SwOV42KkyOfs&amp;tt_state=W3siaXNzdWVyT3JpZ2luIjoiaHR0cHM6Ly9hZHNlcnZpY2UuZ29vZ2xlLmNvbSIsInN0YXRlIjowfV0.&amp;dt=1602501207192&amp;bpp=77&amp;bdt=4717&amp;idt=77&amp;shv=r20201007&amp;cbv=r20190131&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3D39a0d9562ca1fc11-226e6142d4c30054%3AT%3D1601718496%3ART%3D1601718496%3AS%3DALNI_MbXWsTvnZH7n5IQIMTMJmc7uoAjXg&amp;prev_fmts=0x0&amp;nras=1&amp;correlator=2434425294712&amp;frm=20&amp;pv=1&amp;ga_vid=1144099473.1601718494&amp;ga_sid=1602501206&amp;ga_hid=1998152957&amp;ga_fc=0&amp;iag=0&amp;icsg=281268461415074&amp;dssz=59&amp;mdo=0&amp;mso=0&amp;u_tz=-420&amp;u_his=7&amp;u_java=0&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;adx=137&amp;ady=1235&amp;biw=1349&amp;bih=568&amp;scr_x=0&amp;scr_y=0&amp;eid=21067584&amp;oid=3&amp;pvsid=1472150865238367&amp;pem=64&amp;ref=https%3A%2F%2Fwww.blackhatethicalhacking.com%2Ftools%2F&amp;rx=0&amp;eae=0&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C1366%2C568&amp;vis=1&amp;rsz=%7C%7CeEbr%7C&amp;abl=CS&amp;pfx=0&amp;fu=8320&amp;bc=31&amp;jar=2020-10-12-10&amp;ifi=1&amp;uci=a!1&amp;btvi=1&amp;fsb=1&amp;xpc=mnpfHlPUSZ&amp;p=https%3A//www.blackhatethicalhacking.com&amp;dtd=137" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!1" data-google-query-id="CPKx6pj2ruwCFcQU1QodCRMDAQ" data-load-complete="true"></iframe></ins></ins></ins><br>
+<script>// <!&#091;CDATA&#091; (adsbygoogle = window.adsbygoogle || &#091;&#093;).push({}); // &#093;&#093;></script>
+</p>
+<div class="c-article__intro" style="height: auto !important;">
+<div class="c-article__intro" style="height: auto !important;">
+<div class="c-article__intro" style="height: auto !important;">
+<div class="topContent container">
+<div class="row">
+<div class="row">
+<div class="col-12">
+<header class="storyHeader article">
+<div id="main" data-article-num="1">
+<div>
+<section class="leader leader-top" data-component="medusaContentRecommendation" data-medusa-content-recommendation-options="{&quot;promo&quot;:&quot;promo_zd_recommendation_top_leaderboard_desktop&quot;,&quot;spot&quot;:&quot;content-top-leaderboard&quot;}"></section>
+<div style="text-align: center;">Github <a title="Download" href="https://github.com/blackhatethicalhacking/TIDoS-Framework">Link</a></div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;"><strong><div class="post-views post-247063 entry-meta">
+<span class="post-views-icon dashicons dashicons-chart-bar"></span>
+<span class="post-views-label">Post Views: </span>
+<span class="post-views-count">1,566</span>
+</div></strong></div>
+<div style="text-align: center;"></div>
+</div>
+</div>
+</header>
+</div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="Box-body px-5 pb-5" style="height: auto !important;">
+<article class="markdown-body entry-content container-lg" itemprop="text" style="height: auto !important;">
+<h1 align="center"><a href="https://github.com/0xinfection"><img src="https://camo.githubusercontent.com/777ef57e202d63de8543b3fa318ffb6f644b4228/68747470733a2f2f692e696d6775722e636f6d2f514162615664552e706e67" alt="TIDoS" data-canonical-src="https://i.imgur.com/QAbaVdU.png"></a><br> &nbsp;</h1>
+<p>The TIDoS Framework</p>
+<p>&nbsp;</p>
+<h4 align="center"><a id="user-content-the-offensive-web-application-penetration-testing-framework" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/TIDoS-Framework#the-offensive-web-application-penetration-testing-framework" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>The Offensive Web Application Penetration Testing Framework.</h4>
+<p align="center"><a href="https://www.python.org/download/releases/2.7" rel="nofollow"><img src="https://camo.githubusercontent.com/670b10f942e408b66ccbd22324ba892b603a53ac/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f507974686f6e2d322e372d677265656e2e737667" data-canonical-src="https://img.shields.io/badge/Python-2.7-green.svg"><span>&nbsp;</span></a><a href="https://github.com/0xinfection/TIDoS-Framework/releases"><img src="https://camo.githubusercontent.com/1b8faf107aa7b8290ace85299a7d96b822e77a5c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5449446f532d76312e372d626c75652e737667" data-canonical-src="https://img.shields.io/badge/TIDoS-v1.7-blue.svg"><span>&nbsp;</span></a><a href="https://github.com/0xinfection/tidos-framework/"><img src="https://camo.githubusercontent.com/4579b9ef6cf788a246c686b0e2bba2ed8b0b1fa4/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f537570706f727465642532304f532d4c696e75782d79656c6c6f772e737667" data-canonical-src="https://img.shields.io/badge/Supported%20OS-Linux-yellow.svg"><span>&nbsp;</span></a><a href="https://github.com/0xinfection/TIDoS-Framework/blob/master/doc/LICENSE/"><img src="https://camo.githubusercontent.com/4cdc21ce98486a9fdfe3db5adf1fdf145c174ede/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d47504c76332d6f72616e67652e737667" data-canonical-src="https://img.shields.io/badge/License-GPLv3-orange.svg"><span>&nbsp;</span></a><a href="https://github.com/0xinfection/TIDoS-Framework#flawless-features--" data-et-has-event-already="true"><img src="https://camo.githubusercontent.com/794deddd8f73828a472bb3d3dbec2fca5cb3e5d0/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d6f64756c65732d3130382d7265642e737667" data-canonical-src="https://img.shields.io/badge/Modules-108-red.svg"><span>&nbsp;</span></a><a href="https://travis-ci.org/0xinfection/TIDoS-Framework" rel="nofollow"><img src="https://camo.githubusercontent.com/bb2ee30eb72de9f6a77ae2a153e1228968cad01e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4275696c642d50617373696e672d627269676874677265656e2e7376673f6c6f676f3d747261766973" data-canonical-src="https://img.shields.io/badge/Build-Passing-brightgreen.svg?logo=travis"><span>&nbsp;</span></a><a href="https://github.com/0xinfection/TIDoS-Framework/releases/tag/v1.7/"><img src="https://camo.githubusercontent.com/36f0e9f9610bba34ed29f0e5e40e7fee1c90317a/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f52656c656173652d537461626c652d677265656e2e737667" data-canonical-src="https://img.shields.io/badge/Release-Stable-green.svg"></a></p>
+<h3><a id="user-content-highlights--" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/TIDoS-Framework#highlights--" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Highlights :-</h3>
+<p>Here is some light on what the framework is all about:</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="disabled" class="task-list-item-checkbox" checked="checked"><span>&nbsp;</span>A complete versatile framework to cover up everything from Reconnaissance to Vulnerability Analysis.</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="disabled" class="task-list-item-checkbox" checked="checked"><span>&nbsp;</span>Has 5 main phases, subdivided into<span>&nbsp;</span><strong>14 sub-phases</strong><span>&nbsp;</span>consisting a total of<span>&nbsp;</span><a href="https://github.com/0xinfection/TIDoS-Framework/blob/master/doc/man/tree.man"><strong>108 modules</strong></a>.</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="disabled" class="task-list-item-checkbox" checked="checked"><span>&nbsp;</span>Reconnaissance Phase has 50 modules of its own (including active and passive recon, information disclosure modules).</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="disabled" class="task-list-item-checkbox" checked="checked"><span>&nbsp;</span>Scanning &amp; Enumeration Phase has got 16 modules (including port scans, WAF analysis, etc)</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="disabled" class="task-list-item-checkbox" checked="checked"><span>&nbsp;</span>Vulnerability Analysis Phase has 37 modules (including most common vulnerabilites in action).</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="disabled" class="task-list-item-checkbox" checked="checked"><span>&nbsp;</span>Exploits Castle has only 1 exploit.<span>&nbsp;</span><code>(purely developmental)</code></li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="disabled" class="task-list-item-checkbox" checked="checked"><span>&nbsp;</span>And finally, Auxillaries have got 4 modules.<span>&nbsp;</span><code>more under development</code></li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="disabled" class="task-list-item-checkbox" checked="checked"><span>&nbsp;</span>All four phases each have a<span>&nbsp;</span><code>Auto-Awesome</code><span>&nbsp;</span>module which automates every module for you.</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="disabled" class="task-list-item-checkbox" checked="checked"><span>&nbsp;</span>You just need the domain, and leave everything is to this tool.</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="disabled" class="task-list-item-checkbox" checked="checked"><span>&nbsp;</span>TIDoS has full verbose out support, so you’ll know whats going on.</li>
+<li class="task-list-item"><input type="checkbox" id="" disabled="disabled" class="task-list-item-checkbox" checked="checked"><span>&nbsp;</span>Fully user friendly interaction environment.<span>&nbsp;</span><code>(no shits)</code></li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/03223b05f7e476a4e1d04c00edc07589e36811e5/68747470733a2f2f692e696d6775722e636f6d2f4762333059346b2e676966"><img src="https://camo.githubusercontent.com/03223b05f7e476a4e1d04c00edc07589e36811e5/68747470733a2f2f692e696d6775722e636f6d2f4762333059346b2e676966" data-canonical-src="https://i.imgur.com/Gb30Y4k.gif"></a></p>
+<h3><a id="user-content-installation--" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/TIDoS-Framework#installation--" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Installation :-</h3>
+<p style="height: auto !important;">
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+ <ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-6620833063853657" data-ad-slot="9572483901" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:797px;background-color:transparent;"><ins id="aswift_2_anchor" style="display: block; border: none; height: 280px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 797px; background-color: transparent; overflow: visible;"><iframe id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0;width:797px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="797" height="280" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-6620833063853657&amp;output=html&amp;h=280&amp;slotname=9572483901&amp;adk=2512601758&amp;adf=4185857382&amp;w=797&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1602502744&amp;rafmt=1&amp;psa=1&amp;guci=2.2.0.0.2.2.0.0&amp;format=797x280&amp;url=https%3A%2F%2Fwww.blackhatethicalhacking.com%2Ftools%2Fthe-tidos-framework%2F&amp;flash=0&amp;fwr=0&amp;fwrattr=true&amp;rpe=1&amp;resp_fmts=3&amp;wgl=1&amp;tt_state=W3siaXNzdWVyT3JpZ2luIjoiaHR0cHM6Ly9hZHNlcnZpY2UuZ29vZ2xlLmNvbSIsInN0YXRlIjowfV0.&amp;dt=1602501207409&amp;bpp=22&amp;bdt=4934&amp;idt=23&amp;shv=r20201007&amp;cbv=r20190131&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3D39a0d9562ca1fc11-226e6142d4c30054%3AT%3D1601718496%3ART%3D1601718496%3AS%3DALNI_MbXWsTvnZH7n5IQIMTMJmc7uoAjXg&amp;prev_fmts=0x0%2C797x280&amp;nras=1&amp;correlator=2434425294712&amp;frm=20&amp;pv=1&amp;ga_vid=1144099473.1601718494&amp;ga_sid=1602501206&amp;ga_hid=1998152957&amp;ga_fc=0&amp;iag=0&amp;icsg=3002365749755891&amp;dssz=87&amp;mdo=0&amp;mso=0&amp;u_tz=-420&amp;u_his=7&amp;u_java=0&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;adx=38&amp;ady=2756&amp;biw=362&amp;bih=551&amp;scr_x=0&amp;scr_y=1680&amp;eid=21067584&amp;oid=3&amp;psts=AGkb-H_ZMCOODNCtshJZ8M0DHznG1DKSV_icyhqjcn8w7QvomalXtC211cdTOlgcayw9pA&amp;pvsid=1472150865238367&amp;pem=64&amp;ref=https%3A%2F%2Fwww.blackhatethicalhacking.com%2Ftools%2F&amp;rx=0&amp;eae=0&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C379%2C568&amp;vis=1&amp;rsz=%7C%7CeEbr%7C&amp;abl=CS&amp;pfx=0&amp;fu=9344&amp;bc=31&amp;ifi=2&amp;uci=a!2&amp;btvi=2&amp;fsb=1&amp;xpc=fJvqA4Cuyk&amp;p=https%3A//www.blackhatethicalhacking.com&amp;dtd=M" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!2" data-google-query-id="CMTV_PX7ruwCFemFrAIdS68KeQ" data-load-complete="true"></iframe></ins></ins></ins><br>
+<script>// <!&#091;CDATA&#091;      (adsbygoogle = window.adsbygoogle || &#091;&#093;).push({}); // &#093;&#093;></script>
+</p>
+<h4><a id="user-content-global-installation" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/TIDoS-Framework#global-installation" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Global Installation:</h4>
+<blockquote>
+<p><strong>NOTE:</strong></p>
+<p>Presently, for installing globally, you will need to default your Python version to 2.x. However, the work of migration from Python2 to Python3 is already underway.</p>
+</blockquote>
+<ul>
+<li>Clone the repository locally and navigate there:</li>
+</ul>
+<pre><code>git clone https://github.com/0xinfection/tidos-framework.git
+cd tidos-framework
+</code></pre>
+<ul>
+<li>Install the dependencies:</li>
+</ul>
+<pre><code>chmod +x install
+./install
+</code></pre>
+<p><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/89af79966764b9d13300f87afd556b6e7804edc0/68747470733a2f2f692e696d6775722e636f6d2f7a785a42556f572e676966"><img src="https://camo.githubusercontent.com/89af79966764b9d13300f87afd556b6e7804edc0/68747470733a2f2f692e696d6775722e636f6d2f7a785a42556f572e676966" data-canonical-src="https://i.imgur.com/zxZBUoW.gif"></a></p>
+<p>Thats it! Now you are good to go! Now lets run the tool:</p>
+<pre><code>tidos
+</code></pre>
+<h4><a id="user-content-manual-installation-locally-" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/TIDoS-Framework#manual-installation-locally-" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Manual Installation (Locally) :</h4>
+<p>TIDoS needs some libraries to run, which can be installed via<span>&nbsp;</span><code>aptitude</code><span>&nbsp;</span>or<span>&nbsp;</span><code>yum</code><span>&nbsp;</span>Package Managers.</p>
+<pre><code>sudo apt-get install libncurses5 libxml2 nmap tcpdump libexiv2-dev build-essential python-pip python-xmpp
+</code></pre>
+<p>Now after these dependencies are finished installing, we need to install the remaining Python Package dependencies, hence run:</p>
+<pre><code>pip2 install -r requirements.txt
+</code></pre>
+<p>Thats it. You now have TIDoS at your service. Fire it up using:</p>
+<pre><code>python2 tidos.py
+</code></pre>
+<h4><a id="user-content-docker-image-" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/TIDoS-Framework#docker-image-" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Docker image :</h4>
+<p>You can build it from Dockerfile :</p>
+<pre><code>git clone https://github.com/0xinfection/tidos-framework.git
+cd tidos-framework/docker
+docker build -t tidos .
+</code></pre>
+<p>To run TIDoS :</p>
+<pre><code>docker run --interactive --tty --rm tidos bash
+tidos
+</code></pre>
+<h3><a id="user-content-getting-started--" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/TIDoS-Framework#getting-started--" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Getting Started :-</h3>
+<p>TIDoS is built to be a comprehensive, flexible and versatile framework where you just have to select and use modules.</p>
+<p>So to get started, you need to set your own<span>&nbsp;</span><code>API KEYS</code><span>&nbsp;</span>for various OSINT &amp; Scanning and Enumeration purposes. To do so, open up<span>&nbsp;</span><code>API_KEYS.py</code><span>&nbsp;</span>under<span>&nbsp;</span><code>files/</code><span>&nbsp;</span>directory and set your own keys and access tokens for<span>&nbsp;</span><code>SHODAN</code>,<span>&nbsp;</span><code>CENSYS</code>,<span>&nbsp;</span><code>FULL CONTACT</code>,<span>&nbsp;</span><code>GOOGLE</code><span>&nbsp;</span>and<span>&nbsp;</span><code>WHATCMS</code>.</p>
+<p><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+ <ins class="adsbygoogle" style="display: block;" data-ad-client="ca-pub-6620833063853657" data-ad-slot="9572483901" data-ad-format="auto" data-full-width-responsive="true"></ins><br>
+<script>// <!&#091;CDATA&#091;      (adsbygoogle = window.adsbygoogle || &#091;&#093;).push({}); // &#093;&#093;></script>
+</p>
+<blockquote>
+<p><strong>GOOD NEWS</strong>:</p>
+<p>The latest release of TIDoS includes all API KEYS and ACCESS TOKENS for<span>&nbsp;</span><code>SHODAN</code>,<span>&nbsp;</span><code>CENSYS</code>,<span>&nbsp;</span><code>FULL CONTACT</code>,<span>&nbsp;</span><code>GOOGLE</code><span>&nbsp;</span>and<span>&nbsp;</span><code>WHATCMS</code><span>&nbsp;</span>by default. I found these tokens on various repositories on GitHub itself.<span>&nbsp;</span><strong>You can now use all the modules</strong><span>&nbsp;</span>which use the API KEYS. <img draggable="false" role="img" class="emoji" alt="🙂" src="https://s.w.org/images/core/emoji/13.0.0/svg/1f642.svg"></p>
+</blockquote>
+<p>Finally, as the framework opens up, enter the website name<span>&nbsp;</span><code>eg. http://www.example.com</code><span>&nbsp;</span>and let TIDoS lead you. Thats it! Its as easy as that.</p>
+<blockquote>
+<p>Recommended:</p>
+<ul>
+<li>Follow the order of the tool (Run in a schematic way).</li>
+</ul>
+<pre><code>Reconnaissance ➣ Scanning &amp; Enumeration ➣ Vulnerability Analysis
+</code></pre>
+</blockquote>
+<p>To update this tool, use<span>&nbsp;</span><code>tidos_updater.py</code><span>&nbsp;</span>module under<span>&nbsp;</span><code>tools/</code><span>&nbsp;</span>folder.</p>
+<h3><a id="user-content-flawless-features--" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/TIDoS-Framework#flawless-features--" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Flawless Features :-</h3>
+<p>TIDoS Framework presently supports the following:<span>&nbsp;</span><code>and more modules are under active development</code></p>
+<ul>
+<li><strong>Reconnaissance + OSINT</strong>
+<ul>
+<li><strong>Passive Reconnaissance:</strong>
+<ul>
+<li>Nping Enumeration<span>&nbsp;</span><code>Via external APi</code></li>
+<li>WhoIS Lookup<span>&nbsp;</span><code>Domain info gathering</code></li>
+<li>GeoIP Lookup<span>&nbsp;</span><code>Pinpoint physical location</code></li>
+<li>DNS Configuration Lookup<span>&nbsp;</span><code>DNSDump</code></li>
+<li>Subdomains Lookup<span>&nbsp;</span><code>Indexed ones</code></li>
+<li>Reverse DNS Lookup<span>&nbsp;</span><code>Host Instances</code></li>
+<li>Reverse IP Lookup<span>&nbsp;</span><code>Hosts on same server</code></li>
+<li>Subnets Enumeration<span>&nbsp;</span><code>Class Based</code></li>
+<li>Domain IP History<span>&nbsp;</span><code>IP Instances</code></li>
+<li>Web Links Gatherer<span>&nbsp;</span><code>Indexed ones</code></li>
+<li>Google Search<span>&nbsp;</span><code>Manual search</code></li>
+<li>Google Dorking (multiple modules)<span>&nbsp;</span><code>Automated</code></li>
+<li>Email to Domain Resolver<span>&nbsp;</span><code>Email WhoIs</code></li>
+<li>Wayback Machine Lookups<span>&nbsp;</span><code>Find Backups</code></li>
+<li>Breached Email Check<span>&nbsp;</span><code>Pwned Email Accounts</code></li>
+<li>Enumeration via Google Groups<span>&nbsp;</span><code>Emails Only</code></li>
+<li>Check Alias Availability<span>&nbsp;</span><code>Social Networks</code></li>
+<li>Find PasteBin Posts<span>&nbsp;</span><code>Domain Based</code></li>
+<li>LinkedIn Gathering<span>&nbsp;</span><code>Employees &amp; Company</code></li>
+<li>Google Plus Gathering<span>&nbsp;</span><code>Domain Profiles</code></li>
+<li>Public Contact Info Scraping<span>&nbsp;</span><code>FULL CONTACT</code></li>
+<li>Censys Intel Gathering<span>&nbsp;</span><code>Domain Based</code></li>
+<li>Threat Intelligence Gathering<span>&nbsp;</span><code>Bad IPs</code></li>
+</ul>
+</li>
+<li><strong>Active Reconnaissance:</strong>
+<ul>
+<li>Ping Enumeration<span>&nbsp;</span><code>Advanced</code></li>
+<li>CMS Detection<span>&nbsp;</span><code>(185+ CMSs supported)</code><span>&nbsp;</span><code>IMPROVED</code></li>
+<li>Advanced Traceroute<span>&nbsp;</span><code>IMPROVED</code></li>
+<li><code>robots.txt</code><span>&nbsp;</span>and<span>&nbsp;</span><code>sitemap.xml</code><span>&nbsp;</span>Checker</li>
+<li>Grab HTTP Headers<span>&nbsp;</span><code>Live Capture</code></li>
+<li>Find HTTP Methods Allowed<span>&nbsp;</span><code>via OPTIONS</code></li>
+<li>Detect Server Type<span>&nbsp;</span><code>IMPROVED</code></li>
+<li>Examine SSL Certificate<span>&nbsp;</span><code>Absolute</code></li>
+<li>Apache Status Disclosure Checks<span>&nbsp;</span><code>File Based</code></li>
+<li>WebDAV HTTP Enumeration<span>&nbsp;</span><code>PROFIND &amp; SEARCH</code></li>
+<li>PHPInfo File Enumeration<span>&nbsp;</span><code>via Bruteforce</code></li>
+<li>Comments Scraper<span>&nbsp;</span><code>Regex Based</code></li>
+<li>Find Shared DNS Hosts<span>&nbsp;</span><code>Name Server Based</code></li>
+<li>Alternate Sites Discovery<span>&nbsp;</span><code>User-Agent Based</code></li>
+<li>Discover Interesting Files<span>&nbsp;</span><code>via Bruteforce</code>
+<ul>
+<li>Common Backdoor Locations<span>&nbsp;</span><code>shells, etc.</code></li>
+<li>Common Backup Locations<span>&nbsp;</span><code>.bak, .db, etc.</code></li>
+<li>Common Password Locations<span>&nbsp;</span><code>.pgp, .skr, etc.</code></li>
+<li>Common Proxy Path Configs.<span>&nbsp;</span><code>.pac, etc.</code></li>
+<li>Multiple Index Paths<span>&nbsp;</span><code>index, index1, etc.</code></li>
+<li>Common Dot Files<span>&nbsp;</span><code>.htaccess, .apache, etc</code></li>
+<li>Common Logfile Locations<span>&nbsp;</span><code>.log, .changelog, etc</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Information Disclosure:</strong>
+<ul>
+<li>Credit Cards Disclosure<span>&nbsp;</span><code>If Plaintext</code></li>
+<li>Email Harvester<span>&nbsp;</span><code>IMPROVED</code></li>
+<li>Fatal Errors Enumeration<span>&nbsp;</span><code>Includes Full Path Disclosure</code></li>
+<li>Internal IP Disclosure<span>&nbsp;</span><code>Signature Based</code></li>
+<li>Phone Number Havester<span>&nbsp;</span><code>Signature Based</code></li>
+<li>Social Security Number Harvester<span>&nbsp;</span><code>US Ones</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Scanning &amp; Enumeration</strong>
+<ul>
+<li>Remote Server WAF Enumeration<span>&nbsp;</span><code>Generic</code><span>&nbsp;</span><code>54 WAFs</code></li>
+<li>Port Scanning<span>&nbsp;</span><code>Ingenious Modules</code>
+<ul>
+<li>Simple Port Scanner<span>&nbsp;</span><code>via Socket Connections</code></li>
+<li>TCP SYN Scan<span>&nbsp;</span><code>Highly reliable</code></li>
+<li>TCP Connect Scan<span>&nbsp;</span><code>Highly Reliable</code></li>
+<li>XMAS Flag Scan<span>&nbsp;</span><code>Reliable Only in LANs</code></li>
+<li>FIN Flag Scan<span>&nbsp;</span><code>Reliable Only in LANs</code></li>
+<li>Port Service Detector</li>
+</ul>
+</li>
+<li>Web Technology Enumeration<span>&nbsp;</span><code>Absolute</code></li>
+<li>Complete SSL Enumeration<span>&nbsp;</span><code>Absolute</code></li>
+<li>Operating System Fingerprinting<span>&nbsp;</span><code>IMPROVED</code></li>
+<li>Banner Grabbing of Services<span>&nbsp;</span><code>via Open Ports</code></li>
+<li>Interactive Scanning with NMap<span>&nbsp;</span><code>16 preloaded modules</code></li>
+<li>Internet Wide Servers Scan<span>&nbsp;</span><code>Using CENSYS Database</code></li>
+<li>Web and Links Crawlers
+<ul>
+<li>Depth 1<span>&nbsp;</span><code>Indexed Uri Crawler</code></li>
+<li>Depth 2<span>&nbsp;</span><code>Single Page Crawler</code></li>
+<li>Depth 3<span>&nbsp;</span><code>Web Link Crawler</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+ <ins class="adsbygoogle" style="display: block;" data-ad-client="ca-pub-6620833063853657" data-ad-slot="9572483901" data-ad-format="auto" data-full-width-responsive="true"></ins><br>
+<script>// <!&#091;CDATA&#091;      (adsbygoogle = window.adsbygoogle || &#091;&#093;).push({}); // &#093;&#093;></script>
+</p>
+<ul>
+<li><strong>Vulnerability Analysis</strong><strong>Web-Bugs &amp; Server Misconfigurations</strong>
+<ul>
+<li>Insecure CORS<span>&nbsp;</span><code>Absolute</code></li>
+<li>Same-Site Scripting<span>&nbsp;</span><code>Sub-domain based</code></li>
+<li>Zone Transfer<span>&nbsp;</span><code>DNS Server based</code></li>
+<li>Clickjacking
+<ul>
+<li>Frame-Busting Checks</li>
+<li><code>X-FRAME-OPTIONS</code><span>&nbsp;</span>Header Checks</li>
+</ul>
+</li>
+<li>Security on Cookies
+<ul>
+<li><code>HTTPOnly</code><span>&nbsp;</span>Flag</li>
+<li><code>Secure</code><span>&nbsp;</span>Flag on Cookies</li>
+</ul>
+</li>
+<li>Cloudflare Misconfiguration Check
+<ul>
+<li>DNS Misconfiguration Checks</li>
+<li>Online Database Lookup<span>&nbsp;</span><code>For Breaches</code></li>
+</ul>
+</li>
+<li>HTTP Strict Transport Security Usage
+<ul>
+<li>HTTPS Enabled but no HSTS</li>
+</ul>
+</li>
+<li>Domain Based Email Spoofing
+<ul>
+<li>Missing<span>&nbsp;</span><code>SPF</code><span>&nbsp;</span>Records</li>
+<li>Missing<span>&nbsp;</span><code>DMARC</code><span>&nbsp;</span>Records</li>
+</ul>
+</li>
+<li>Host Header Injection
+<ul>
+<li>Port Based<span>&nbsp;</span><code>Web Socket Based</code></li>
+<li><code>X-Forwarded-For</code><span>&nbsp;</span>Header Injection</li>
+</ul>
+</li>
+<li>Security Headers Analysis<span>&nbsp;</span><code>Live Capture</code></li>
+<li>Cross-Site Tracing<span>&nbsp;</span><code>HTTP TRACE Method</code></li>
+<li>Session Fixation<span>&nbsp;</span><code>via Cookie Injection</code></li>
+<li>Network Security Misconfig.
+<ul>
+<li>Checks for<span>&nbsp;</span><code>TELNET</code><span>&nbsp;</span>Enabled<span>&nbsp;</span><code>via Port 23</code></li>
+</ul>
+</li>
+</ul>
+<p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+ <ins class="adsbygoogle" style="display: block;" data-ad-client="ca-pub-6620833063853657" data-ad-slot="9572483901" data-ad-format="auto" data-full-width-responsive="true"></ins><br>
+<script>// <!&#091;CDATA&#091;      (adsbygoogle = window.adsbygoogle || &#091;&#093;).push({}); // &#093;&#093;></script></p>
+<p> <strong>Serious Web Vulnerabilities</strong></p>
+<ul>
+<li>File Inclusions
+<ul>
+<li>Local File Inclusion (LFI)<span>&nbsp;</span><code>Param based</code></li>
+<li>Remote File Inclusion (RFI)<span>&nbsp;</span><code>IMPROVED</code>
+<ul>
+<li>Parameter Based</li>
+<li>Pre-loaded Path Based</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>OS Command Injection<span>&nbsp;</span><code>Linux &amp; Windows (RCE)</code></li>
+<li>Path Traversal<span>&nbsp;</span><code>(Sensitive Paths)</code></li>
+<li>Cross-Site Request Forgery<span>&nbsp;</span><code>Absolute</code></li>
+<li>SQL Injection
+<ul>
+<li>Error Based Injection
+<ul>
+<li>Cookie Value Based</li>
+<li>Referer Value Based</li>
+<li>User-Agent Value Based</li>
+<li>Auto-gathering<span>&nbsp;</span><code>IMPROVED</code></li>
+</ul>
+</li>
+<li>Blind Based Injection<span>&nbsp;</span><code>Crafted Payloads</code>
+<ul>
+<li>Cookie Value Based</li>
+<li>Referer Value Based</li>
+<li>User-Agent Value Based</li>
+<li>Auto-gathering<span>&nbsp;</span><code>IMPROVED</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>LDAP Injection<span>&nbsp;</span><code>Parameter Based</code></li>
+<li>HTML Injection<span>&nbsp;</span><code>Parameter Based</code></li>
+<li>Bash Command Injection<span>&nbsp;</span><code>ShellShock</code></li>
+<li>Apache Struts Shock<span>&nbsp;</span><code>Apache RCE</code></li>
+<li>XPATH Injection<span>&nbsp;</span><code>Parameter Based</code></li>
+<li>Cross-Site Scripting<span>&nbsp;</span><code>IMPROVED</code>
+<ul>
+<li>Cookie Value Based</li>
+<li>Referer Value Based</li>
+<li>User-Agent Value Based</li>
+<li>Parameter Value Based<span>&nbsp;</span><code>Manual</code></li>
+</ul>
+</li>
+<li>Unvalidated URL Forwards<span>&nbsp;</span><code>Open Redirect</code></li>
+<li>PHP Code Injection<span>&nbsp;</span><code>Windows + Linux RCE</code></li>
+<li>CRLF Injection<span>&nbsp;</span><code>HTTP Response Splitting</code>
+<ul>
+<li>User-Agent Value Based</li>
+<li>Parameter value Based<span>&nbsp;</span><code>Manual</code></li>
+</ul>
+</li>
+<li>Sub-domain Takeover<span>&nbsp;</span><code>50+ Services</code>
+<ul>
+<li>Single Sub-domain<span>&nbsp;</span><code>Manual</code></li>
+<li>All Subdomains<span>&nbsp;</span><code>Automated</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>Other</strong></p>
+<ul>
+<li>PlainText Protocol Default Credential Bruteforce
+<ul>
+<li>FTP Protocol Bruteforce</li>
+<li>SSH Protocol Bruteforce</li>
+<li>POP 2/3 Protocol Bruteforce</li>
+<li>SQL Protocol Bruteforce</li>
+<li>XMPP Protocol Bruteforce</li>
+<li>SMTP Protocol Bruteforce</li>
+<li>TELNET Protocol Bruteforce</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<ul>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+</ul>
+</ul>
+<p>
+<ins class="adsbygoogle" style="display: block;" data-ad-client="ca-pub-6620833063853657" data-ad-slot="9572483901" data-ad-format="auto" data-full-width-responsive="true"></ins></p>
+<ul>
+<script>// <!&#091;CDATA&#091;      (adsbygoogle = window.adsbygoogle || &#091;&#093;).push({}); // &#093;&#093;></script><p></p>
+<li><strong>Auxillary Modules</strong>
+<ul>
+<li>Hash Generator<span>&nbsp;</span><code>MD5, SHA1, SHA256, SHA512</code></li>
+<li>String &amp; Payload Encoder<span>&nbsp;</span><code>7 Categories</code></li>
+<li>Forensic Image Analysis<span>&nbsp;</span><code>Metadata Extraction</code></li>
+<li>Web HoneyPot Probability<span>&nbsp;</span><code>ShodanLabs HoneyScore</code></li>
+</ul>
+</li>
+<li><strong>Exploitation</strong><span>&nbsp;</span><code>purely developmental</code>
+<ul>
+<li>ShellShock</li>
+</ul>
+</li>
+</ul>
+<h3><a id="user-content-other-tools" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/TIDoS-Framework#other-tools" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Other Tools:</h3>
+<ul>
+<li><code>net_info.py</code><span>&nbsp;</span>– Displays information about your network. Located under<span>&nbsp;</span><code>tools/</code>.</li>
+<li><code>tidos_updater.py</code><span>&nbsp;</span>– Updates the framework to the latest release via signature matching. Located under<span>&nbsp;</span><code>tools/</code>.</li>
+</ul>
+<h3><a id="user-content-tidos-in-action" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/TIDoS-Framework#tidos-in-action" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>TIDoS In Action:</h3>
+<p>Lets see some screenshots of TIDoS in real world pentesting action:</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/67946e7da68f6484ea9fdf1b39baad7c5074d662/68747470733a2f2f692e696d6775722e636f6d2f37384e754c45302e676966"><img src="https://camo.githubusercontent.com/67946e7da68f6484ea9fdf1b39baad7c5074d662/68747470733a2f2f692e696d6775722e636f6d2f37384e754c45302e676966" data-canonical-src="https://i.imgur.com/78NuLE0.gif"></a><span>&nbsp;</span><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/a596a9424badd3d24f6345485d5d220689975669/68747470733a2f2f692e696d6775722e636f6d2f6a39426c386d632e676966"><img src="https://camo.githubusercontent.com/a596a9424badd3d24f6345485d5d220689975669/68747470733a2f2f692e696d6775722e636f6d2f6a39426c386d632e676966" width="33%" data-canonical-src="https://i.imgur.com/j9Bl8mc.gif"></a><span>&nbsp;</span><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/f11adfc6a6e46125b38f2c77047506932f874bf7/68747470733a2f2f692e696d6775722e636f6d2f4c655835644f692e676966"><img src="https://camo.githubusercontent.com/f11adfc6a6e46125b38f2c77047506932f874bf7/68747470733a2f2f692e696d6775722e636f6d2f4c655835644f692e676966" width="33%" data-canonical-src="https://i.imgur.com/LeX5dOi.gif"></a><span>&nbsp;</span><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/3eca9d903bcc69a0df675278c1f79b1a88cc838c/68747470733a2f2f692e696d6775722e636f6d2f324250764c52752e676966"><img src="https://camo.githubusercontent.com/3eca9d903bcc69a0df675278c1f79b1a88cc838c/68747470733a2f2f692e696d6775722e636f6d2f324250764c52752e676966" width="33%" data-canonical-src="https://i.imgur.com/2BPvLRu.gif"></a></p>
+<p><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+ <ins class="adsbygoogle" style="display: block;" data-ad-client="ca-pub-6620833063853657" data-ad-slot="9572483901" data-ad-format="auto" data-full-width-responsive="true"></ins><br>
+<script>// <!&#091;CDATA&#091;      (adsbygoogle = window.adsbygoogle || &#091;&#093;).push({}); // &#093;&#093;></script></p>
+<p> <a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/bdd20006ee5bc905e5b7cee360946727087ce54b/68747470733a2f2f692e696d6775722e636f6d2f774c796566526b2e676966"><img src="https://camo.githubusercontent.com/bdd20006ee5bc905e5b7cee360946727087ce54b/68747470733a2f2f692e696d6775722e636f6d2f774c796566526b2e676966" data-canonical-src="https://i.imgur.com/wLyefRk.gif"></a><span>&nbsp;</span><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/52558f021207d8b89beccced52ced33608b2fef1/68747470733a2f2f692e696d6775722e636f6d2f594c346d6267752e676966"><img src="https://camo.githubusercontent.com/52558f021207d8b89beccced52ced33608b2fef1/68747470733a2f2f692e696d6775722e636f6d2f594c346d6267752e676966" width="33%" data-canonical-src="https://i.imgur.com/YL4mbgu.gif"></a><span>&nbsp;</span><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/7db3ab7c583e43f17cf7c4ef012b7484bdd6dc60/68747470733a2f2f692e696d6775722e636f6d2f63636e4c31776f2e676966"><img src="https://camo.githubusercontent.com/7db3ab7c583e43f17cf7c4ef012b7484bdd6dc60/68747470733a2f2f692e696d6775722e636f6d2f63636e4c31776f2e676966" width="33%" data-canonical-src="https://i.imgur.com/ccnL1wo.gif"></a><span>&nbsp;</span><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/91093b18fca7a1c731afd1d586da3e31800ccc68/68747470733a2f2f692e696d6775722e636f6d2f477377464373652e676966"><img src="https://camo.githubusercontent.com/91093b18fca7a1c731afd1d586da3e31800ccc68/68747470733a2f2f692e696d6775722e636f6d2f477377464373652e676966" width="33%" data-canonical-src="https://i.imgur.com/GswFCse.gif"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/c760399492c1a86ec7ab35115bd3fd2be71ac55e/68747470733a2f2f692e696d6775722e636f6d2f694d71766f7a6d2e676966"><img src="https://camo.githubusercontent.com/c760399492c1a86ec7ab35115bd3fd2be71ac55e/68747470733a2f2f692e696d6775722e636f6d2f694d71766f7a6d2e676966" data-canonical-src="https://i.imgur.com/iMqvozm.gif"></a><span>&nbsp;</span><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/e0ea4c4d2c4667a6b35f7b974f2a907a64e53240/68747470733a2f2f692e696d6775722e636f6d2f536444674738512e676966"><img src="https://camo.githubusercontent.com/e0ea4c4d2c4667a6b35f7b974f2a907a64e53240/68747470733a2f2f692e696d6775722e636f6d2f536444674738512e676966" width="50%" data-canonical-src="https://i.imgur.com/SdDgG8Q.gif"></a><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/8efae9691e91e09fe956611e7dc3016b6f68d004/68747470733a2f2f692e696d6775722e636f6d2f66357030444a312e676966"><img src="https://camo.githubusercontent.com/8efae9691e91e09fe956611e7dc3016b6f68d004/68747470733a2f2f692e696d6775722e636f6d2f66357030444a312e676966" width="50%" data-canonical-src="https://i.imgur.com/f5p0DJ1.gif"></a><span>&nbsp;</span><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/df4c2e03e4bd1a1b0d6fa5954c343432735b3a80/68747470733a2f2f692e696d6775722e636f6d2f6c744554464e382e676966"><img src="https://camo.githubusercontent.com/df4c2e03e4bd1a1b0d6fa5954c343432735b3a80/68747470733a2f2f692e696d6775722e636f6d2f6c744554464e382e676966" width="33%" data-canonical-src="https://i.imgur.com/ltETFN8.gif"></a><span>&nbsp;</span><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/99b2a50acd3af08bee3274c7b39c2cdf0a531308/68747470733a2f2f692e696d6775722e636f6d2f643755497559772e676966"><img src="https://camo.githubusercontent.com/99b2a50acd3af08bee3274c7b39c2cdf0a531308/68747470733a2f2f692e696d6775722e636f6d2f643755497559772e676966" width="33%" data-canonical-src="https://i.imgur.com/d7UIuYw.gif"></a><span>&nbsp;</span><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/5c310ee8d1f69470a384fd37e7de0bac6f7190e8/68747470733a2f2f692e696d6775722e636f6d2f74767371444f532e676966"><img src="https://camo.githubusercontent.com/5c310ee8d1f69470a384fd37e7de0bac6f7190e8/68747470733a2f2f692e696d6775722e636f6d2f74767371444f532e676966" width="33%" data-canonical-src="https://i.imgur.com/tvsqDOS.gif"></a></p>
+<h3><a id="user-content-version" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/TIDoS-Framework#version" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Version:</h3>
+<pre><code>v1.7 [latest release] [#stable]
+</code></pre>
+<h3><a id="user-content-upcoming" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/TIDoS-Framework#upcoming" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Upcoming:</h3>
+<p>These are some modules which I have thought of adding:</p>
+<ul>
+<li>Some more of Enumeraton &amp; Information Disclosure modules.</li>
+<li>Lots more of OSINT &amp; Stuff (let that be a suspense).</li>
+<li>More of Auxillary Modules.</li>
+<li>Some Exploits are too being worked on.</li>
+</ul>
+<h3><a id="user-content-ongoing" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/TIDoS-Framework#ongoing" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Ongoing:</h3>
+<p>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+ <ins class="adsbygoogle" style="display: block;" data-ad-client="ca-pub-6620833063853657" data-ad-slot="9572483901" data-ad-format="auto" data-full-width-responsive="true"></ins><br>
+<script>// <!&#091;CDATA&#091;      (adsbygoogle = window.adsbygoogle || &#091;&#093;).push({}); // &#093;&#093;></script>
+</p>
+<ul>
+<li>Working on a full-featured Web UI implementation on Flask and MongoDB and Node.js.</li>
+<li>Working on a new framework, a real framework.<span>&nbsp;</span><code>To be released with v2</code></li>
+<li>Working on a campaign feature + addition of arguments.</li>
+<li>Normal Bug Fixing Stuffs.<span>&nbsp;</span><code>As per the issues being raised</code></li>
+<li>Some other perks:
+<ul>
+<li>Working on a way for contributing new modules easily.</li>
+<li>A complete new method of multi-threaded fuzzing of parameters.</li>
+<li>Keeping better of new console stuff.</li>
+</ul>
+</li>
+</ul>
+<h3><a id="user-content-disclaimer" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/TIDoS-Framework#disclaimer" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Disclaimer:</h3>
+<p>TIDoS is provided as a offensive web application audit framework. It has built-in modules which can reveal potential misconfigurations and vulnerabilties in web applications which could possibly be exploited maliciously.</p>
+<p><strong>THEREFORE, THE AUTHOR AND NEITHER THE CONTRIBUTORS ARE NOT EXCLUSIVELY RESPONSIBLE FOR ANY MISUSE OR DAMAGE DUE TO THIS TOOLKIT.</strong></p>
+</article>
+</div>
+<p><div style="line-height: 0;"><iframe src="https://www.patreon.com/platform/iframe?widget=become-patron-button&amp;redirectURI=https%3A%2F%2Fwww.blackhatethicalhacking.com%2Ftools%2Fthe-tidos-framework%2F&amp;creatorID=20287909" scrolling="no" allowtransparency="true" frameborder="0" class="patreon-widget" title="Patreon Widget" style="position: static; visibility: visible; width: 176px; height: 33px;"></iframe></div></p>
+<p>
+<script async="" src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+</div>
+</div>
+</aside>
+</div>
+</div></div>
+</div> 
+</div> 
+</div>
+</div>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div> 
+</div> 
+</div>
+<hr>
+<center><img src="img/images.png"></center>
+<div class="et_pb_title_container">
+<h1 class="entry-title">
+<center>Offensive Security Tool: Wfuzz</center>
+</h1>
+<p class="et_pb_title_meta_container"> 
+    <center>by</center>
+
+    <span class="author vcard">
+        <center><a href="https://www.facebook.com/kali.rohan221" title="Posts by  Deep.Hacking" rel="author">Deep.Hacking</a></span> | <span class="published">Aug 26, 2020</span>
+        "|" 
+    </a></center>
+</p>
+</div>
+</div>
+</div>  
+</div>
+<div class="et_pb_row_inner et_pb_row_inner_1" style="height: auto !important;">
+<div class="et_pb_column et_pb_column_4_4 et_pb_column_inner et_pb_column_inner_1 et-last-child" style="height: auto !important; min-height: 0px !important;">
+<div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light" style="height: auto !important;">
+<div class="et_pb_text_inner" style="height: auto !important;"><div class="second-place clear"></div>
+<div class="second-place clear"></div>
+<div class="second-place clear" style="text-align: center;">
+<p><code></code></p>
+<p><code><code></code></code></p>
+<p><strong>Reading Time:&nbsp;</strong><strong>2&nbsp;</strong>Minutes</p>
+<p><code></code></p>
+<p><code>&nbsp;</code><strong style="font-size: large;">Offensive Security Tool: Wfuzz</strong></p>
+</div>
+<div id="second-place" class="second-place clear" style="height: auto !important;">
+<div class="c-article__intro" style="text-align: center; height: auto !important;">
+<aside class="inline-block inline-related align-left item-count-1 related-video" style="height: auto !important;">
+<div dir="ltr" style="height: auto !important;">
+<div class="c-article__intro" style="height: auto !important;">
+<header>
+<div class="c-article__intro" style="box-sizing: inherit; orphans: 2; text-align: start; text-indent: 0px; widows: 2; text-decoration-style: initial; text-decoration-color: initial; height: auto !important;">
+<div class="c-article__intro" style="height: auto !important;">
+<div class="c-article__intro" style="height: auto !important;">
+<div class="c-article__intro" style="text-align: center; height: auto !important;">
+<div class="c-article__intro" style="height: auto !important;">
+<div class="c-article__intro" style="height: auto !important;">
+<div class="c-article__intro" style="height: auto !important;">
+<div class="c-article__intro" style="height: auto !important;">
+<div class="c-article__intro" style="height: auto !important;">
+<div class="c-article__intro" style="height: auto !important;">
+<div class="c-article__intro" style="height: auto !important;">
+<p style="height: auto !important;">
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+ <ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-6620833063853657" data-ad-slot="9572483901" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:797px;background-color:transparent;"><ins id="aswift_1_anchor" style="display: block; border: none; height: 280px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 797px; background-color: transparent; overflow: visible;"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:797px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="797" height="280" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-6620833063853657&amp;output=html&amp;h=280&amp;slotname=9572483901&amp;adk=2441063852&amp;adf=2473559564&amp;w=797&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1602503610&amp;rafmt=1&amp;psa=1&amp;guci=2.2.0.0.2.2.0.0&amp;format=797x280&amp;url=https%3A%2F%2Fwww.blackhatethicalhacking.com%2Ftools%2Fwfuzz%2F&amp;flash=0&amp;fwr=0&amp;fwrattr=true&amp;rpe=1&amp;resp_fmts=3&amp;wgl=1&amp;tt_state=W3siaXNzdWVyT3JpZ2luIjoiaHR0cHM6Ly9hZHNlcnZpY2UuZ29vZ2xlLmNvbSIsInN0YXRlIjowfV0.&amp;dt=1602503610549&amp;bpp=25&amp;bdt=2881&amp;idt=27&amp;shv=r20201007&amp;cbv=r20190131&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3D39a0d9562ca1fc11-226e6142d4c30054%3AT%3D1601718496%3ART%3D1601718496%3AS%3DALNI_MbXWsTvnZH7n5IQIMTMJmc7uoAjXg&amp;prev_fmts=0x0&amp;nras=1&amp;correlator=8228021209986&amp;frm=20&amp;pv=1&amp;ga_vid=1144099473.1601718494&amp;ga_sid=1602503610&amp;ga_hid=749006805&amp;ga_fc=0&amp;iag=0&amp;icsg=2815591568091810&amp;dssz=45&amp;mdo=0&amp;mso=0&amp;u_tz=-420&amp;u_his=7&amp;u_java=0&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;adx=137&amp;ady=1147&amp;biw=1349&amp;bih=568&amp;scr_x=0&amp;scr_y=0&amp;eid=21067166%2C21065724%2C21067946&amp;oid=3&amp;pvsid=2068600019848405&amp;pem=64&amp;ref=https%3A%2F%2Fwww.blackhatethicalhacking.com%2Ftools%2F&amp;rx=0&amp;eae=0&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C1366%2C568&amp;vis=1&amp;rsz=%7C%7CeEbr%7C&amp;abl=CS&amp;pfx=0&amp;fu=8320&amp;bc=31&amp;ifi=1&amp;uci=a!1&amp;btvi=1&amp;fsb=1&amp;xpc=KBETvMNFPP&amp;p=https%3A//www.blackhatethicalhacking.com&amp;dtd=91" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!1" data-google-query-id="CKu15JL_ruwCFUuIaAodX_ILNA" data-load-complete="true"></iframe></ins></ins></ins><br>
+<script>// <!&#091;CDATA&#091;      (adsbygoogle = window.adsbygoogle || &#091;&#093;).push({}); // &#093;&#093;></script>
+</p>
+<div class="c-article__intro" style="height: auto !important;">
+<div class="c-article__intro" style="height: auto !important;">
+<div class="c-article__intro" style="height: auto !important;">
+<div class="topContent container">
+<div class="row">
+<div class="row">
+<div class="col-12">
+<header class="storyHeader article">
+<div id="main" data-article-num="1">
+<div>
+<section class="leader leader-top" data-component="medusaContentRecommendation" data-medusa-content-recommendation-options="{&quot;promo&quot;:&quot;promo_zd_recommendation_top_leaderboard_desktop&quot;,&quot;spot&quot;:&quot;content-top-leaderboard&quot;}"></section>
+<div style="text-align: center;">Github <a title="Download" href="https://github.com/blackhatethicalhacking/wfuzz">Link</a></div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;"><strong><div class="post-views post-246916 entry-meta">
+<span class="post-views-icon dashicons dashicons-chart-bar"></span>
+<span class="post-views-label">Post Views: </span>
+<span class="post-views-count">1,062</span>
+</div></strong></div>
+</div>
+</div>
+</header>
+</div>
+</div>
+</div>
+</div>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/xmendez/wfuzz/blob/master/docs/_static/logo/wfuzz_letters.svg"><img src="https://github.com/xmendez/wfuzz/raw/master/docs/_static/logo/wfuzz_letters.svg" width="500"></a></p>
+<p><a href="https://travis-ci.org/xmendez/wfuzz" rel="nofollow"><img src="https://camo.githubusercontent.com/f67c80b69071235554bf2b00c633e04796d2d0fd/68747470733a2f2f7472617669732d63692e6f72672f786d656e64657a2f7766757a7a2e7376673f6272616e63683d6d6173746572" alt="Build Status" data-canonical-src="https://travis-ci.org/xmendez/wfuzz.svg?branch=master"></a><span>&nbsp;</span><a href="https://pypi.python.org/pypi/wfuzz" rel="nofollow"><img src="https://camo.githubusercontent.com/f1a347d4e2edd0d5a53c8053ad3d1b10e5ad1ba4/68747470733a2f2f696d672e736869656c64732e696f2f707970692f762f7766757a7a2e737667" data-canonical-src="https://img.shields.io/pypi/v/wfuzz.svg"></a><span>&nbsp;</span><a href="https://pypi.python.org/pypi/wfuzz" rel="nofollow"><img src="https://camo.githubusercontent.com/db9b6c209f1579cd4de717ef3e7fb18c83509bf5/68747470733a2f2f696d672e736869656c64732e696f2f707970692f646d2f7766757a7a" data-canonical-src="https://img.shields.io/pypi/dm/wfuzz"></a><span>&nbsp;</span><a href="https://pypi.python.org/pypi/wfuzz" rel="nofollow"><img src="https://camo.githubusercontent.com/eb940c0d37429d7d666fccadf18149dd525cec79/68747470733a2f2f696d672e736869656c64732e696f2f707970692f707976657273696f6e732f7766757a7a2e737667" data-canonical-src="https://img.shields.io/pypi/pyversions/wfuzz.svg"></a><span>&nbsp;</span><a href="https://codecov.io/github/xmendez/wfuzz" rel="nofollow"><img src="https://camo.githubusercontent.com/10a6f2059ef6bf9ad36d2c05400c055bba82855d/68747470733a2f2f636f6465636f762e696f2f6769746875622f786d656e64657a2f7766757a7a2f636f7665726167652e7376673f6272616e63683d6d6173746572" data-canonical-src="https://codecov.io/github/xmendez/wfuzz/coverage.svg?branch=master"></a></p>
+<h1><a id="user-content-wfuzz---the-web-fuzzer" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/wfuzz#wfuzz---the-web-fuzzer" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Wfuzz – The Web Fuzzer</h1>
+<p>Wfuzz has been created to facilitate the task in web applications assessments and it is based on a simple concept: it replaces any reference to the FUZZ keyword by the value of a given payload.</p>
+<p>A payload in Wfuzz is a source of data.</p>
+<p>This simple concept allows any input to be injected in any field of an HTTP request, allowing to perform complex web security attacks in different web application components such as: parameters, authentication, forms, directories/files, headers, etc.</p>
+<p>Wfuzz is more than a web content scanner:</p>
+<ul>
+<ul>
+<li>Wfuzz could help you to secure your web applications by finding and exploiting web application vulnerabilities. Wfuzz’s web application vulnerability scanner is supported by plugins.</li>
+<li>Wfuzz is a completely modular framework and makes it easy for even the newest of Python developers to contribute. Building plugins is simple and takes little more than a few minutes.</li>
+</ul>
+</ul>
+<p style="height: auto !important;">
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+ <ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-6620833063853657" data-ad-slot="9572483901" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:797px;background-color:transparent;"><ins id="aswift_2_anchor" style="display: block; border: none; height: 280px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 797px; background-color: transparent; overflow: visible;"><iframe id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0;width:797px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="797" height="280" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-6620833063853657&amp;output=html&amp;h=280&amp;slotname=9572483901&amp;adk=3113036875&amp;adf=1312325102&amp;w=797&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1602503610&amp;rafmt=1&amp;psa=1&amp;guci=2.2.0.0.2.2.0.0&amp;format=797x280&amp;url=https%3A%2F%2Fwww.blackhatethicalhacking.com%2Ftools%2Fwfuzz%2F&amp;flash=0&amp;fwr=0&amp;fwrattr=true&amp;rpe=1&amp;resp_fmts=3&amp;wgl=1&amp;tt_state=W3siaXNzdWVyT3JpZ2luIjoiaHR0cHM6Ly9hZHNlcnZpY2UuZ29vZ2xlLmNvbSIsInN0YXRlIjowfV0.&amp;dt=1602503610733&amp;bpp=17&amp;bdt=3065&amp;idt=17&amp;shv=r20201007&amp;cbv=r20190131&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3D39a0d9562ca1fc11-226e6142d4c30054%3AT%3D1601718496%3ART%3D1601718496%3AS%3DALNI_MbXWsTvnZH7n5IQIMTMJmc7uoAjXg&amp;prev_fmts=0x0%2C797x280&amp;nras=1&amp;correlator=8228021209986&amp;frm=20&amp;pv=1&amp;ga_vid=1144099473.1601718494&amp;ga_sid=1602503610&amp;ga_hid=749006805&amp;ga_fc=0&amp;iag=0&amp;icsg=2255167017626250&amp;dssz=47&amp;mdo=0&amp;mso=0&amp;u_tz=-420&amp;u_his=7&amp;u_java=0&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;adx=137&amp;ady=1977&amp;biw=1349&amp;bih=568&amp;scr_x=0&amp;scr_y=0&amp;eid=21067166%2C21065724%2C21067946&amp;oid=3&amp;pvsid=2068600019848405&amp;pem=64&amp;ref=https%3A%2F%2Fwww.blackhatethicalhacking.com%2Ftools%2F&amp;rx=0&amp;eae=0&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C1366%2C568&amp;vis=1&amp;rsz=%7C%7CeEbr%7C&amp;abl=CS&amp;pfx=0&amp;fu=8320&amp;bc=31&amp;ifi=2&amp;uci=a!2&amp;btvi=2&amp;fsb=1&amp;xpc=0N9syAUmrp&amp;p=https%3A//www.blackhatethicalhacking.com&amp;dtd=66" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!2" data-google-query-id="CKWx7pL_ruwCFQ0-aAodGX4KNg" data-load-complete="true"></iframe></ins></ins></ins><br>
+<script>// <!&#091;CDATA&#091;      (adsbygoogle = window.adsbygoogle || &#091;&#093;).push({}); // &#093;&#093;></script>
+</p>
+<ul>
+<li>Wfuzz exposes a simple language interface to the previous HTTP requests/responses performed using Wfuzz or other tools, such as Burp. This allows you to perform manual and semi-automatic tests with full context and understanding of your actions, without relying on a web application scanner underlying implementation.</li>
+</ul>
+<p>It was created to facilitate the task in web applications assessments, it’s a tool by pentesters for pentesters <img draggable="false" role="img" class="emoji"  src="https://s.w.org/images/core/emoji/13.0.0/svg/1f609.svg"></p>
+<h2><a id="user-content-installation" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/wfuzz#installation" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Installation</h2>
+<p>To install WFuzz, simply use pip:</p>
+<pre><code>pip install wfuzz
+</code></pre>
+<h2><a id="user-content-documentation" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/wfuzz#documentation" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Documentation</h2>
+<p>Documentation is available at<span>&nbsp;</span><a href="https://wfuzz.readthedocs.io/" rel="nofollow">http://wfuzz.readthedocs.io</a></p>
+<p><div style="line-height: 0;"><iframe src="https://www.patreon.com/platform/iframe?widget=become-patron-button&amp;redirectURI=https%3A%2F%2Fwww.blackhatethicalhacking.com%2Ftools%2Fwfuzz%2F&amp;creatorID=20287909" scrolling="no" allowtransparency="true" frameborder="0" class="patreon-widget" title="Patreon Widget" style="position: static; visibility: visible; width: 176px; height: 33px;"></iframe></div></p>
+<p>
+<script async="" src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+</div>
+</div>
+</aside>
+</div>
+</div></div>
+</div> 
+</div> 
+</div>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="index2.html" target="_Tool: Nuclei">1</a></li>
+    <li class="page-item"><a class="page-link" href="index3.html" target="Tool:Twint">2</a></li>
+    <li class="page-item"><a class="page-link" href="index4.html" target="Offensive Security Tool: Jok3r">3</a></li>
+    <li class="page-item"><a class="page-link" href="index5.html" target=" Tool: Sublist3r">4</a></li>
+     <li class="page-item"><a class="page-link" href="#">5</a></li>
+      <li class="page-item"><a class="page-link" href="#">6</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+
+
+
+</body>
+</html>
+
+
+
+

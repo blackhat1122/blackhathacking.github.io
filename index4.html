@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>hackingbook/deephacking</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<img src="img/Shortlist_1012_CyberSecurity_600x200.gif" width="1800" height="290">
+<div id="et-boc" class="et-boc">
+<div class="et-l et-l--post">
+<div class="et_builder_inner_content et_pb_gutters3">
+<div class="et_pb_section et_pb_section_1 et_pb_fullwidth_section et_section_regular et_pb_section_first">
+<div class="et_pb_module et_pb_fullwidth_image et_pb_fullwidth_image_0">
+	<img src="https://www.blackhatethicalhacking.com/wp-content/uploads/2017/11/black-hat-locks-and-electronics.jpg" alt="" title="" srcset="https://www.blackhatethicalhacking.com/wp-content/uploads/2017/11/black-hat-locks-and-electronics.jpg 1920w, https://www.blackhatethicalhacking.com/wp-content/uploads/2017/11/black-hat-locks-and-electronics-200x42.jpg 200w, https://www.blackhatethicalhacking.com/wp-content/uploads/2017/11/black-hat-locks-and-electronics-300x63.jpg 300w, https://www.blackhatethicalhacking.com/wp-content/uploads/2017/11/black-hat-locks-and-electronics-768x160.jpg 768w, https://www.blackhatethicalhacking.com/wp-content/uploads/2017/11/black-hat-locks-and-electronics-1024x213.jpg 1024w, https://www.blackhatethicalhacking.com/wp-content/uploads/2017/11/black-hat-locks-and-electronics-1080x225.jpg 1080w" sizes="(max-width: 1920px) 100vw, 1920px">
+</div>
+</div> <div class="et_pb_section et_pb_section_2 et_section_specialty">
+<div class="et_pb_row et_pb_row_3-4_1-4">
+<div class="et_pb_column et_pb_column_3_4 et_pb_column_0   et_pb_specialty_column  et_pb_css_mix_blend_mode_passthrough">
+<div class="et_pb_row_inner et_pb_row_inner_0">
+<div class="et_pb_column et_pb_column_4_4 et_pb_column_inner et_pb_column_inner_0 et-last-child">
+<div class="et_pb_module et_pb_post_title et_pb_post_title_0 et_pb_bg_layout_light  et_pb_text_align_left">
+<div class="et_pb_title_container">
+<h1 class="entry-title">Offensive Security Tool: Jok3r</h1><p class="et_pb_title_meta_container"> by <span class="author vcard"><a href="https://www.blackhatethicalhacking.com/author/admin/" title="Posts by Black Hat Ethical Hacking" rel="author">Black Hat Ethical Hacking</a></span> | <span class="published">Jul 23, 2020</span> | <a href="https://www.blackhatethicalhacking.com/category/tools/" rel="category tag">Tools</a></p>
+</div>
+<div class="et_pb_title_featured_container"><span class="et_pb_image_wrap"><img src="https://www.blackhatethicalhacking.com/wp-content/uploads/2020/07/jok3r1-1024x665-1.jpg" alt="" title="jok3r1-1024×665" srcset="https://www.blackhatethicalhacking.com/wp-content/uploads/2020/07/jok3r1-1024x665-1.jpg 1024w, https://www.blackhatethicalhacking.com/wp-content/uploads/2020/07/jok3r1-1024x665-1-980x636.jpg 980w, https://www.blackhatethicalhacking.com/wp-content/uploads/2020/07/jok3r1-1024x665-1-480x312.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1024px, 100vw"></span></div>
+</div><div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
+<div class="et_pb_text_inner"><p style="text-align: center;"><strong></strong></p><div class="post-views post-246486 entry-meta"><strong>
+<span class="post-views-icon dashicons dashicons-chart-bar"></span>
+<span class="post-views-label">Post Views: </span>
+<span class="post-views-count">4,597</span>
+</strong></div><p></p></div>
+</div> 
+</div> 
+</div> <div class="et_pb_row_inner et_pb_row_inner_1">
+<div class="et_pb_column et_pb_column_4_4 et_pb_column_inner et_pb_column_inner_1 et-last-child">
+<div class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_light">
+<div class="et_pb_text_inner"><div class="second-place clear"></div>
+<div class="second-place clear"></div>
+<div class="second-place clear" style="text-align: center;">
+<p><code></code></p>
+<p><code><code></code></code></p>
+<p><strong>Reading Time:&nbsp;</strong><strong>&nbsp;8&nbsp;</strong>Minutes</p>
+<p><code></code></p>
+<p><code>&nbsp;</code><strong style="font-size: large;">Offensive Security Tool: Jok3r</strong></p>
+</div>
+<div id="second-place" class="second-place clear">
+<div class="c-article__intro" style="text-align: center;">
+<aside class="inline-block inline-related align-left item-count-1 related-video">
+<div dir="ltr">
+<div class="c-article__intro">
+<header>
+<div class="c-article__intro" style="box-sizing: inherit; orphans: 2; text-align: start; text-indent: 0px; widows: 2; text-decoration-style: initial; text-decoration-color: initial;">
+<div class="c-article__intro">
+<div class="c-article__intro">
+<div class="c-article__intro" style="text-align: center;">
+<div class="c-article__intro">
+<div class="c-article__intro">
+<div class="c-article__intro">
+<div class="c-article__intro">
+<div class="c-article__intro">
+<div class="c-article__intro">
+<div class="c-article__intro">
+<p><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+<ins class="adsbygoogle" style="display: block; text-align: center; height: 0px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6620833063853657" data-ad-slot="4517761481" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display: inline-table; border: none; height: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 797px; background-color: transparent;"><ins id="aswift_1_anchor" style="display: block; border: none; height: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 797px; background-color: transparent; overflow: hidden; opacity: 0;"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:797px;height:200px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="797" height="200" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-6620833063853657&amp;output=html&amp;h=200&amp;slotname=4517761481&amp;adk=2928413059&amp;adf=2473559564&amp;w=797&amp;fwrn=4&amp;lmt=1602664983&amp;rafmt=11&amp;psa=1&amp;guci=2.2.0.0.2.2.0.0&amp;format=797x200&amp;url=https%3A%2F%2Fwww.blackhatethicalhacking.com%2Ftools%2Fjok3r%2F%3F__cf_chl_captcha_tk__%3D8262bf7e2ec3fcce8ac2d6aa04108df5a9e7792f-1602664943-0-AfrLsh5LBVGfK76AJZEKtnJueIkussP2WU1sIMm3mR2yjIe33XG6L9tbPZ4PRct_T7l2hF8vIeTz5P2yiFYUWU2HDPLSuxSihgCupNCWbfpbRyfCOdShNmQapHQLO7QrYoJS4ksV7VlgH6Fn3mBA3GeySGE8X7iPSsRBIX-Afu83g5LnuN-OhINHwLcMsW55FefWRCyvf9Aab7Mw9TAD7j-84ToV2qAhIkv_3Rjaq2lWKVCs3BdSrB2P1UAVUF7s4nVw_BKp_BpOnUK-tmuoC3R-1mIIFJgyAqrYtmm_u_I2T-G3LbAU-43qqZ7xcTZCMtVURUrJzmuPT7y3jbJqJ_920-a2pUVa_2Was2jJAO2trcUv5spp5fquVmH8dd9hEyKO1HTafRUXjtMx0pjQVTtvGWJ5YbtEDlrPzE65SQATsbboZl6NxwK8k6V_ALR64X6lPTM3YAdu6KeKP6S9o4Kw7PCCHgjYRxRvaKbuct3vmHjn46_wDkHWMcu1mLH0Wkb-pHBwQjupQTLIFspg2v5zK4O9opa3jYF5Bzu5Oaep&amp;flash=0&amp;wgl=1&amp;tt_state=W3siaXNzdWVyT3JpZ2luIjoiaHR0cHM6Ly9hZHNlcnZpY2UuZ29vZ2xlLmNvbSIsInN0YXRlIjowfV0.&amp;dt=1602664983402&amp;bpp=21&amp;bdt=1223&amp;idt=224&amp;shv=r20201008&amp;cbv=r20190131&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3D39a0d9562ca1fc11-226e6142d4c30054%3AT%3D1601718496%3ART%3D1601718496%3AS%3DALNI_MbXWsTvnZH7n5IQIMTMJmc7uoAjXg&amp;prev_fmts=0x0&amp;nras=1&amp;correlator=5570033123379&amp;frm=20&amp;pv=1&amp;ga_vid=1144099473.1601718494&amp;ga_sid=1602664984&amp;ga_hid=382040938&amp;ga_fc=0&amp;iag=0&amp;icsg=281268460366506&amp;dssz=61&amp;mdo=0&amp;mso=0&amp;rplot=4&amp;u_tz=-420&amp;u_his=10&amp;u_java=0&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;adx=137&amp;ady=433&amp;biw=1349&amp;bih=625&amp;scr_x=0&amp;scr_y=0&amp;oid=3&amp;pvsid=4336622444357190&amp;pem=64&amp;ref=https%3A%2F%2Fwww.blackhatethicalhacking.com%2Ftools%2Fjok3r%2F%3F__cf_chl_jschl_tk__%3Dd2924c1d7348bb6759ef8c0ff7516bc232754b97-1602664939-0-AdrZWDXJhXUlB6QCKomnNnYMkKvwxfa-s6HK_yKwYXMUHbLQssH2I3oczu11Ebq-a1xRKr7_Nv77G8nQ0Tbl4TeiVny_iHvHgiTCtRMZ0FdVxgVT7Rrw-dJTDQAHKWC41-3dUg4hIOL_AUpFLygxN-ic07HsFFYACMzZPV_8vHG-4U2-ad-BZJcF36B4dOjmdHrrflewYS5ClAOw6edWOSy--toBhCToNz_9VMpB7zPgeiRaSz_HjLNDMvR9O-XiywwsYgGj0smXscF-En53HG60lsxOP120vU87jr1plXlI&amp;rx=0&amp;eae=0&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C1366%2C625&amp;vis=1&amp;rsz=%7C%7CeE%7C&amp;abl=CS&amp;pfx=0&amp;fu=8320&amp;bc=31&amp;ifi=1&amp;uci=a!1&amp;fsb=1&amp;xpc=bhypzlobeR&amp;p=https%3A//www.blackhatethicalhacking.com&amp;dtd=246" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!1" data-google-query-id="CMi9i6jYs-wCFRbG7Qod4ygHnw" data-load-complete="true"></iframe></ins></ins></ins><br>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+<div class="c-article__intro">
+<div class="c-article__intro">
+<div class="c-article__intro">
+<div class="topContent container">
+<div class="row">
+<div class="row">
+<div class="col-12">
+<header class="storyHeader article">
+<div id="main" data-article-num="1">
+<div>
+<section class="leader leader-top" data-component="medusaContentRecommendation" data-medusa-content-recommendation-options="{&quot;promo&quot;:&quot;promo_zd_recommendation_top_leaderboard_desktop&quot;,&quot;spot&quot;:&quot;content-top-leaderboard&quot;}"></section>
+<div style="text-align: center;">Github <a title="Download" href="https://github.com/blackhatethicalhacking/jok3r">Link</a></div>
+</div>
+</div>
+</header>
+</div>
+</div>
+</div>
+</div>
+<header class="entry-header ">
+<div class="ast-single-post-order">
+<div class="Box-header d-flex flex-items-center flex-justify-between ">
+<div></div>
+</div>
+<div class="Box-body p-5">
+<article class="markdown-body entry-content">
+<div class="application-main " data-commit-hovercards-enabled="">
+<div class="">
+<div class="Box-body px-5 pb-5">
+<article class="markdown-body entry-content container-lg" itemprop="text">
+<h1 align="center"><a target="_blank" rel="noopener noreferrer" href="https://github.com/blackhatethicalhacking/jok3r/blob/master/pictures/logo.png"><img alt="./pictures/logo.png" src="https://github.com/blackhatethicalhacking/jok3r/raw/master/pictures/logo.png"></a><br>
+Jok3r v3 beta<br>
+<a href="https://www.python.org/downloads/release/python-366/" rel="nofollow"><img alt="Python 3.6" src="https://camo.githubusercontent.com/c2ed0c1d8ac1a5ebbe7281923d42b50b7962912c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f707974686f6e2d332e362d626c75652e737667" data-canonical-src="https://img.shields.io/badge/python-3.6-blue.svg"><span>&nbsp;</span></a><a href="https://jok3r.readthedocs.io/en/latest/" rel="nofollow"><img alt="Documentation ReadTheDocs" src="https://camo.githubusercontent.com/ce5ca0e297e273dd4f615fe09af625822c9388a1/68747470733a2f2f72656164746865646f63732e6f72672f70726f6a656374732f6a6f6b33722f62616467652f3f76657273696f6e3d6c6174657374" data-canonical-src="https://readthedocs.org/projects/jok3r/badge/?version=latest"></a><span>&nbsp;</span><a href="https://hub.docker.com/r/koutto/jok3r/" rel="nofollow"><img alt="Docker Size" src="https://camo.githubusercontent.com/aff5a39aa6b8a5a4a668072d9ae663f8ca2636c1/68747470733a2f2f696d672e736869656c64732e696f2f6d6963726f6261646765722f696d6167652d73697a652f6b6f7574746f2f6a6f6b33722e737667" data-canonical-src="https://img.shields.io/microbadger/image-size/koutto/jok3r.svg"><span>&nbsp;</span></a><a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/05c88ea1e50c33bac29abde24f9e477d50baa4e9/68747470733a2f2f696d672e736869656c64732e696f2f646f636b65722f636c6f75642f6275696c642f6b6f7574746f2f6a6f6b33722e737667"><img alt="Docker Build Status" src="https://camo.githubusercontent.com/05c88ea1e50c33bac29abde24f9e477d50baa4e9/68747470733a2f2f696d672e736869656c64732e696f2f646f636b65722f636c6f75642f6275696c642f6b6f7574746f2f6a6f6b33722e737667" data-canonical-src="https://img.shields.io/docker/cloud/build/koutto/jok3r.svg"></a></h1>
+<h3 align="center"><a id="user-content-network--web-pentest-automation-framework" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#network--web-pentest-automation-framework" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Network &amp; Web Pentest Automation Framework</h3>
+<p align="center"><a href="https://www.jok3r-framework.com/" rel="nofollow">www.jok3r-framework.com</a></p>
+<p><strong>WARNING: Project is still in version 3 BETA. It is still under active development and bugs might be present.</strong></p>
+<p><strong>Many tests are going on: see<span>&nbsp;</span><a href="https://github.com/koutto/jok3r/blob/master/tests/TESTS.rst">https://github.com/koutto/jok3r/blob/master/tests/TESTS.rst</a>. Ideas, bug reports, contributions are welcome !</strong></p>
+<div id="user-content-contents">
+<ul>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#overview" id="user-content-id3" data-et-has-event-already="true">Overview</a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#features" id="user-content-id4" data-et-has-event-already="true">Features</a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#demos" id="user-content-id5" data-et-has-event-already="true">Demos</a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#architecture" id="user-content-id6" data-et-has-event-already="true">Architecture</a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#installation" id="user-content-id7" data-et-has-event-already="true">Installation</a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#update" id="user-content-id8" data-et-has-event-already="true">Update</a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#quick-usage-examples" id="user-content-id9" data-et-has-event-already="true">Quick usage examples</a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#typical-usage-example" id="user-content-id10" data-et-has-event-already="true">Typical usage example</a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#full-documentation" id="user-content-id11" data-et-has-event-already="true">Full Documentation</a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#supported-services-security-checks" id="user-content-id12" data-et-has-event-already="true">Supported Services &amp; Security Checks</a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#known-issues" id="user-content-id13" data-et-has-event-already="true">Known Issues</a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#changelog" id="user-content-id14" data-et-has-event-already="true">Changelog</a></li>
+</ul>
+</div>
+<h1><a name="user-content-overview"></a><span></span></h1>
+<h2><a id="user-content-overview" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#overview" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a><a href="https://github.com/blackhatethicalhacking/jok3r#id3" data-et-has-event-already="true">Overview</a></h2>
+<p><em>Jok3r</em><span>&nbsp;</span>is a Python3 CLI application which is aimed at<span>&nbsp;</span><strong>helping penetration testers for network infrastructure and web black-box security tests</strong>.</p>
+<p>The goal is to save as much time as possible during network/web pentests by automating as many security tests as possible in order to quickly identify low-hanging fruits vulnerabilities, and then spend more time on more interesting and tricky stuff !</p>
+<p>It is based upon the observation that there are many hacking open-source tools/scripts (from various sources) targeting common network services available out there, that allow to perform various tasks from fingerprinting to exploitation. Therefore, the idea of<span>&nbsp;</span><em>Jok3r</em><span>&nbsp;</span>is to combine those open-source tools in a smart way to get the more relevant results.</p>
+<h1><a name="user-content-features"></a><span></span></h1>
+<h2><a id="user-content-features" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#features" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a><a href="https://github.com/blackhatethicalhacking/jok3r#id4" data-et-has-event-already="true">Features</a></h2>
+<h1><a name="user-content-pentest-toolbox-management"></a><span></span></h1>
+<h3><a id="user-content-pentest-toolbox-management" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#pentest-toolbox-management" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Pentest Toolbox management</h3>
+<p><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+<ins class="adsbygoogle" style="display: block; text-align: center; height: 0px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6620833063853657" data-ad-slot="4517761481" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display: inline-table; border: none; height: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 797px; background-color: transparent;"><ins id="aswift_2_anchor" style="display: block; border: none; height: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 797px; background-color: transparent; overflow: hidden; opacity: 0;"><iframe id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0;width:797px;height:200px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="797" height="200" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-6620833063853657&amp;output=html&amp;h=200&amp;slotname=4517761481&amp;adk=1206472870&amp;adf=912212523&amp;w=797&amp;fwrn=4&amp;lmt=1602664983&amp;rafmt=11&amp;psa=1&amp;guci=2.2.0.0.2.2.0.0&amp;format=797x200&amp;url=https%3A%2F%2Fwww.blackhatethicalhacking.com%2Ftools%2Fjok3r%2F%3F__cf_chl_captcha_tk__%3D8262bf7e2ec3fcce8ac2d6aa04108df5a9e7792f-1602664943-0-AfrLsh5LBVGfK76AJZEKtnJueIkussP2WU1sIMm3mR2yjIe33XG6L9tbPZ4PRct_T7l2hF8vIeTz5P2yiFYUWU2HDPLSuxSihgCupNCWbfpbRyfCOdShNmQapHQLO7QrYoJS4ksV7VlgH6Fn3mBA3GeySGE8X7iPSsRBIX-Afu83g5LnuN-OhINHwLcMsW55FefWRCyvf9Aab7Mw9TAD7j-84ToV2qAhIkv_3Rjaq2lWKVCs3BdSrB2P1UAVUF7s4nVw_BKp_BpOnUK-tmuoC3R-1mIIFJgyAqrYtmm_u_I2T-G3LbAU-43qqZ7xcTZCMtVURUrJzmuPT7y3jbJqJ_920-a2pUVa_2Was2jJAO2trcUv5spp5fquVmH8dd9hEyKO1HTafRUXjtMx0pjQVTtvGWJ5YbtEDlrPzE65SQATsbboZl6NxwK8k6V_ALR64X6lPTM3YAdu6KeKP6S9o4Kw7PCCHgjYRxRvaKbuct3vmHjn46_wDkHWMcu1mLH0Wkb-pHBwQjupQTLIFspg2v5zK4O9opa3jYF5Bzu5Oaep&amp;flash=0&amp;wgl=1&amp;tt_state=W3siaXNzdWVyT3JpZ2luIjoiaHR0cHM6Ly9hZHNlcnZpY2UuZ29vZ2xlLmNvbSIsInN0YXRlIjowfV0.&amp;dt=1602664983423&amp;bpp=3&amp;bdt=1244&amp;idt=251&amp;shv=r20201008&amp;cbv=r20190131&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3D39a0d9562ca1fc11-226e6142d4c30054%3AT%3D1601718496%3ART%3D1601718496%3AS%3DALNI_MbXWsTvnZH7n5IQIMTMJmc7uoAjXg&amp;prev_fmts=0x0%2C797x200&amp;nras=1&amp;correlator=5570033123379&amp;frm=20&amp;pv=1&amp;ga_vid=1144099473.1601718494&amp;ga_sid=1602664984&amp;ga_hid=382040938&amp;ga_fc=0&amp;iag=0&amp;icsg=1125073841466024&amp;dssz=62&amp;mdo=0&amp;mso=0&amp;rplot=4&amp;u_tz=-420&amp;u_his=10&amp;u_java=0&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;adx=137&amp;ady=1640&amp;biw=1349&amp;bih=625&amp;scr_x=0&amp;scr_y=0&amp;oid=3&amp;pvsid=4336622444357190&amp;pem=64&amp;ref=https%3A%2F%2Fwww.blackhatethicalhacking.com%2Ftools%2Fjok3r%2F%3F__cf_chl_jschl_tk__%3Dd2924c1d7348bb6759ef8c0ff7516bc232754b97-1602664939-0-AdrZWDXJhXUlB6QCKomnNnYMkKvwxfa-s6HK_yKwYXMUHbLQssH2I3oczu11Ebq-a1xRKr7_Nv77G8nQ0Tbl4TeiVny_iHvHgiTCtRMZ0FdVxgVT7Rrw-dJTDQAHKWC41-3dUg4hIOL_AUpFLygxN-ic07HsFFYACMzZPV_8vHG-4U2-ad-BZJcF36B4dOjmdHrrflewYS5ClAOw6edWOSy--toBhCToNz_9VMpB7zPgeiRaSz_HjLNDMvR9O-XiywwsYgGj0smXscF-En53HG60lsxOP120vU87jr1plXlI&amp;rx=0&amp;eae=0&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C1366%2C625&amp;vis=1&amp;rsz=%7C%7CeEbr%7C&amp;abl=CS&amp;pfx=0&amp;fu=8320&amp;bc=31&amp;ifi=2&amp;uci=a!2&amp;btvi=1&amp;fsb=1&amp;xpc=LMDb8WUzCD&amp;p=https%3A//www.blackhatethicalhacking.com&amp;dtd=278" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!2" data-google-query-id="CJGejajYs-wCFaRi5godKqILxg" data-load-complete="true"></iframe></ins></ins></ins><br>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+<ul>
+<li><strong>Selection of Tools</strong>: Compilation of 50+ open-source tools &amp; scripts, from various sources.</li>
+<li><strong>Docker-based</strong>: Application packaged in a Docker image running Kali OS, available on Docker Hub.</li>
+<li><strong>Ready-to-use</strong>: All tools and dependencies installed, just pull the Docker image and run a fresh container.</li>
+<li><strong>Updates made easy</strong>: Easily keep the whole toolbox up-to-date by running only one command.</li>
+<li><strong>Easy Customization</strong>: Easily add/remove tools from a simple configuration file.</li>
+</ul>
+<h1><a name="user-content-network-infrastructure-security-assessment"></a><span></span></h1>
+<h3><a id="user-content-network-infrastructure-security-assessment" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#network-infrastructure-security-assessment" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Network Infrastructure Security Assessment</h3>
+<ul>
+<li><strong>Many supported Services</strong>: Target most common TCP/UDP services (HTTP, FTP, SSH, SMB, Oracle, MS-SQL, MySQL, PostgreSQL, VNC, etc.).</li>
+<li><strong>Combine Power of Tools</strong>: Each security check is performed by a tool from the toolbox. Attacks are performed by chaining security checks.</li>
+<li><strong>Context Awareness</strong>: Security checks to run are selected and adapted according to the context of the target (i.e. detected technologies, credentials, vulnerabilities, etc.).</li>
+<li><strong>Reconnaissance</strong>: Automatic fingerprinting (product detection) of targeted services is performed.</li>
+<li><strong>CVE Lookup</strong>: When product names and their versions are detected, a vulnerability lookup is performed on online CVE databases (using Vulners &amp; CVE Details).</li>
+<li><strong>Vulnerability Scanning</strong>: Automatically check for common vulnerabilities and attempt to perform some exploitations (auto-pwn).</li>
+<li><strong>Brute-force Attack</strong>: Automatically check for default/common credentials on the service and perform dictionnary attack if necessary. Wordlists are optimized according to the targeted services.</li>
+<li><strong>Post-authentication Testing</strong>: Automatically perform some post-exploitation checks when valid credentials have been found.</li>
+</ul>
+<h1><a name="user-content-web-security-assessment"></a><span></span></h1>
+<h3><a id="user-content-web-security-assessment" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#web-security-assessment" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Web Security Assessment</h3>
+<ul>
+<li><strong>Large Focus on HTTP</strong>: More than 60 different security checks targeting HTTP supported for now.</li>
+<li><strong>Web Technologies Detection</strong>: Fingerprinting engine based on Wappalyzer is run prior to security checks, allowing to detect: Programming language, Framework, JS library, CMS, Web &amp; Application Server.</li>
+<li><strong>Server Exploitation</strong>: Automatically scan and/or exploit most critical vulnerabilities (e.g. RCE) on web and application servers (e.g. JBoss, Tomcat, Weblogic, Websphere, Jenkins, etc.).</li>
+<li><strong>CMS Vulnerability Scanning</strong>: Automatically run vulnerability scanners on most common CMS (WordPress, Drupal, Joomla, etc.).</li>
+</ul>
+<h1><a name="user-content-local-database-reporting"></a><span></span></h1>
+<h3><a id="user-content-local-database--reporting" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#local-database--reporting" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Local Database &amp; Reporting</h3>
+<ul>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+<ins class="adsbygoogle" style="display: block; text-align: center; height: 196px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6620833063853657" data-ad-slot="4517761481" data-adsbygoogle-status="done"><ins id="aswift_3_expand" style="display:inline-table;border:none;height:196px;margin:0;padding:0;position:relative;visibility:visible;width:783px;background-color:transparent;"><ins id="aswift_3_anchor" style="display:block;border:none;height:196px;margin:0;padding:0;position:relative;visibility:visible;width:783px;background-color:transparent;"></ins></ins></ins><br>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><p></p>
+<li><strong>Local Database</strong>: Data related to targets is organized by missions (workspaces) into a local Sqlite database that is kept updated during security testings.</li>
+<li><strong>Metasploit-like Interactive Shell</strong>: Access the database through an interactive shell with several built-in commands.</li>
+<li><strong>Import Targets from Nmap</strong>: Add targets to a mission either manually or by loading Nmap results.</li>
+<li><strong>Import Targets from Shodan</strong>: Add targets to a mission manually from shodan (need shodan API key).</li>
+<li><strong>Access all Results</strong>: All outputs from security checks, detected credentials and vulnerabilities are stored into the database and can be accessed easily.</li>
+<li><strong>Reporting</strong>: Generate full HTML reports with targets summary, web screenshots and all results from security testing.</li>
+</ul>
+<h1><a name="user-content-demos"></a><span></span></h1>
+<h2><a id="user-content-demos" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#demos" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a><a href="https://github.com/blackhatethicalhacking/jok3r#id5" data-et-has-event-already="true">Demos</a></h2>
+<ul>
+<li><strong>Example 1: Scan a JAVA-RMI (JMX) service:</strong></li>
+</ul>
+<h1><a href="https://www.youtube.com/watch?v=FlbeBj5FPtI" rel="nofollow"><img alt="pictures/video-01.png" src="https://github.com/blackhatethicalhacking/jok3r/raw/master/pictures/video-01.png"></a><span></span></h1>
+<ul>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+<ins class="adsbygoogle" style="display: block; text-align: center; height: 196px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6620833063853657" data-ad-slot="4517761481" data-adsbygoogle-status="done"><ins id="aswift_4_expand" style="display:inline-table;border:none;height:196px;margin:0;padding:0;position:relative;visibility:visible;width:783px;background-color:transparent;"><ins id="aswift_4_anchor" style="display:block;border:none;height:196px;margin:0;padding:0;position:relative;visibility:visible;width:783px;background-color:transparent;"></ins></ins></ins><br>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><p></p>
+<li><strong>Example 2: Scan a Joomla website:</strong></li>
+</ul>
+<h1><a href="https://www.youtube.com/watch?v=z4cf_8EQ59Q" rel="nofollow"><img alt="pictures/video-02.png" src="https://github.com/blackhatethicalhacking/jok3r/raw/master/pictures/video-02.png"></a><span></span><a name="user-content-architecture"></a><span></span></h1>
+<h2><a id="user-content-architecture" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#architecture" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a><a href="https://github.com/blackhatethicalhacking/jok3r#id6" data-et-has-event-already="true">Architecture</a></h2>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/blackhatethicalhacking/jok3r/blob/master/pictures/visio/architecture/jok3r-architecture.png"><img alt="Jok3r architecture" src="https://github.com/blackhatethicalhacking/jok3r/raw/master/pictures/visio/architecture/jok3r-architecture.png"></a><br>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+<ins class="adsbygoogle" style="display: block; text-align: center; height: 200px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6620833063853657" data-ad-slot="4517761481" data-adsbygoogle-status="done"><ins id="aswift_5_expand" style="display:inline-table;border:none;height:200px;margin:0;padding:0;position:relative;visibility:visible;width:797px;background-color:transparent;"><ins id="aswift_5_anchor" style="display:block;border:none;height:200px;margin:0;padding:0;position:relative;visibility:visible;width:797px;background-color:transparent;"></ins></ins></ins><br>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><br>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/blackhatethicalhacking/jok3r/blob/master/pictures/visio/flowchart/jok3r-flow-chart.svg"><img alt="Jok3r flowchart" src="https://github.com/blackhatethicalhacking/jok3r/raw/master/pictures/visio/flowchart/jok3r-flow-chart.svg" width="700px"></a></p>
+<h1><a name="user-content-installation"></a><span></span></h1>
+<h2><a id="user-content-installation" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#installation" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a><a href="https://github.com/blackhatethicalhacking/jok3r#id7" data-et-has-event-already="true">Installation</a></h2>
+<p><strong>IMPORTANT: The recommended way to use Jok3r is by pulling the Docker Image so you will not have to worry about dependencies issues and installing the various hacking tools of the toolbox. Everything is tested from the Docker container available on Docker Hub !</strong></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/koutto/jok3r/master/pictures/docker-logo.png"><img alt="https://raw.githubusercontent.com/koutto/jok3r/master/pictures/docker-logo.png" src="https://raw.githubusercontent.com/koutto/jok3r/master/pictures/docker-logo.png"></a></p>
+<p>A Docker image is available on Docker Hub and automatically re-built at each update:<span>&nbsp;</span><a href="https://hub.docker.com/r/koutto/jok3r/" rel="nofollow">https://hub.docker.com/r/koutto/jok3r/</a>. It is initially based on official Kali Linux Docker image (kalilinux/kali-linux-docker).</p>
+<h1><a href="https://microbadger.com/images/koutto/jok3r" rel="nofollow"><img alt="Docker Image size" src="https://camo.githubusercontent.com/2090a7561a6d053f66132fc9c151e61a13d22d1e/68747470733a2f2f696d616765732e6d6963726f6261646765722e636f6d2f6261646765732f696d6167652f6b6f7574746f2f6a6f6b33722e737667" data-canonical-src="https://images.microbadger.com/badges/image/koutto/jok3r.svg"></a><span></span></h1>
+<ol>
+<li><strong>Pull Jok3r Docker Image:</strong><br>
+<blockquote>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">sudo docker pull koutto/jok3r</span></pre>
+</div>
+</blockquote>
+</li>
+<li><strong>Run fresh Docker container:</strong><br>
+<blockquote>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">sudo docker run -i -t --name jok3r-container -w /root/jok3r -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --shm-size 2g --net=host koutto/jok3r</span></pre>
+</div>
+</blockquote>
+</li>
+</ol>
+<p>Notes:</p>
+<ul>
+<li><code>-e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix</code><span>&nbsp;</span>is required in order to be able to start GUI applicationfrom the Docker container (e.g. open web browser to read reports). It requires running<span>&nbsp;</span><code>xhost +local:root</code><span>&nbsp;</span>on the host.</li>
+<li><code>--shm-size 2g</code><span>&nbsp;</span>is used to increase the size of the shared memory, it is required to avoid crashs of web browser when reading reports from the Docker container.</li>
+<li><code>--net=host</code><span>&nbsp;</span>is required to share host’s interface. It is needed for reverse connections (e.g. Ping to container when testing for RCE, Getting a reverse shell)</li>
+</ul>
+<ol start="3">
+<li><strong>To re-run a stopped container:</strong><br>
+<blockquote>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">sudo docker start -i jok3r-container</span></pre>
+</div>
+</blockquote>
+</li>
+<li><strong>To open multiple shells inside the container:</strong><br>
+<blockquote>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">sudo docker exec -it jok3r-container bash</span></pre>
+</div>
+</blockquote>
+</li>
+</ol>
+<p><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+<ins class="adsbygoogle" style="display: block; text-align: center; height: 200px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6620833063853657" data-ad-slot="4517761481" data-adsbygoogle-status="done"><ins id="aswift_6_expand" style="display:inline-table;border:none;height:200px;margin:0;padding:0;position:relative;visibility:visible;width:797px;background-color:transparent;"><ins id="aswift_6_anchor" style="display:block;border:none;height:200px;margin:0;padding:0;position:relative;visibility:visible;width:797px;background-color:transparent;"></ins></ins></ins><br>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+<h1><a name="user-content-update"></a><span></span></h1>
+<h2><a id="user-content-update" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#update" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a><a href="https://github.com/blackhatethicalhacking/jok3r#id8" data-et-has-event-already="true">Update</a></h2>
+<p><strong>In order to update, just pull the latest Docker Image from Docker Hub and run a fresh container from this new image:</strong></p>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">sudo docker pull koutto/jok3r</span>
+<span class="pl-c1">sudo docker run -i -t --name jok3r-container-updated -w /root/jok3r -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --shm-size 2g --net=host koutto/jok3r</span></pre>
+</div>
+<p>Note: Of course, you can retrieve your local database<span>&nbsp;</span><code>local.db</code><span>&nbsp;</span>(with your saved missions, targets…) from an old container by using the command<span>&nbsp;</span><code>sudo docker cp</code>.</p>
+<h1><a name="user-content-quick-usage-examples"></a><span></span></h1>
+<h2><a id="user-content-quick-usage-examples" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#quick-usage-examples" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a><a href="https://github.com/blackhatethicalhacking/jok3r#id9" data-et-has-event-already="true">Quick usage examples</a></h2>
+<h1><a name="user-content-id1"></a><span></span></h1>
+<h3><a id="user-content-pentest-toolbox-management-1" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#pentest-toolbox-management-1" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Pentest Toolbox management</h3>
+<ul>
+<li>Show all the tools in the toolbox:</li>
+</ul>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">python3 jok3r.py toolbox --show-all</span></pre>
+</div>
+<ul>
+<li>Install all the tools in the toolbox (already done in Docker container):</li>
+</ul>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">python3 jok3r.py toolbox --install-all --auto</span></pre>
+</div>
+<ul>
+<li>Update all the tools in the toolbox and prompt each time to check update:</li>
+</ul>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">python3 jok3r.py toolbox --update-all</span></pre>
+</div>
+<ul>
+<li>Update all the tools in the toolbox without any prompt:</li>
+</ul>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">python3 jok3r.py toolbox --update-all --auto</span></pre>
+</div>
+<h1><a name="user-content-information"></a><span></span></h1>
+<h3><a id="user-content-information" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#information" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Information</h3>
+<ul>
+<li>List supported services:</li>
+</ul>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">python3 jok3r.py info --services</span></pre>
+</div>
+<ul>
+<li>Show security checks for a given service:</li>
+</ul>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">python3 jok3r.py info --checks &lt;service&gt;</span></pre>
+</div>
+<ul>
+<li>Show supported attack profiles for a given service:</li>
+</ul>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">python3 jok3r.py info --attack-profiles &lt;service&gt;</span></pre>
+</div>
+<ul>
+<li>Show supported products for all services:</li>
+</ul>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">python3 jok3r.py info --products</span></pre>
+</div>
+<h1><a name="user-content-security-testing"></a><span></span></h1>
+<h3><a id="user-content-security-testing" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#security-testing" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Security Testing</h3>
+<p>Create a new mission in local database:</p>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">python3 jok3r.py db</span>
+
+<span class="pl-c1">jok3rdb[default]&gt; mission -a mayhem</span>
+
+<span class="pl-c1">[+] Mission "mayhem" successfully added</span>
+<span class="pl-c1">[*] Selected mission is now mayhem</span>
+
+<span class="pl-c1">jok3rdb[mayhem]&gt;</span></pre>
+</div>
+<p><strong>Single target:</strong></p>
+<ul>
+<li>Run all security checks against an URL in interactive mode and add results to the “mayhem” mission:</li>
+</ul>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">python3 jok3r.py attack -t https://www.example.com/ --add2db mayhem</span></pre>
+</div>
+<ul>
+<li>Run security checks against a MS-SQL service (without user-interaction) and add results to the mission:</li>
+</ul>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">python3 jok3r.py attack -t 192.168.1.42:1433 -s mssql --add2db mayhem --fast</span></pre>
+</div>
+<ul>
+<li>Run only “recon” and “vulnscan” security checks against an FTP service and add results to the mission:</li>
+</ul>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">python3 jok3r.py attack -t 192.168.1.142:21 -s ftp --cat-only recon,vulnscan --add2db mayhem</span></pre>
+</div>
+<p><strong>Multiple targets:</strong></p>
+<ul>
+<li>Search only for “easy wins” (critical vulns &amp; easy to exploit) on all services registered in mission “mayhem”:</li>
+</ul>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">python3 jok3r.py attack -m mayhem --profile red-team --fast</span></pre>
+</div>
+<ul>
+<li>Run all security checks against all services in the given mission and store results in the database:</li>
+</ul>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">python3 jok3r.py attack -m mayhem --fast</span></pre>
+</div>
+<ul>
+<li>Run security checks against only FTP services running on ports 21/tcp and 2121/tcp from the mission:</li>
+</ul>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">python3 jok3r.py attack -m mayhem -f "port=21,2121;service=ftp" --fast</span></pre>
+</div>
+<ul>
+<li>Run security checks against only FTP services running on ports 2121/tcp and all HTTP services on 192.168.1.42 from the mission:</li>
+</ul>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">python3 jok3r.py attack -m mayhem -f "port=2121;service=ftp" -f "ip=192.168.1.42;service=http"</span></pre>
+</div>
+<h1><a name="user-content-database-access-reporting"></a><span></span></h1>
+<h3><a id="user-content-database-access--reporting" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#database-access--reporting" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Database Access &amp; Reporting</h3>
+<ul>
+<li>Select a mission:</li>
+</ul>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">python3 jok3r.py db</span>
+
+<span class="pl-c1">jok3rdb[default]&gt; mission mayhem</span>
+
+<span class="pl-c1">[*] Selected mission is now mayhem</span></pre>
+</div>
+<ul>
+<li>Import hosts/services from Nmap results (XML) into the mission scope:</li>
+</ul>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">jok3rdb[mayhem]&gt; nmap results.xml</span></pre>
+</div>
+<ul>
+<li>Import hosts/services from Shodan results (ip) into the mission scope:</li>
+</ul>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">jok3rdb[mayhem]&gt; shodan ip</span></pre>
+</div>
+<ul>
+<li>Display services, hosts, detected products &amp; credentials registered in selected mission:</li>
+</ul>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">jok3rdb[mayhem]&gt; services</span>
+<span class="pl-c1">jok3rdb[mayhem]&gt; hosts</span>
+<span class="pl-c1">jok3rdb[mayhem]&gt; products</span>
+<span class="pl-c1">jok3rdb[mayhem]&gt; creds</span></pre>
+</div>
+<ul>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+<ins class="adsbygoogle" style="display: block; text-align: center; height: 196px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6620833063853657" data-ad-slot="4517761481" data-adsbygoogle-status="done"><ins id="aswift_7_expand" style="display:inline-table;border:none;height:196px;margin:0;padding:0;position:relative;visibility:visible;width:783px;background-color:transparent;"><ins id="aswift_7_anchor" style="display:block;border:none;height:196px;margin:0;padding:0;position:relative;visibility:visible;width:783px;background-color:transparent;"></ins></ins></ins><br>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><p></p>
+<li>Search for string in checks results in selected mission:</li>
+</ul>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">jok3rdb[mayhem]&gt; results --search '&lt;search_string&gt;'</span></pre>
+</div>
+<ul>
+<li>Display vulnerabilities automatically detected from checks outputs in selected mission (experimental):</li>
+</ul>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">jok3rdb[mayhem]&gt; vulns</span></pre>
+</div>
+<ul>
+<li>Generate HTML report for the selected mission:</li>
+</ul>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">jok3rdb[mayhem]&gt; report</span></pre>
+</div>
+<h1><a name="user-content-typical-usage-example"></a><span></span></h1>
+<h2><a id="user-content-typical-usage-example" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#typical-usage-example" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a><a href="https://github.com/blackhatethicalhacking/jok3r#id10" data-et-has-event-already="true">Typical usage example</a></h2>
+<p>You begin a pentest with several servers in the scope. Here is a typical example of usage of<span>&nbsp;</span><em>JoK3r</em>:</p>
+<ol>
+<li>You run<span>&nbsp;</span><em>Nmap</em><span>&nbsp;</span>scan on the servers in the scope.</li>
+<li>You create a new mission (let’s say “mayhem”) in the local database:</li>
+</ol>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">python3 jok3r.py db</span>
+
+<span class="pl-c1">jok3rdb[default]&gt; mission -a mayhem</span>
+
+<span class="pl-c1">[+] Mission "mayhem" successfully added</span>
+<span class="pl-c1">[*] Selected mission is now mayhem</span>
+
+<span class="pl-c1">jok3rdb[mayhem]&gt;</span></pre>
+</div>
+<ol start="3">
+<li>You import your results from<span>&nbsp;</span><em>Nmap</em><span>&nbsp;</span>scan in the database:</li>
+</ol>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">jok3rdb[mayhem]&gt; nmap results.xml</span></pre>
+</div>
+<ol start="4">
+<li>You can then have a quick overview of all services and hosts in the scope, add some comments, add some credentials if you already have some knowledge about the targets (grey box pentest), and so on.</li>
+</ol>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">jok3rdb[mayhem]&gt; hosts</span>
+
+<span class="pl-c1">[...]</span>
+
+<span class="pl-c1">jok3rdb[mayhem]&gt; services</span>
+
+<span class="pl-c1">[...]</span></pre>
+</div>
+<ol start="5">
+<li>Now, you can run security checks against some targets in the scope. For example, if you want to run checks against all Java-RMI services in the scope, you can run the following command:</li>
+</ol>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">python3 jok3r.py attack -m mayhem -f "service=java-rmi" --fast</span></pre>
+</div>
+<ol start="6">
+<li>You can view the full results from the security checks either in live when the tools are executed or later from the database using the following command:</li>
+</ol>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">jok3rdb[mayhem]&gt; results</span></pre>
+</div>
+<ol start="7">
+<li>At any moment, it is possible to display data automatically extracted from security checks outputs, i.e. detected products, credentials &amp; vulnerabilities.</li>
+</ol>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">jok3rdb[mayhem]&gt; products</span>
+
+<span class="pl-c1">[...]</span>
+
+<span class="pl-c1">jok3rdb[mayhem]&gt; creds</span>
+
+<span class="pl-c1">[...]</span>
+
+<span class="pl-c1">jok3rdb[mayhem]&gt; vulns</span>
+
+<span class="pl-c1">[...]</span></pre>
+</div>
+<ol start="8">
+<li>At any moment, you can generate an HTML report with a summary of all targets in the mission scope, screenshots of web pages for HTTP services and full outputs of all security checks that have been run:</li>
+</ol>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">jok3rdb[mayhem]&gt; report</span></pre>
+</div>
+<h1><a name="user-content-full-documentation"></a><span></span></h1>
+<h2><a id="user-content-full-documentation" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#full-documentation" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a><a href="https://github.com/blackhatethicalhacking/jok3r#id11" data-et-has-event-already="true">Full Documentation</a></h2>
+<p><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+<ins class="adsbygoogle" style="display: block; text-align: center; height: 200px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6620833063853657" data-ad-slot="4517761481" data-adsbygoogle-status="done"><ins id="aswift_8_expand" style="display:inline-table;border:none;height:200px;margin:0;padding:0;position:relative;visibility:visible;width:797px;background-color:transparent;"><ins id="aswift_8_anchor" style="display:block;border:none;height:200px;margin:0;padding:0;position:relative;visibility:visible;width:797px;background-color:transparent;"></ins></ins></ins><br>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><br>
+Documentation writing in progress…</p>
+<h1><a name="user-content-supported-services-security-checks"></a><span></span></h1>
+<h2><a id="user-content-supported-services--security-checks" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#supported-services--security-checks" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a><a href="https://github.com/blackhatethicalhacking/jok3r#id12" data-et-has-event-already="true">Supported Services &amp; Security Checks</a></h2>
+<p><strong>Updated on: 12/07/2019</strong></p>
+<p><strong>Lots of checks remain to be implemented and services must be added !! Work in progress …</strong></p>
+<ul>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#ajp-default-8009-tcp" data-et-has-event-already="true">AJP (default 8009/tcp)</a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#ftp-default-21-tcp" data-et-has-event-already="true">FTP (default 21/tcp)</a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#http-default-80-tcp" data-et-has-event-already="true">HTTP (default 80/tcp)</a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#java-rmi-default-1099-tcp" data-et-has-event-already="true">Java-RMI (default 1099/tcp)</a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#jdwp-default-9000-tcp" data-et-has-event-already="true">JDWP (default 9000/tcp)</a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#mssql-default-1433-tcp" data-et-has-event-already="true">MSSQL (default 1433/tcp)</a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#mysql-default-3306-tcp" data-et-has-event-already="true">MySQL (default 3306/tcp)</a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#oracle-default-1521-tcp" data-et-has-event-already="true">Oracle (default 1521/tcp)</a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#postgresql-default-5432-tcp" data-et-has-event-already="true">PostgreSQL (default 5432/tcp)</a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#rdp-default-3389-tcp" data-et-has-event-already="true">RDP (default 3389/tcp)</a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#smb-default-445-tcp" data-et-has-event-already="true">SMB (default 445/tcp)</a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#smtp-default-25-tcp" data-et-has-event-already="true">SMTP (default 25/tcp)</a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#snmp-default-161-udp" data-et-has-event-already="true">SNMP (default 161/udp)</a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#ssh-default-22-tcp" data-et-has-event-already="true">SSH (default 22/tcp)</a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#id15" data-et-has-event-already="true"><span id="user-content-id16">`Telnet (default 21/tcp)`_</span></a></li>
+<li><a href="https://github.com/blackhatethicalhacking/jok3r#vnc-default-5900-tcp" data-et-has-event-already="true">VNC (default 5900/tcp)</a></li>
+</ul>
+<h1><a name="user-content-ajp-default-8009-tcp"></a><span></span></h1>
+<h3><a id="user-content-ajp-default-8009tcp" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#ajp-default-8009tcp" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>AJP (default 8009/tcp)</h3>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">+------------------------+--------------+--------------------------------------------------------------------------+-------------------+</span>
+<span class="pl-c1">| Name                   | Category     | Description                                                              | Tool used         |</span>
+<span class="pl-c1">+------------------------+--------------+--------------------------------------------------------------------------+-------------------+</span>
+<span class="pl-c1">| nmap-recon             | recon        | Recon using Nmap AJP scripts                                             | nmap              |</span>
+<span class="pl-c1">| tomcat-version         | recon        | Fingerprint Tomcat version through AJP                                   | ajpy              |</span>
+<span class="pl-c1">| vulners-lookup         | vulnlookup   | Vulnerabilities lookup on Vulners.com (requires product name+version)    | vulners-lookup    |</span>
+<span class="pl-c1">| cvedetails-lookup      | vulnlookup   | Vulnerabilities lookup on Cvedetails.com (requires product name+version) | cvedetails-lookup |</span>
+<span class="pl-c1">| default-creds-tomcat   | defaultcreds | Check default credentials for Tomcat Application Manager through AJP     | ajpy              |</span>
+<span class="pl-c1">| deploy-webshell-tomcat | exploit      | Deploy a webshell on Tomcat through AJP and list applications            | ajpy              |</span>
+<span class="pl-c1">+------------------------+--------------+--------------------------------------------------------------------------+-------------------+</span></pre>
+</div>
+<h1><a name="user-content-ftp-default-21-tcp"></a><span></span></h1>
+<h3><a id="user-content-ftp-default-21tcp" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#ftp-default-21tcp" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>FTP (default 21/tcp)</h3>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">+-------------------+--------------+--------------------------------------------------------------------------+-------------------+</span>
+<span class="pl-c1">| Name              | Category     | Description                                                              | Tool used         |</span>
+<span class="pl-c1">+-------------------+--------------+--------------------------------------------------------------------------+-------------------+</span>
+<span class="pl-c1">| nmap-recon        | recon        | Recon using Nmap FTP scripts                                             | nmap              |</span>
+<span class="pl-c1">| ftpmap-scan       | vulnscan     | Identify FTP server soft/version and check for known vulns               | ftpmap            |</span>
+<span class="pl-c1">| vulners-lookup    | vulnlookup   | Vulnerabilities lookup on Vulners.com (requires product name+version)    | vulners-lookup    |</span>
+<span class="pl-c1">| cvedetails-lookup | vulnlookup   | Vulnerabilities lookup on Cvedetails.com (requires product name+version) | cvedetails-lookup |</span>
+<span class="pl-c1">| default-creds     | defaultcreds | Check default/common credentials on FTP server                           | hydra             |</span>
+<span class="pl-c1">| bruteforce-creds  | bruteforce   | Bruteforce FTP accounts                                                  | hydra             |</span>
+<span class="pl-c1">| ftp-dirlisting    | postexploit  | List directories/files on FTP server (maxdepth=4)                        | lftp              |</span>
+<span class="pl-c1">+-------------------+--------------+--------------------------------------------------------------------------+-------------------+</span></pre>
+</div>
+<h1><a name="user-content-http-default-80-tcp"></a><span></span></h1>
+<h3><a id="user-content-http-default-80tcp" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#http-default-80tcp" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>HTTP (default 80/tcp)</h3>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">+------------------------------------------+--------------+------------------------------------------------------------------------------------------------+-------------------------------+</span>
+<span class="pl-c1">| Name                                     | Category     | Description                                                                                    | Tool used                     |</span>
+<span class="pl-c1">+------------------------------------------+--------------+------------------------------------------------------------------------------------------------+-------------------------------+</span>
+<span class="pl-c1">| nmap-recon                               | recon        | Recon using Nmap HTTP scripts                                                                  | nmap                          |</span>
+<span class="pl-c1">| load-balancing-detection                 | recon        | HTTP load balancer detection                                                                   | halberd                       |</span>
+<span class="pl-c1">| waf-detection                            | recon        | Identify and fingerprint WAF products protecting website                                       | wafw00f                       |</span>
+<span class="pl-c1">| waf-detection2                           | recon        | Identify and fingerprint WAF products protecting website                                       | identifywaf                   |</span>
+<span class="pl-c1">| cloudmare-recon                          | recon        | CloudFlare real IP catcher                                                                     | cloudmare                     |</span>
+<span class="pl-c1">| fingerprinting-multi-whatweb             | recon        | Identify CMS, blogging platforms, JS libraries, Web servers                                    | whatweb                       |</span>
+<span class="pl-c1">| fingerprinting-appserver                 | recon        | Fingerprint application server (JBoss, ColdFusion, Weblogic, Tomcat, Railo, Axis2, Glassfish)  | clusterd                      |</span>
+<span class="pl-c1">| webdav-detection-msf                     | recon        | Detect WebDAV on webserver                                                                     | metasploit                    |</span>
+<span class="pl-c1">| fingerprinting-multi-wig                 | recon        | Fingerprint several CMS and web/application servers                                            | wig                           |</span>
+<span class="pl-c1">| fingerprinting-cms-cmseek                | recon        | Detect CMS (130+ supported), detect version on Drupal, advanced scan on WordPress/Joomla       | cmseek                        |</span>
+<span class="pl-c1">| fingerprinting-cms-fingerprinter         | recon        | Fingerprint precisely CMS versions (based on files checksums)                                  | fingerprinter                 |</span>
+<span class="pl-c1">| fingerprinting-drupal                    | recon        | Fingerprint Drupal 7/8: users, nodes, default files, modules, themes enumeration               | drupwn                        |</span>
+<span class="pl-c1">| fingerprinting-domino                    | recon        | Fingerprint IBM/Lotus Domino software                                                          | domiowned                     |</span>
+<span class="pl-c1">| crawling-fast                            | recon        | Crawl website quickly, analyze interesting files/directories                                   | dirhunt                       |</span>
+<span class="pl-c1">| crawling-fast2                           | recon        | Crawl website and extract URLs, files, intel &amp; endpoints                                       | photon                        |</span>
+<span class="pl-c1">| vulners-lookup                           | vulnlookup   | Vulnerabilities lookup (language, framework, jslib, cms, server, appserver) on Vulners.com     | vulners-lookup                |</span>
+<span class="pl-c1">| cvedetails-lookup                        | vulnlookup   | Vulnerabilities lookup (language, framework, jslib, cms, server, appserver) on Cvedetails.com  | cvedetails-lookup             |</span>
+<span class="pl-c1">| default-creds-web-multi                  | defaultcreds | Check for default credentials on various web interfaces                                        | changeme                      |</span>
+<span class="pl-c1">| default-creds-appserver                  | defaultcreds | Check for default/common credentials on appservers                                             | web-brutator                  |</span>
+<span class="pl-c1">| ssl-check                                | vulnscan     | Check for SSL/TLS configuration                                                                | testssl                       |</span>
+<span class="pl-c1">| headers-analysis                         | vulnscan     | Check HTTP headers                                                                             | h2t                           |</span>
+<span class="pl-c1">| vulnscan-multi-nikto                     | vulnscan     | Check for multiple web vulnerabilities/misconfigurations                                       | nikto                         |</span>
+<span class="pl-c1">| webdav-scan-davscan                      | vulnscan     | Scan HTTP WebDAV                                                                               | davscan                       |</span>
+<span class="pl-c1">| webdav-internal-ip-disclosure            | vulnscan     | Check for WebDAV internal IP disclosure                                                        | metasploit                    |</span>
+<span class="pl-c1">| webdav-website-content                   | vulnscan     | Detect webservers disclosing its content through WebDAV                                        | metasploit                    |</span>
+<span class="pl-c1">| http-put-check                           | vulnscan     | Detect the support of dangerous HTTP PUT method                                                | metasploit                    |</span>
+<span class="pl-c1">| apache-optionsbleed-check                | vulnscan     | Test for the Optionsbleed bug in Apache httpd (CVE-2017-9798)                                  | optionsbleed                  |</span>
+<span class="pl-c1">| shellshock-scan                          | vulnscan     | Detect if web server is vulnerable to Shellshock (CVE-2014-6271)                               | shocker                       |</span>
+<span class="pl-c1">| iis-shortname-scan                       | vulnscan     | Scan for IIS short filename (8.3) disclosure vulnerability                                     | iis-shortname-scanner         |</span>
+<span class="pl-c1">| iis-internal-ip-disclosure               | vulnscan     | Check for IIS internal IP disclosure                                                           | metasploit                    |</span>
+<span class="pl-c1">| tomcat-user-enum                         | vulnscan     | Enumerate users on Tomcat 4.1.0-4.1.39, 5.5.0-5.5.27 and 6.0.0-6.0.18                          | metasploit                    |</span>
+<span class="pl-c1">| jboss-vulnscan-multi                     | vulnscan     | Scan JBoss application server for multiple vulnerabilities                                     | metasploit                    |</span>
+<span class="pl-c1">| jboss-status-infoleak                    | vulnscan     | Queries JBoss status servlet to collect sensitive information (JBoss 4.0, 4.2.2 and 4.2.3)     | metasploit                    |</span>
+<span class="pl-c1">| jenkins-infoleak                         | vulnscan     | Enumerate a remote Jenkins-CI installation in an unauthenticated manner                        | metasploit                    |</span>
+<span class="pl-c1">| cms-multi-vulnscan-cmsmap                | vulnscan     | Check for vulnerabilities in CMS WordPress, Drupal, Joomla                                     | cmsmap                        |</span>
+<span class="pl-c1">| wordpress-vulnscan                       | vulnscan     | Scan for vulnerabilities in CMS WordPress                                                      | wpscan                        |</span>
+<span class="pl-c1">| wordpress-vulnscan2                      | vulnscan     | Scan for vulnerabilities in CMS WordPress                                                      | wpseku                        |</span>
+<span class="pl-c1">| joomla-vulnscan                          | vulnscan     | Scan for vulnerabilities in CMS Joomla                                                         | joomscan                      |</span>
+<span class="pl-c1">| joomla-vulnscan2                         | vulnscan     | Scan for vulnerabilities in CMS Joomla                                                         | joomlascan                    |</span>
+<span class="pl-c1">| joomla-vulnscan3                         | vulnscan     | Scan for vulnerabilities in CMS Joomla                                                         | joomlavs                      |</span>
+<span class="pl-c1">| drupal-vulnscan                          | vulnscan     | Scan for vulnerabilities in CMS Drupal                                                         | droopescan                    |</span>
+<span class="pl-c1">| magento-vulnscan                         | vulnscan     | Check for misconfigurations in CMS Magento (working partially)                                 | magescan                      |</span>
+<span class="pl-c1">| silverstripe-vulnscan                    | vulnscan     | Scan for vulnerabilities in CMS Silverstripe                                                   | droopescan                    |</span>
+<span class="pl-c1">| vbulletin-vulnscan                       | vulnscan     | Scan for vulnerabilities in CMS vBulletin                                                      | vbscan                        |</span>
+<span class="pl-c1">| liferay-vulnscan                         | vulnscan     | Scan for vulnerabilities in CMS Liferay                                                        | liferayscan                   |</span>
+<span class="pl-c1">| angularjs-csti-scan                      | vulnscan     | Scan for AngularJS Client-Side Template Injection                                              | angularjs-csti-scanner        |</span>
+<span class="pl-c1">| jquery-fileupload-rce-cve2018-9206       | exploit      | Exploit arbitrary file upload in jQuery File Upload widget &lt;= 9.22 (CVE-2018-9206)             | jqshell                       |</span>
+<span class="pl-c1">| struts2-rce-cve2017-5638                 | exploit      | Exploit Apache Struts2 Jakarta Multipart parser RCE (CVE-2017-5638)                            | jexboss                       |</span>
+<span class="pl-c1">| struts2-rce-cve2017-9791                 | exploit      | Exploit Apache Struts2 Plugin Showcase OGNL RCE (CVE-2017-9791)                                | metasploit                    |</span>
+<span class="pl-c1">| struts2-rce-cve2017-9805                 | exploit      | Exploit Apache Struts2 REST Plugin XStream RCE (CVE-2017-9805)                                 | struts-pwn-cve2017-9805       |</span>
+<span class="pl-c1">| struts2-rce-cve2018-11776                | exploit      | Exploit Apache Struts2 misconfiguration RCE (CVE-2018-11776)                                   | struts-pwn-cve2018-11776      |</span>
+<span class="pl-c1">| rails-rce-cve2019-5420                   | exploit      | Exploit File Content Disclosure (CVE-2019-5418) + RCE (CVE-2019-5420) On Ruby on Rails         | jok3r-pocs                    |</span>
+<span class="pl-c1">| appserver-auth-bypass                    | exploit      | Attempt to exploit authentication bypass on appservers                                         | clusterd                      |</span>
+<span class="pl-c1">| tomcat-rce-cve2017-12617                 | exploit      | Exploit for Apache Tomcat JSP Upload Bypass RCE (CVE-2017-12617)                               | jok3r-pocs                    |</span>
+<span class="pl-c1">| jboss-misconfig-exploit                  | exploit      | Try exploit misconfig on JBoss appserver pre-auth (jmx|web|admin-console,JMXInvokerServlet)    | jexboss                       |</span>
+<span class="pl-c1">| jboss-path-traversal-cve2014-7816        | exploit      | Exploit path traversal on Jboss Wildfly 8.1.0 (only Windows) (CVE-2014-7816)                   | metasploit                    |</span>
+<span class="pl-c1">| jboss-deserialize-cve2015-7501           | exploit      | Exploit for JBoss Deserialize RCE (CVE-2015-7501)                                              | jok3r-pocs                    |</span>
+<span class="pl-c1">| glassfish-path-traversal-cve2017-1000028 | exploit      | Exploit path traversal on Glassfish &lt;= 4.1 (CVE-2017-1000028)                                  | metasploit                    |</span>
+<span class="pl-c1">| jenkins-unauthenticated-console          | exploit      | Detect and exploit unauthenticated Jenkins-CI script console                                   | metasploit                    |</span>
+<span class="pl-c1">| jenkins-cli-deserialize-cve2015-8103     | exploit      | Exploit Java deserialization (unauthenticated) in Jenkins CLI RMI (CVE-2015-8103)              | jexboss                       |</span>
+<span class="pl-c1">| jenkins-cli-deserialize2-cve2015-8103    | exploit      | Exploit Java deserialization (unauthenticated) in Jenkins CLI RMI (CVE-2015-8103)              | jok3r-pocs                    |</span>
+<span class="pl-c1">| jenkins-groovy-xml-rce-cve2016-0792      | exploit      | Exploit Jenkins Groovy XML RCE (CVE-2016-0792)                                                 | jok3r-pocs                    |</span>
+<span class="pl-c1">| jenkins-deserialize-cve2017-1000353      | exploit      | Exploit Jenkins Java Deserialize RCE (CVE-2017-1000353)                                        | jok3r-pocs                    |</span>
+<span class="pl-c1">| jenkins-rce-cve2018-1000861              | exploit      | Exploit Jenkins unauthenticated RCE via method invokation (CVE-2018-1000861)                   | jok3r-pocs                    |</span>
+<span class="pl-c1">| weblogic-t3-open-jdbc-datasource         | exploit      | List JNDIs available thru Weblogic T3(s) and attempt to get SQL shell via open JDBC datasource | jndiat                        |</span>
+<span class="pl-c1">| weblogic-t3-deserialize-cve2015-4852     | exploit      | Exploit Java deserialization (unauthenticated) in Weblogic T3(s) (CVE-2015-4852)               | jok3r-pocs                    |</span>
+<span class="pl-c1">| weblogic-t3-deserialize-cve2016-3510     | exploit      | Exploit Java deserialization (unauthenticated) in Weblogic T3 (CVE-2016-3510)                  | jok3r-pocs                    |</span>
+<span class="pl-c1">| weblogic-t3-deserialize-cve2017-3248     | exploit      | Exploit Java deserialization (unauthenticated) in Weblogic T3(s) (CVE-2017-3248)               | exploit-weblogic-cve2017-3248 |</span>
+<span class="pl-c1">| weblogic-t3-deserialize-cve2018-2628     | exploit      | Exploit Java deserialization (unauthenticated) in Weblogic T3(s) (CVE-2018-2628)               | jok3r-pocs                    |</span>
+<span class="pl-c1">| weblogic-t3-deserialize-cve2018-2893     | exploit      | Exploit Java deserialization (unauthenticated) in Weblogic T3(s) (CVE-2018-2893)               | jok3r-pocs                    |</span>
+<span class="pl-c1">| weblogic-rce-cve2018-2894                | exploit      | Exploit vulnerability in Weblogic allowing webshell deploiement (CVE-2018-2894)                | jok3r-pocs                    |</span>
+<span class="pl-c1">| weblogic-wls-wsat-cve2017-10271          | exploit      | Exploit WLS-WSAT (unauthenticated) in Weblogic (CVE-2017-10271)                                | jok3r-pocs                    |</span>
+<span class="pl-c1">| websphere-deserialize-cve2015-7450       | exploit      | Exploit Java deserialization (unauthenticated) in Websphere (CVE-2015-7450)                    | jok3r-pocs                    |</span>
+<span class="pl-c1">| coldfusion-xxe-cve2009-3960              | exploit      | Exploit XXE in Coldfusion 7/8/9 (CVE-2009-3960)                                                | metasploit                    |</span>
+<span class="pl-c1">| coldfusion-path-traversal-cve2010-2861   | exploit      | Exploit path traversal in Coldfusion (CVE-2010-2861)                                           | metasploit                    |</span>
+<span class="pl-c1">| coldfusion-path-traversal-cve2013-3336   | exploit      | Exploit path traversal in Coldfusion 9/10 and extract creds (CVE-2013-3336)                    | metasploit                    |</span>
+<span class="pl-c1">| iis-webdav-win2003-bof                   | exploit      | Exploit Buffer overflow in WebDAV in IIS 6.0 on Windows 2003 R2 (CVE-2017-7269)                | metasploit                    |</span>
+<span class="pl-c1">| drupal-sqli-drupalgeddon                 | exploit      | Exploit Drupalgeddon SQLi to add an admin in CMS Drupal 7.x &lt;= 7.31 (CVE-2014-3704)            | jok3r-pocs                    |</span>
+<span class="pl-c1">| drupal-rce-drupalgeddon2                 | exploit      | Exploit Drupalgeddon2 RCE in CMS Drupal 7.x &lt; 7.58 &amp; 8.x &lt; 8.1 (CVE-2018-7600)                 | drupwn                        |</span>
+<span class="pl-c1">| drupal-rce-rest-cve2019-6340             | exploit      | Exploit REST RCE in CMS Drupal 8.5.x &lt; 8.5.11 &amp; 8.6.x &lt; 8.6.10 (CVE-2019-6340)                 | drupwn                        |</span>
+<span class="pl-c1">| joomla-comfields-sqli-rce                | exploit      | Exploit SQL injection to RCE in com_fields component in Joomla &gt;= 3.7.0 (CVE-2017-8917)        | metasploit                    |</span>
+<span class="pl-c1">| bruteforce-htaccess                      | bruteforce   | Bruteforce HTTP authentication (htaccess) if 401 Unauthorized returned                         | web-brutator                  |</span>
+<span class="pl-c1">| bruteforce-appserver                     | bruteforce   | Bruteforce authentication on appserver (if no lockout by default)                              | web-brutator                  |</span>
+<span class="pl-c1">| bruteforce-domino                        | bruteforce   | Bruteforce authentication on IBM/Lotus Domino software                                         | domiowned                     |</span>
+<span class="pl-c1">| bruteforce-wordpress                     | bruteforce   | Bruteforce WordPress accounts (require detected username(s))                                   | wpseku                        |</span>
+<span class="pl-c1">| bruteforce-joomla                        | bruteforce   | Bruteforce Joomla "admin" account                                                              | xbruteforcer                  |</span>
+<span class="pl-c1">| bruteforce-drupal                        | bruteforce   | Bruteforce Drupal "admin" account                                                              | xbruteforcer                  |</span>
+<span class="pl-c1">| bruteforce-opencart                      | bruteforce   | Bruteforce Opencart "admin" account                                                            | xbruteforcer                  |</span>
+<span class="pl-c1">| bruteforce-magento                       | bruteforce   | Bruteforce Magento "admin" account                                                             | xbruteforcer                  |</span>
+<span class="pl-c1">| discovery-server                         | discovery    | Bruteforce web paths specific to detected web/application servers                              | dirsearch                     |</span>
+<span class="pl-c1">| discovery-cms                            | discovery    | Bruteforce web paths specific to detected CMS                                                  | dirsearch                     |</span>
+<span class="pl-c1">| discovery-language-directories           | discovery    | Bruteforce web paths specific to detected language and directories                             | dirsearch                     |</span>
+<span class="pl-c1">| discovery-general                        | discovery    | Bruteforce web paths related to config, database, static files, misc...                        | dirsearch                     |</span>
+<span class="pl-c1">| appserver-postauth-deploy                | postexploit  | Deploy a webshell on appserver (require credentials)                                           | clusterd                      |</span>
+<span class="pl-c1">| wordpress-shell-upload                   | postexploit  | Upload shell on WordPress (require admin credentials)                                          | wpforce                       |</span>
+<span class="pl-c1">+------------------------------------------+--------------+------------------------------------------------------------------------------------------------+-------------------------------+</span></pre>
+</div>
+<p><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+<ins class="adsbygoogle" style="display: block; text-align: center; height: 200px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6620833063853657" data-ad-slot="4517761481" data-adsbygoogle-status="done"><ins id="aswift_9_expand" style="display:inline-table;border:none;height:200px;margin:0;padding:0;position:relative;visibility:visible;width:797px;background-color:transparent;"><ins id="aswift_9_anchor" style="display:block;border:none;height:200px;margin:0;padding:0;position:relative;visibility:visible;width:797px;background-color:transparent;"></ins></ins></ins><br>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+<h1><a name="user-content-java-rmi-default-1099-tcp"></a><span></span></h1>
+<h3><a id="user-content-java-rmi-default-1099tcp" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#java-rmi-default-1099tcp" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Java-RMI (default 1099/tcp)</h3>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">+--------------------------------+--------------+-------------------------------------------------------------------------------------------------------+------------+</span>
+<span class="pl-c1">| Name                           | Category     | Description                                                                                           | Tool used  |</span>
+<span class="pl-c1">+--------------------------------+--------------+-------------------------------------------------------------------------------------------------------+------------+</span>
+<span class="pl-c1">| nmap-recon                     | recon        | Attempt to dump all objects from Java-RMI service                                                     | nmap       |</span>
+<span class="pl-c1">| rmi-enum                       | recon        | Enumerate RMI services                                                                                | barmie     |</span>
+<span class="pl-c1">| jmx-info                       | recon        | Get information about JMX and the MBean server                                                        | twiddle    |</span>
+<span class="pl-c1">| jmx-default-creds              | defaultcreds | Check default/common credentials on JMX                                                               | jmxbf      |</span>
+<span class="pl-c1">| jmx-bruteforce-creds           | bruteforce   | Bruteforce creds to connect to JMX registry                                                           | jmxbf      |</span>
+<span class="pl-c1">| exploit-rmi-default-config     | exploit      | Exploit default config in RMI Registry to load classes from any remote URL (not working against JMX)  | metasploit |</span>
+<span class="pl-c1">| exploit-jmx-insecure-config    | exploit      | Exploit JMX insecure config. Auth disabled: should be vuln. Auth enabled: vuln if weak config         | metasploit |</span>
+<span class="pl-c1">| jmx-auth-disabled-deploy-class | exploit      | Deploy malicious MBean on JMX service with auth disabled (alternative to msf module)                  | sjet       |</span>
+<span class="pl-c1">| tomcat-jmxrmi-deserialize      | exploit      | Exploit JMX-RMI deserialize in Tomcat (CVE-2016-3427, CVE-2016-8735), req. JmxRemoteLifecycleListener | jexboss    |</span>
+<span class="pl-c1">| rmi-deserialize-all-payloads   | exploit      | Attempt to exploit Java deserialize against Java RMI Registry with all ysoserial payloads             | ysoserial  |</span>
+<span class="pl-c1">| tomcat-jmxrmi-manager-creds    | postexploit  | Retrieve Manager creds on Tomcat JMX (req. auth disabled or creds known on JMX)                       | jmxploit   |</span>
+<span class="pl-c1">+--------------------------------+--------------+-------------------------------------------------------------------------------------------------------+------------+</span></pre>
+</div>
+<h1><a name="user-content-jdwp-default-9000-tcp"></a><span></span></h1>
+<h3><a id="user-content-jdwp-default-9000tcp" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#jdwp-default-9000tcp" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>JDWP (default 9000/tcp)</h3>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">+------------+----------+-----------------------------------------------------+-----------------+</span>
+<span class="pl-c1">| Name       | Category | Description                                         | Tool used       |</span>
+<span class="pl-c1">+------------+----------+-----------------------------------------------------+-----------------+</span>
+<span class="pl-c1">| nmap-recon | recon    | Recon using Nmap JDWP scripts                       | nmap            |</span>
+<span class="pl-c1">| jdwp-rce   | exploit  | Gain RCE on JDWP service (show OS/Java info as PoC) | jdwp-shellifier |</span>
+<span class="pl-c1">+------------+----------+-----------------------------------------------------+-----------------+</span></pre>
+</div>
+<h1><a name="user-content-mssql-default-1433-tcp"></a><span></span></h1>
+<h3><a id="user-content-mssql-default-1433tcp" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#mssql-default-1433tcp" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>MSSQL (default 1433/tcp)</h3>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">+-------------------------+--------------+--------------------------------------------------------------------------------------------------------------+-------------------+</span>
+<span class="pl-c1">| Name                    | Category     | Description                                                                                                  | Tool used         |</span>
+<span class="pl-c1">+-------------------------+--------------+--------------------------------------------------------------------------------------------------------------+-------------------+</span>
+<span class="pl-c1">| nmap-recon              | recon        | Recon using Nmap MSSQL scripts                                                                               | nmap              |</span>
+<span class="pl-c1">| mssqlinfo               | recon        | Get technical information about a remote MSSQL server (use TDS protocol and SQL browser Server)              | msdat             |</span>
+<span class="pl-c1">| vulners-lookup          | vulnlookup   | Vulnerabilities lookup on Vulners.com (requires product name+version)                                        | vulners-lookup    |</span>
+<span class="pl-c1">| cvedetails-lookup       | vulnlookup   | Vulnerabilities lookup on Cvedetails.com (requires product name+version)                                     | cvedetails-lookup |</span>
+<span class="pl-c1">| default-creds           | defaultcreds | Check default/common credentials on MSSQL server                                                             | msdat             |</span>
+<span class="pl-c1">| bruteforce-creds        | bruteforce   | Bruteforce MSSQL accounts ("sa" or known users)                                                              | msdat             |</span>
+<span class="pl-c1">| postauth-audit          | postexploit  | Check permissive privileges, methods allowing command execution, weak accounts after authenticating on MSSQL | msdat             |</span>
+<span class="pl-c1">| postauth-rce-xpcmdshell | postexploit  | Try to execute system command via xp_cmdshell (whoami &amp;&amp; net user)                                           | msdat             |</span>
+<span class="pl-c1">+-------------------------+--------------+--------------------------------------------------------------------------------------------------------------+-------------------+</span></pre>
+</div>
+<p><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+<ins class="adsbygoogle" style="display: block; text-align: center; height: 200px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6620833063853657" data-ad-slot="4517761481" data-adsbygoogle-status="done"><ins id="aswift_10_expand" style="display:inline-table;border:none;height:200px;margin:0;padding:0;position:relative;visibility:visible;width:797px;background-color:transparent;"><ins id="aswift_10_anchor" style="display:block;border:none;height:200px;margin:0;padding:0;position:relative;visibility:visible;width:797px;background-color:transparent;"></ins></ins></ins><br>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+<h1><a name="user-content-mysql-default-3306-tcp"></a><span></span></h1>
+<h3><a id="user-content-mysql-default-3306tcp" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#mysql-default-3306tcp" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>MySQL (default 3306/tcp)</h3>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">+----------------------------------+--------------+--------------------------------------------------------------------------+-------------------+</span>
+<span class="pl-c1">| Name                             | Category     | Description                                                              | Tool used         |</span>
+<span class="pl-c1">+----------------------------------+--------------+--------------------------------------------------------------------------+-------------------+</span>
+<span class="pl-c1">| nmap-recon                       | recon        | Recon using Nmap MySQL scripts                                           | nmap              |</span>
+<span class="pl-c1">| vulners-lookup                   | vulnlookup   | Vulnerabilities lookup on Vulners.com (requires product name+version)    | vulners-lookup    |</span>
+<span class="pl-c1">| cvedetails-lookup                | vulnlookup   | Vulnerabilities lookup on Cvedetails.com (requires product name+version) | cvedetails-lookup |</span>
+<span class="pl-c1">| mysql-auth-bypass-cve2012-2122   | exploit      | Exploit password bypass vulnerability in MySQL - CVE-2012-2122           | metasploit        |</span>
+<span class="pl-c1">| default-creds                    | defaultcreds | Check default/common credentials on MySQL server                         | hydra             |</span>
+<span class="pl-c1">| bruteforce-creds                 | bruteforce   | Bruteforce MySQL accounts ("root" or known users)                        | hydra             |</span>
+<span class="pl-c1">| mysql-hashdump                   | postexploit  | Retrieve usernames and password hashes from MySQL database (req. creds)  | metasploit        |</span>
+<span class="pl-c1">| mysql-interesting-tables-columns | postexploit  | Search for interesting tables and columns in database                    | jok3r-scripts     |</span>
+<span class="pl-c1">+----------------------------------+--------------+--------------------------------------------------------------------------+-------------------+</span></pre>
+</div>
+<h1><a name="user-content-oracle-default-1521-tcp"></a><span></span></h1>
+<h3><a id="user-content-oracle-default-1521tcp" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#oracle-default-1521tcp" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Oracle (default 1521/tcp)</h3>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">+--------------------------+--------------+--------------------------------------------------------------------------------------------------------------+-------------------+</span>
+<span class="pl-c1">| Name                     | Category     | Description                                                                                                  | Tool used         |</span>
+<span class="pl-c1">+--------------------------+--------------+--------------------------------------------------------------------------------------------------------------+-------------------+</span>
+<span class="pl-c1">| tnscmd                   | recon        | Connect to TNS Listener and issue commands Ping, Status, Version                                             | odat              |</span>
+<span class="pl-c1">| vulners-lookup           | vulnlookup   | Vulnerabilities lookup on Vulners.com (requires product name+version)                                        | vulners-lookup    |</span>
+<span class="pl-c1">| cvedetails-lookup        | vulnlookup   | Vulnerabilities lookup on Cvedetails.com (requires product name+version)                                     | cvedetails-lookup |</span>
+<span class="pl-c1">| tnspoisoning             | vulnscan     | Test if TNS Listener is vulnerable to TNS Poisoning (CVE-2012-1675)                                          | odat              |</span>
+<span class="pl-c1">| default-creds            | defaultcreds | Check default/common credentials on Oracle server                                                            | odat              |</span>
+<span class="pl-c1">| bruteforce-creds         | bruteforce   | Bruteforce Oracle accounts (might block some accounts !)                                                     | odat              |</span>
+<span class="pl-c1">| postauth-audit           | postexploit  | Check for privesc vectors, config leading to command execution, weak accounts after authenticating on Oracle | odat              |</span>
+<span class="pl-c1">| search-columns-passwords | postexploit  | Search for columns storing passwords in the database                                                         | odat              |</span>
+<span class="pl-c1">+--------------------------+--------------+--------------------------------------------------------------------------------------------------------------+-------------------+</span></pre>
+</div>
+<h1><a name="user-content-postgresql-default-5432-tcp"></a><span></span></h1>
+<h3><a id="user-content-postgresql-default-5432tcp" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#postgresql-default-5432tcp" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>PostgreSQL (default 5432/tcp)</h3>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">+------------------------------------+--------------+-------------------------------------------------------------------------------+-------------------+</span>
+<span class="pl-c1">| Name                               | Category     | Description                                                                   | Tool used         |</span>
+<span class="pl-c1">+------------------------------------+--------------+-------------------------------------------------------------------------------+-------------------+</span>
+<span class="pl-c1">| vulners-lookup                     | vulnlookup   | Vulnerabilities lookup on Vulners.com (requires product name+version)         | vulners-lookup    |</span>
+<span class="pl-c1">| cvedetails-lookup                  | vulnlookup   | Vulnerabilities lookup on Cvedetails.com (requires product name+version)      | cvedetails-lookup |</span>
+<span class="pl-c1">| dbname-flag-injection-cve2013-1899 | vulnscan     | Check for command-line flag injection on PostgreSQL 9.0|1|2 (CVE-2013-1899)   | metasploit        |</span>
+<span class="pl-c1">| default-creds                      | defaultcreds | Check default/common credentials on PostgreSQL server                         | hydra             |</span>
+<span class="pl-c1">| bruteforce-creds                   | bruteforce   | Bruteforce PostgreSQL accounts                                                | hydra             |</span>
+<span class="pl-c1">| postauth-rce-cve2019-9193          | postexploit  | Try to execute system command post-authentication by exploiting CVE-2019-9193 | psql              |</span>
+<span class="pl-c1">+------------------------------------+--------------+-------------------------------------------------------------------------------+-------------------+</span></pre>
+</div>
+<h1><a name="user-content-rdp-default-3389-tcp"></a><span></span></h1>
+<h3><a id="user-content-rdp-default-3389tcp" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#rdp-default-3389tcp" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>RDP (default 3389/tcp)</h3>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">+----------+----------+-----------------------------------------------------------------------+------------+</span>
+<span class="pl-c1">| Name     | Category | Description                                                           | Tool used  |</span>
+<span class="pl-c1">+----------+----------+-----------------------------------------------------------------------+------------+</span>
+<span class="pl-c1">| ms12-020 | vulnscan | Check for MS12-020 RCE vulnerability (any Windows before 13 Mar 2012) | metasploit |</span>
+<span class="pl-c1">+---------+----------+-----------------------------------------------------------------------+------------+</span></pre>
+</div>
+<h1><a name="user-content-smb-default-445-tcp"></a><span></span></h1>
+<h3><a id="user-content-smb-default-445tcp" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#smb-default-445tcp" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>SMB (default 445/tcp)</h3>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">+-----------------------------------+-------------+----------------------------------------------------------------------------------------------+------------+</span>
+<span class="pl-c1">| Name                              | Category    | Description                                                                                  | Tool used  |</span>
+<span class="pl-c1">+-----------------------------------+-------------+----------------------------------------------------------------------------------------------+------------+</span>
+<span class="pl-c1">| nmap-recon                        | recon       | Recon using Nmap SMB scripts and check for vulns (MS17-010, MS10-061, MS10-054, MS08-067...) | nmap       |</span>
+<span class="pl-c1">| anonymous-enum-smb                | recon       | Attempt to perform enum (users, shares...) without account                                   | nullinux   |</span>
+<span class="pl-c1">| detect-ms17-010                   | vulnscan    | Detect MS17-010 SMB RCE                                                                      | metasploit |</span>
+<span class="pl-c1">| samba-rce-cve2015-0240            | vulnscan    | Detect RCE vuln (CVE-2015-0240) in Samba 3.5.x and 3.6.X                                     | metasploit |</span>
+<span class="pl-c1">| exploit-rce-ms08-067              | exploit     | Exploit for RCE vuln MS08-067 on SMB                                                         | metasploit |</span>
+<span class="pl-c1">| exploit-rce-ms17-010-eternalblue  | exploit     | Exploit for RCE vuln MS17-010 EternalBlue on SMB                                             | metasploit |</span>
+<span class="pl-c1">| exploit-sambacry-rce-cve2017-7494 | exploit     | Exploit for SambaCry RCE on Samba &lt;= 4.5.9 (CVE-2017-7494) (no creds if guest account)       | metasploit |</span>
+<span class="pl-c1">| auth-enum-smb                     | postexploit | Authenticated enumeration (users, groups, shares) on SMB                                     | nullinux   |</span>
+<span class="pl-c1">| auth-shares-perm                  | postexploit | Get R/W permissions on SMB shares                                                            | smbmap     |</span>
+<span class="pl-c1">| smb-exec                          | postexploit | Attempt to get a remote shell (psexec-like, requires Administrator creds)                    | impacket   |</span>
+<span class="pl-c1">+-----------------------------------+-------------+----------------------------------------------------------------------------------------------+------------+</span></pre>
+</div>
+<h1><a name="user-content-smtp-default-25-tcp"></a><span></span></h1>
+<h3><a id="user-content-smtp-default-25tcp" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#smtp-default-25tcp" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>SMTP (default 25/tcp)</h3>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">+----------------+----------+--------------------------------------------------------------------------------------------+----------------+</span>
+<span class="pl-c1">| Name           | Category | Description                                                                                | Tool used      |</span>
+<span class="pl-c1">+----------------+----------+--------------------------------------------------------------------------------------------+----------------+</span>
+<span class="pl-c1">| smtp-cve       | vulnscan | Scan for vulnerabilities (CVE-2010-4344, CVE-2011-1720, CVE-2011-1764, open-relay) on SMTP | nmap           |</span>
+<span class="pl-c1">| smtp-user-enum | vulnscan | Attempt to perform user enumeration via SMTP commands EXPN, VRFY and RCPT TO               | smtp-user-enum |</span>
+<span class="pl-c1">+----------------+----------+--------------------------------------------------------------------------------------------+----------------+</span></pre>
+</div>
+<h1><a name="user-content-snmp-default-161-udp"></a><span></span></h1>
+<h3><a id="user-content-snmp-default-161udp" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#snmp-default-161udp" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>SNMP (default 161/udp)</h3>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">+--------------------------+-------------+---------------------------------------------------------------------+------------+</span>
+<span class="pl-c1">| Name                     | Category    | Description                                                         | Tool used  |</span>
+<span class="pl-c1">+--------------------------+-------------+---------------------------------------------------------------------+------------+</span>
+<span class="pl-c1">| common-community-strings | bruteforce  | Check common community strings on SNMP server                       | metasploit |</span>
+<span class="pl-c1">| snmpv3-bruteforce-creds  | bruteforce  | Bruteforce SNMPv3 credentials                                       | snmpwn     |</span>
+<span class="pl-c1">| enumerate-info           | postexploit | Enumerate information provided by SNMP (and check for write access) | snmp-check |</span>
+<span class="pl-c1">+--------------------------+-------------+---------------------------------------------------------------------+------------+</span></pre>
+</div>
+<p><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>
+<ins class="adsbygoogle" style="display: block; text-align: center; height: 200px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6620833063853657" data-ad-slot="4517761481" data-adsbygoogle-status="done"><ins id="aswift_11_expand" style="display:inline-table;border:none;height:200px;margin:0;padding:0;position:relative;visibility:visible;width:797px;background-color:transparent;"><ins id="aswift_11_anchor" style="display:block;border:none;height:200px;margin:0;padding:0;position:relative;visibility:visible;width:797px;background-color:transparent;"></ins></ins></ins><br>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+<h1><a name="user-content-ssh-default-22-tcp"></a><span></span></h1>
+<h3><a id="user-content-ssh-default-22tcp" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#ssh-default-22tcp" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>SSH (default 22/tcp)</h3>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">+----------------------------------+--------------+--------------------------------------------------------------------------------------------+------------------------------+</span>
+<span class="pl-c1">| Name                             | Category     | Description                                                                                | Tool used                    |</span>
+<span class="pl-c1">+----------------------------------+--------------+--------------------------------------------------------------------------------------------+------------------------------+</span>
+<span class="pl-c1">| vulns-algos-scan                 | vulnscan     | Scan supported algorithms and security info on SSH server                                  | ssh-audit                    |</span>
+<span class="pl-c1">| vulners-lookup                   | vulnlookup   | Vulnerabilities lookup on Vulners.com (requires product name+version)                      | vulners-lookup               |</span>
+<span class="pl-c1">| cvedetails-lookup                | vulnlookup   | Vulnerabilities lookup on Cvedetails.com (requires product name+version)                   | cvedetails-lookup            |</span>
+<span class="pl-c1">| user-enum-timing-attack          | exploit      | Try to perform OpenSSH (versions &lt;= 7.2 and &gt;= 5.*) user enumeration timing attack OpenSSH | osueta                       |</span>
+<span class="pl-c1">| user-enum-cve2018-15473          | exploit      | Attempt to exploit OpenSSH &lt;= 7.7 user enumeration (CVE-2018-15473)                        | ssh-user-enum-cve-2018-15473 |</span>
+<span class="pl-c1">| auth-bypass-libssh-cve2018-10933 | exploit      | Attempt authentication bypass (CVE-2018-10933) in libssh 0.6+ (fixed in 0.7.6 and 0.8.4)   | libssh-scanner               |</span>
+<span class="pl-c1">| default-ssh-key                  | defaultcreds | Try to authenticate on SSH server using known SSH keys                                     | changeme                     |</span>
+<span class="pl-c1">| default-creds                    | defaultcreds | Check default/common credentials on SSH                                                    | hydra                        |</span>
+<span class="pl-c1">| bruteforce-creds                 | bruteforce   | Bruteforce SSH accounts                                                                    | hydra                        |</span>
+<span class="pl-c1">+----------------------------------+--------------+--------------------------------------------------------------------------------------------+------------------------------+</span></pre>
+</div>
+<h1><a name="user-content-telnet-default-23-tcp"></a><span></span></h1>
+<h3><a id="user-content-telnet-default-23tcp" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#telnet-default-23tcp" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Telnet (default 23/tcp)</h3>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">+-------------------------+------------+----------------------------------------------------------------------------------+-----------+</span>
+<span class="pl-c1">| Name                    | Category   | Description                                                                      | Tool used |</span>
+<span class="pl-c1">+-------------------------+------------+----------------------------------------------------------------------------------+-----------+</span>
+<span class="pl-c1">| nmap-recon              | recon      | Recon using Nmap Telnet scripts                                                  | nmap      |</span>
+<span class="pl-c1">| default-creds           | bruteforce | Check default credentials on Telnet (dictionary from https://cirt.net/passwords) | patator   |</span>
+<span class="pl-c1">| bruteforce-root-account | bruteforce | Bruteforce "root" account on Telnet                                              | patator   |</span>
+<span class="pl-c1">+-------------------------+------------+----------------------------------------------------------------------------------+-----------+</span></pre>
+</div>
+<h1><a name="user-content-vnc-default-5900-tcp"></a><span></span></h1>
+<h3><a id="user-content-vnc-default-5900tcp" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#vnc-default-5900tcp" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>VNC (default 5900/tcp)</h3>
+<div class="highlight highlight-text-shell-session">
+<pre><span class="pl-c1">+-----------------+------------+-------------------------------------------------------------------------------------------------+----------------+</span>
+<span class="pl-c1">| Name            | Category   | Description                                                                                     | Tool used      |</span>
+<span class="pl-c1">+-----------------+------------+-------------------------------------------------------------------------------------------------+----------------+</span>
+<span class="pl-c1">| nmap-recon      | recon      | Recon using Nmap VNC scripts                                                                    | nmap           |</span>
+<span class="pl-c1">| vuln-lookup     | vulnscan   | Vulnerability lookup in Vulners.com (NSE scripts) and exploit-db.com (lots of false positive !) | vuln-databases |</span>
+<span class="pl-c1">| bruteforce-pass | bruteforce | Bruteforce VNC password                                                                         | patator        |</span>
+<span class="pl-c1">+-----------------+------------+-------------------------------------------------------------------------------------------------+----------------+</span></pre>
+</div>
+<h1><a name="user-content-known-issues"></a><span></span></h1>
+<h2><a id="user-content-known-issues" class="anchor" aria-hidden="true" href="https://github.com/blackhatethicalhacking/jok3r#known-issues" data-et-has-event-already="true"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a><a href="https://github.com/blackhatethicalhacking/jok3r#id13" data-et-has-event-already="true">Known Issues</a></h2>
+<ul>
+<li>Docker image is huge ! (it actually contains lots of tools and dependencies… Will try to reduce size later)</li>
+</ul>
+</article>
+</div>
+<div class="container-lg clearfix new-discussion-timeline px-3">
+<div class="repository-content ">
+<div id="readme" class="Box md js-code-block-container Box--condensed">
+<div class="Box-body p-5">
+<article class="markdown-body entry-content">
+<article class="main markdown-body">
+<section class="box"><div style="line-height: 0;"><iframe src="https://www.patreon.com/platform/iframe?widget=become-patron-button&amp;redirectURI=https%3A%2F%2Fwww.blackhatethicalhacking.com%2Ftools%2Fjok3r%2F%3F__cf_chl_captcha_tk__%3D8262bf7e2ec3fcce8ac2d6aa04108df5a9e7792f-1602664943-0-AfrLsh5LBVGfK76AJZEKtnJueIkussP2WU1sIMm3mR2yjIe33XG6L9tbPZ4PRct_T7l2hF8vIeTz5P2yiFYUWU2HDPLSuxSihgCupNCWbfpbRyfCOdShNmQapHQLO7QrYoJS4ksV7VlgH6Fn3mBA3GeySGE8X7iPSsRBIX-Afu83g5LnuN-OhINHwLcMsW55FefWRCyvf9Aab7Mw9TAD7j-84ToV2qAhIkv_3Rjaq2lWKVCs3BdSrB2P1UAVUF7s4nVw_BKp_BpOnUK-tmuoC3R-1mIIFJgyAqrYtmm_u_I2T-G3LbAU-43qqZ7xcTZCMtVURUrJzmuPT7y3jbJqJ_920-a2pUVa_2Was2jJAO2trcUv5spp5fquVmH8dd9hEyKO1HTafRUXjtMx0pjQVTtvGWJ5YbtEDlrPzE65SQATsbboZl6NxwK8k6V_ALR64X6lPTM3YAdu6KeKP6S9o4Kw7PCCHgjYRxRvaKbuct3vmHjn46_wDkHWMcu1mLH0Wkb-pHBwQjupQTLIFspg2v5zK4O9opa3jYF5Bzu5Oaep&amp;creatorID=20287909" scrolling="no" allowtransparency="true" frameborder="0" class="patreon-widget" title="Patreon Widget" style="position: static; visibility: visible; width: 176px; height: 33px;"></iframe></div></section>
+</article>
+</article>
+</div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</div>
+</div>
+</article>
+</div>
+</div>
+</header>
+<p><script async="" src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+</div>
+</div>
+</aside>
+</div>
+</div></div>
+</div> 
+</div> 
+</div> 
+</div> <div class="et_pb_column et_pb_column_1_4 et_pb_column_1    et_pb_css_mix_blend_mode_passthrough et_pb_column_single">
+<div class="et_pb_module et_pb_sidebar_0 et_pb_widget_area clearfix et_pb_widget_area_left et_pb_bg_layout_light">
+<style>
+.rpwe-block ul{list-style:none!important;margin-left:0!important;padding-left:0!important;}.rpwe-block li{border-bottom:1px solid #eee;margin-bottom:10px;padding-bottom:10px;list-style-type: none;}.rpwe-block a{display:inline!important;text-decoration:none;}.rpwe-block h3{background:none!important;clear:none;margin-bottom:0!important;margin-top:0!important;font-weight:400;font-size:12px!important;line-height:1.5em;}.rpwe-thumb{border:1px solid #EEE!important;box-shadow:none!important;margin:2px 10px 2px 0;padding:3px!important;}.rpwe-summary{font-size:12px;}.rpwe-time{color:#bbb;font-size:11px;}.rpwe-comment{color:#bbb;font-size:11px;padding-left:5px;}.rpwe-alignleft{display:inline;float:left;}.rpwe-alignright{display:inline;float:right;}.rpwe-aligncenter{display:block;margin-left: auto;margin-right: auto;}.rpwe-clearfix:before,.rpwe-clearfix:after{content:"";display:table !important;}.rpwe-clearfix:after{clear:both;}.rpwe-clearfix{zoom:1;}
+</style>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div> 
+</div> 
+</div> 
+</div> 
+</div> <div class="et_pb_section et_pb_section_3 et_section_regular section_has_divider et_pb_bottom_divider">
+<div class="et_pb_row et_pb_row_0">
+<div class="et_pb_column et_pb_column_4_4 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough et-last-child">
+<div class="et_pb_module et_pb_code et_pb_code_0">
+<div class="et_pb_code_inner"><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display: block; text-align: center; height: 200px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6620833063853657" data-ad-slot="4517761481" data-adsbygoogle-status="done"><ins id="aswift_13_expand" style="display:inline-table;border:none;height:200px;margin:0;padding:0;position:relative;visibility:visible;width:1079px;background-color:transparent;"><ins id="aswift_13_anchor" style="display:block;border:none;height:200px;margin:0;padding:0;position:relative;visibility:visible;width:1079px;background-color:transparent;"></ins></ins></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+</div> 
+</div> 
+</div> 
+<div class="et_pb_bottom_inside_divider" style=""></div>
+<div class="et_pb_row"><div class="et_pb_column et_pb_column_4_4"><div class="et_social_inline et_social_mobile_on et_social_inline_bottom">
+<div class="et_social_networks et_social_6col et_social_simple et_social_rounded et_social_top et_social_no_animation et_social_withcounts et_social_withtotalcount et_social_outer_dark">
+<div class="et_social_totalcount">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> 
+</head>
+<body>
+
